@@ -1,0 +1,59 @@
+<!--pages/CouponList/CouponList.wxml-->
+<view class='coupon-list-wrapper'>
+  <view class='title-wrap'>
+    <view>优惠券管理</view>
+    <navigator wx:if="{{ false }}" url='/pages/CouponAdd/CouponAdd' class='coupon-add'>
+      <image style='width: 80rpx;height: 80rpx;' src='../image/icon_add.png'></image>
+    </navigator>
+  </view>
+  
+  <block wx:if="{{ false }}" wx:for="{{ [0, 1, 2, 3] }}">
+    <view class='card'>
+    <view class='card-body'>
+      <view class='body-title'>
+        <view>通用优惠券</view>
+        <view bindtap='confirmDelete' class='iconfont icon-icon_shanchu delete'></view>
+      </view>
+      <view class='price-area'>
+        <span class='price-mark'>￥</span>
+        <span class="price">5</span>
+        （满35可用） 
+      </view>
+      <view style='margin-bottom: 6rpx;'>有效期：30天</view>
+      <view>创建时间：2018.04.01</view>
+    </view>
+    <view class='card-footer'>
+        <view class='footer-each'>
+          <view>已领取/张</view>
+          <view class='value'>20</view>
+        </view>
+        <view class='footer-each'>
+          <view>已使用/张</view>
+          <view class='value'>80</view>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <!-- 新增空态 start -->
+  <block wx:if="{{ true }}">
+    <view class='null-page-wrap'>
+      <view class='iconfont icon-wodehuodong-zanwuhuodong null-icon'></view>
+      <view>暂无优惠券</view>
+      <navigator class='add-btn' url='/pages/CouponAdd/CouponAdd' >
+        <span class="iconfont icon-guanbi- add"></span>
+        <span>立即添加</span>
+      </navigator>
+    </view>
+  </block>
+  <!-- 新增空态 end -->
+
+  <dialog id='dialog'
+    title='提示'
+    content='确定删除该优惠券的所有信息？'
+    cancelText='取消'
+    confirm='确定'
+    bind:cancelEvent="_cancelEvent"
+    bind:confirmEvent="_confirmEvent"
+  ></dialog>
+</view>

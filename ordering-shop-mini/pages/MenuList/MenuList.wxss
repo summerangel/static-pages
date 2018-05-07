@@ -1,0 +1,160 @@
+/* pages/MenuList/MenuList.wxss */
+.menu-tab-wrap {
+  height:67px;
+  /* padding-bottom: 40rpx; */
+  border-bottom: 2rpx solid #F6F6F6;
+  position: relative;
+}
+.menu-tab-wrap .menu-tab {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 14rpx;
+  padding-left: 40rpx;
+}
+.menu-tab-wrap .menu-goods {
+  font-size: 40rpx;
+  color: #BDBDBD;
+  padding-bottom: 20rpx;
+  padding-right: 50rpx;
+  font-weight: bold;
+  position: relative;
+}
+.menu-tab-wrap .menu-goods.active {
+  color: #333333;
+}
+.menu-tab-wrap .menu-goods.active .tab-underline {
+  width: 68rpx;
+  height: 8rpx;
+  background-color: #333333;
+  border-radius: 8rpx;
+  
+  position: absolute;
+  bottom: 0;
+  left: 22%;
+}
+.menu-tab-wrap .menu-add-btn {
+  position: absolute;
+  top: 5%;
+  right: 40rpx;
+  /* background-color: #FDCB47; */
+   color: #FDCB47; 
+  /* width: 46px;
+  height: 46px; */
+  /* line-height: 37px; */
+  /* border-radius: 46px; */
+  /* text-align: center; */
+  font-size: 80rpx;
+}
+.menu-list-wrap {
+   padding: 40rpx;
+   border-bottom: 2rpx solid #F6F6F6;
+}
+.menu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-list .menu-icon {
+  display: flex;
+  align-items: center;
+}
+.menu-list .fold {
+  color: #5B9DEA;
+  font-size: 16rpx;
+}
+.menu-list .fold.expand {
+  transform: rotate(90deg);
+}
+.menu-list .item-name {
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: bold;
+  margin-left: 18rpx;
+  display: inline-block;
+}
+.menu-list .item-num {
+  font-size: 32rpx;
+  color: #999999;
+}
+
+.goods-info {
+  padding-top: 30rpx;
+  display: flex;
+  justify-content: flex-start;
+}
+.goods-info .icon {
+  flex: 0 0 114rpx;
+}
+.goods-info .goods-right {
+  height: 180rpx;
+  padding-left: 30rpx;
+  width: 100%;
+
+  position: relative;
+}
+.goods-info .goods-right .goods-name {
+  font-size: 32rpx;
+  color: #333333;
+}
+.goods-info .goods-right .price {
+  font-size: 36rpx;
+  color: #DC4950;
+
+  position: absolute;
+  left: 30rpx;
+  bottom: 0;
+}
+.goods-info .goods-right .unshelf-btn {
+  width: 166rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border: 2rpx solid #BDBDBD;
+  border-radius: 200rpx;
+  font-size: 26rpx;
+  color: #333333;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+
+/** 字体图标 **/
+
+@font-face {
+  font-family: 'iconfont';  /* project id 606896 */
+  src: url('//at.alicdn.com/t/font_606896_dzibrdcxfdxfajor.eot');
+  src: url('//at.alicdn.com/t/font_606896_dzibrdcxfdxfajor.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_606896_dzibrdcxfdxfajor.woff') format('woff'),
+  url('//at.alicdn.com/t/font_606896_dzibrdcxfdxfajor.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_606896_dzibrdcxfdxfajor.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-iconfonttianjia:before { content: "\e60f"; }
+
+.icon-gouwuche-copy:before { content: "\e62d"; }
+
+.icon-duihao:before { content: "\e60b"; }
+
+.icon-dizhi:before { content: "\e62e"; }
+
+.icon-tongzhi:before { content: "\e647"; }
+
+.icon-guanbi-:before { content: "\e659"; }
+
+.icon-icon_shanchu:before { content: "\e641"; }
+
+.icon-tianjia:before { content: "\e644"; }
+
+.icon-Triangle:before { content: "\e645"; }
+

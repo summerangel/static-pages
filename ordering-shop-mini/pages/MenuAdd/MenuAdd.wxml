@@ -1,0 +1,49 @@
+<!--pages/MenuAdd/MenuAdd.wxml-->
+<view class='menu-add-wrapper'>
+  <view class='menu-add-title'>添加菜品</view>
+
+  <view class='input-wrap'>
+    <view class='name'>菜品名称</view>
+    <input class='name-input' placeholder='请输入菜品名称'></input>
+  </view>
+
+  <view class='input-wrap'>
+    <view class='name'>菜品价格(元)</view>
+    <input class='name-input' placeholder='例如：48'></input>
+  </view>
+
+  <view class='category-wrap'>
+    <view class='name'>菜品分类</view>
+    <view class='cate-list'>
+      <view class='item' wx:for="{{ categoryList }}" wx:key="unique">
+        {{ item }}
+      </view>
+      <view class='item-add' bindtap='showDialog'>+</view>
+    </view>
+  </view>
+
+   <view class='image-upload-wrap'>
+    <view class='image-upload-title'>菜品图片</view>
+    <view wx:if="{{ !!imagePath }}">
+      <image src='{{ imagePath }}' style='width:268rpx;height:180rpx;border-radius:4rpx;padding-top:30rpx;'></image>
+      <span class='replace' bindtap='chooseImage'>替换图片</span>
+    </view>
+    <view wx:if="{{ !imagePath }}" class='image-upload' bindtap='chooseImage'>+</view>
+  </view> 
+
+  <view class='btn-wrap'>
+    <view class='confirm-add'>{{ btnText }}</view>
+  </view>
+
+    <editBox 
+    id='edit-box'
+    title='菜品分类名称'
+    value='{{ categoryName }}'
+    confirm='确定'
+    bind:closeBoxEvent='_closeBoxEvent'
+    bind:inputEvent='_inputEvent'
+    bind:deleteInputEvent='_deleteInputEvent'
+    bind:confirmEvent='_confirmEvent'
+  ></editBox>  
+
+</view>

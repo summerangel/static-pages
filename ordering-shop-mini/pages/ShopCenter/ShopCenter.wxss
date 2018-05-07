@@ -1,0 +1,217 @@
+/* pages/ShopCenter/ShopCenter.wxss */
+Page {
+  background-color: #f0f0f0;
+}
+.center-header-wrap {
+  padding: 46rpx 40rpx 50rpx 40rpx;
+  background-color: #FFFFFF;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.center-header-wrap .user-info {
+  padding-top: 12rpx;
+  font-size: 28rpx;
+  color: #999999;
+}
+.user-info .name {
+  font-size: 44rpx;
+  color: #333333;
+  padding-right: 20rpx;
+}
+.user-info .user-phone {
+  padding-top: 16rpx;
+  padding-bottom: 32rpx;
+}
+.order-filter-wrap {
+  position: relative;
+}
+.filter-btn {
+  background-color: #5B9DEA;
+  border-radius: 52rpx;
+  font-size: 26rpx;
+  color: #FFFFFF;
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filter-btn .arrow-down {
+  transform: rotate(90deg);
+  font-size: 14rpx;
+  margin-left: 20rpx;
+}
+.filter-down-show {
+  width: 198rpx;
+  position: absolute;
+  top: 72rpx;
+  left: 0;
+}
+.filter-down-show .filter-condition {
+  background: #5B9DEA;
+  border-radius: 8rpx;
+  font-size: 26rpx;
+  color: #FFFFFF;
+}
+.filter-down-show .filter-condition .condition-each {
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  text-align: center;
+}
+.filter-down-show .filter-condition .condition-each.active {
+  background: #4C8FDE;
+}
+.opacity6 {
+  opacity: 0.6;
+}
+
+.operate-data-wrap {
+  background-color: #FFFFFF;
+  margin-top: 20rpx;
+} 
+.operate-data-wrap .operate-title {
+  padding: 24rpx 36rpx 24rpx 40rpx;
+  border-bottom: 2rpx solid #F6F6F6;
+  font-size: 16px;
+  color: #333333;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.operate-data-wrap .operate-title .filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 200;
+}
+.filter .filter-value {
+  border-radius: 200rpx;
+  width: 120rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  font-size: 13px;
+  color: #BDBDBD;
+}
+.filter .filter-value.active {
+  background-color: #5B9DEA;
+  color: #FFFFFF;
+}
+.operate-data-wrap .operate-body {
+  padding: 50rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.operate-body .body-item {
+  font-size: 13px;
+  color: #BDBDBD;
+  text-align: center;
+  width: 100%;
+}
+.operate-body .body-item:first-child {
+  border-right:2rpx solid #F3F3F3;
+}
+.operate-body .body-item .equal {
+  opacity: 0.45;
+  color: #5B9DEA;
+  /* font-size: 80rpx; */
+}
+.operate-body .body-item .statics {
+  font-size: 60rpx;
+  color: #333333;
+  /* padding-top: 14rpx; */
+  padding-bottom: 14rpx;
+}
+
+.bar-list {
+  margin-top: 20rpx;
+  background-color: #FFFFFF;
+}
+.bar-list .bar-item {
+  padding: 28rpx 40rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bar-item .name {
+  font-size: 16px;
+  color: #333333;
+}
+.bar-item .right-arrow {
+  display: inline-block;
+  position: relative;
+  padding-right: 48rpx;
+  font-size: 28rpx;
+  color: #BDBDBD;
+}
+.bar-item .right-arrow::after {
+  display: inline-block;
+  content: "";
+  height: 18rpx;
+  width: 18rpx;
+  border-width: 2rpx 2rpx 0 0;
+  border-color: #D6D6D6;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  right: 6rpx;
+  margin-top: -9rpx;
+}
+
+.logout-btn {
+  text-align: center;
+  background-color: #FFFFFF;
+  font-size: 32rpx;
+  color: #333333;
+  padding-top: 28rpx;
+  padding-bottom: 28rpx;
+  margin-top: 60rpx;
+  margin-bottom: 20rpx;
+}
+
+
+
+/** 字体图标 **/
+
+@font-face {
+  font-family: 'iconfont';  /* project id 606896 */
+  src: url('//at.alicdn.com/t/font_606896_dzibrdcxfdxfajor.eot');
+  src: url('//at.alicdn.com/t/font_606896_dzibrdcxfdxfajor.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_606896_dzibrdcxfdxfajor.woff') format('woff'),
+  url('//at.alicdn.com/t/font_606896_dzibrdcxfdxfajor.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_606896_dzibrdcxfdxfajor.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-iconfonttianjia:before { content: "\e60f"; }
+
+.icon-gouwuche-copy:before { content: "\e62d"; }
+
+.icon-duihao:before { content: "\e60b"; }
+
+.icon-dizhi:before { content: "\e62e"; }
+
+.icon-tongzhi:before { content: "\e647"; }
+
+.icon-guanbi-:before { content: "\e659"; }
+
+.icon-icon_shanchu:before { content: "\e641"; }
+
+.icon-tianjia:before { content: "\e644"; }
+
+.icon-Triangle:before { content: "\e645"; }

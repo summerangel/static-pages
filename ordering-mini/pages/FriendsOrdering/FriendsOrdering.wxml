@@ -1,0 +1,84 @@
+<!--pages/FriendsOrdering/FriendsOrdering.wxml-->
+<view class='friends-ordering'>
+  <view class='friends-ordering-title'>点单成功</view>
+
+  <view class='ordering-invite'>等待发起人 <span class="invite-name">董小姐</span> 提交</view>
+
+  <view class='shop-wrap'>
+     <image style='width: 45px;height: 45px;border-radius: 45px;' src='/pages/image/shop/shop.jpg'></image>
+     <view class='shop-name'>满江红酒楼</view>
+      <view class='icon-text'>
+        <view class='iconfont icon-dizhi shop-icon'></view>
+        <view>上海市静安区广中路1025弄</view>
+      </view>
+      <view class='participate-in-ordering' bindtap='participateOrdering'>参与点单</view>
+  </view>
+
+  <view class='order-person-wrap'>
+    <view class='inviter'>
+      <view class='inviter-info'>
+        <image style='width:30px;height:30px;border-radius:30px;'
+      src='https://fuss10.elemecdn.com/0/a3/2da88bf6180ea48fa3a23f4b5b9a4jpeg.jpeg'
+      ></image>
+        <span class="inviter-name">邱大叔</span>
+        <!-- <span class="inviter-mark">发起</span> -->
+      </view>
+      <view class='control-wrap'>
+        <navigator url='../ordering/ordering' open-type='switchTab'
+        class='add-goods'>添加商品</navigator>
+        <view bindtap='quitOrdering'>不点了</view>
+      </view>
+    </view>
+    <view wx:if="{{false}}" class='no-order-now'>暂时没有点单</view>
+    <block wx:for="{{[0, 1, 2]}}">
+      <view class='ordering-bar'>
+        <view>招牌红烧排骨</view>
+        <view class='bar-right'>
+            <view>x1</view>
+            <view class='goods-price'>￥55</view>
+            <view class='iconfont icon-icon_shanchu' style='color: #666;'></view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class='order-completed-num'>已有0人点好啦</view>
+
+  <view class='order-person-wrap'>
+    <view class='inviter'>
+      <view class='inviter-info'>
+        <image style='width:30px;height:30px;border-radius:30px;'
+      src='https://fuss10.elemecdn.com/0/a3/2da88bf6180ea48fa3a23f4b5b9a4jpeg.jpeg'
+      ></image>
+        <span class="inviter-name">董小姐</span>
+         <span class="inviter-mark">发起</span> 
+      </view>
+      <!-- <view class='control-wrap'>
+        <navigator url='../ordering/ordering' open-type='switchTab'
+        class='add-goods'>添加商品</navigator>
+        <view>不点了</view>
+      </view> -->
+    </view>
+    <view wx:if="{{false}}" class='no-order-now'>暂时没有点单</view>
+    <block wx:for="{{[0, 1, 2]}}">
+      <view class='ordering-bar'>
+        <view>招牌红烧排骨</view>
+        <view class='bar-right'>
+            <view>x1</view>
+            <view class='goods-price'>￥55</view>
+            <view class='iconfont icon-icon_shanchu' style='color: #666;'></view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+</view>
+
+<dialog id='dialog'
+    title='提示'
+    content='确定放弃与好友一起点单吗？'
+    cancelText='我再想想'
+    confirm='确定放弃'
+    bind:cancelEvent="_cancelEvent"
+    bind:confirmEvent="_confirmEvent"
+  ></dialog>

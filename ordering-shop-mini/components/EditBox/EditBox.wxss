@@ -1,0 +1,106 @@
+/* components/promptBox/promptBox.wxss */
+.edit-box-wrap .edit-mask {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(51, 51, 51, 0.6);
+}
+.edit-box-wrap .edit-body {
+  position: fixed;
+  z-index: 5000;
+  width: 80%;
+  max-width: 600rpx;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #FFFFFF;
+  text-align: center;
+  border-radius: 4px;
+  overflow: hidden;
+  padding-bottom: 25px;
+}
+.edit-box-wrap .edit-body .edit-title {
+  font-size: 16px;
+  color: #333333;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.edit-box-wrap .edit-body .edit-title .box-close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  color: #999999;
+}
+
+.edit-box-wrap .edit-body .edit-content {
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+.edit-box-wrap .edit-body .edit-content .edit-input {
+  background: #FFFFFF;
+  border: 1px solid #ECECEC;
+  border-radius: 3px;
+  padding: 19px 15px;
+  text-align: left;
+}
+.edit-box-wrap .edit-body .edit-content .delete {
+  position: absolute;
+  right: 36px;
+  top: 31%;
+  font-size: 20px;
+  color: #CCCCCC; 
+  z-index: 888;
+}
+
+.edit-body .btn-wrap {
+  padding: 25px 25px 0 25px;
+}
+.edit-body .btn-wrap .confirm-btn {
+  background: #5B9DEA;
+  border-radius: 92px;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+/** 字体 **/
+
+@font-face {
+  font-family: 'iconfont';  /* project id 606896 */
+  src: url('//at.alicdn.com/t/font_606896_1h0pfepnjerhehfr.eot');
+  src: url('//at.alicdn.com/t/font_606896_1h0pfepnjerhehfr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_606896_1h0pfepnjerhehfr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_606896_1h0pfepnjerhehfr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_606896_1h0pfepnjerhehfr.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-iconfonttianjia:before { content: "\e60f"; }
+
+.icon-gouwuche-copy:before { content: "\e62d"; }
+
+.icon-duihao:before { content: "\e60b"; }
+
+.icon-dizhi:before { content: "\e62e"; }
+
+.icon-tongzhi:before { content: "\e647"; }
+
+.icon-guanbi-:before { content: "\e659"; }
+
+.icon-icon_shanchu:before { content: "\e641"; }
+

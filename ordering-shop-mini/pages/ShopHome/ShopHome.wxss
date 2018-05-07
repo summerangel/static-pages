@@ -1,0 +1,276 @@
+/* pages/ShopHome/ShopHome.wxss */
+Page {
+  background-color: #f0f0f0;
+}
+.coupon-manage-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 28rpx;
+  align-items: center;
+  background-color: #5B9DEA;
+}
+.coupon-each {
+  padding-top: 44rpx;
+  padding-bottom: 42rpx;
+  background-color: #FFFFFF;
+  border-radius: 8rpx;
+  position: relative;
+  width: 100%;
+}
+.coupon-each:first-child {
+  margin-right: 26rpx;
+}
+.coupon-each .img {
+  position: absolute;
+  left: 30rpx;
+  top: 38rpx;
+}
+.coupon-each .manage-wrap {
+  padding-left: 100rpx;
+}
+.coupon-each .manage-wrap .manage-title {
+  font-size: 28rpx;
+  color: #333333;
+}
+.coupon-each .manage-wrap .manage-desc {
+  font-size: 22rpx;
+  color: #999999;
+  padding-top: 6rpx;
+}
+
+.order-list-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50rpx 28rpx 30rpx 28rpx;
+}
+.order-list-title .title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.order-list-title .title-wrap .title-name {
+  font-size: 40rpx;
+  color: #333333;
+  font-weight: bold;
+}
+.order-list-title .title-wrap .title-num {
+  font-size: 24rpx;
+  color: #999999;
+  padding-left: 20rpx;
+}
+.order-list-title .order-filter-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.order-list-title .order-filter-wrap .filter-btn {
+  background: #FDCB47;
+  border-radius: 52rpx;
+  font-size: 26rpx;
+  color: #FFFFFF;
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.order-list-title .order-filter-wrap .filter-btn .arrow-down {
+  transform: rotate(90deg);
+  font-size: 14rpx;
+  margin-left: 20rpx;
+}
+.order-list-title .order-filter-wrap .filter-down-show {
+  width: 198rpx;
+  position: absolute;
+  top: 72rpx;
+  right: 0;
+}
+.filter-down-show .filter-condition {
+  background: #FDCB47;
+  border-radius: 8rpx;
+  font-size: 26rpx;
+  color: #FFFFFF;
+}
+.filter-down-show .filter-condition .condition-each {
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  text-align: center;
+}
+.filter-down-show .filter-condition .condition-each.active {
+  background: #F8BF2A;
+}
+
+.order-tab-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.order-tab-wrap .tab-each {
+  padding-top: 26rpx;
+  padding-bottom: 24rpx;
+  background-color: #FFFFFF;
+  font-size: 28rpx;
+  color: #333333;
+  width: 100%;
+  text-align: center;
+}
+.order-tab-wrap .tab-each.active {
+  background-color: #5B9DEA;
+  color: #FFFFFF;
+}
+
+.order-detail-wrap {
+  padding: 20rpx 28rpx 0 28rpx;
+}
+.order-detail-wrap .order-detail {
+  background-color: #FFFFFF;
+  border-radius: 8rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.order-detail-wrap .order-detail .order-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 2rpx solid #F6F6F6;
+  font-size: 28rpx;
+  color: #EE9C16;
+}
+.order-detail-wrap .order-detail .order-title .status {
+  font-size: 26rpx;
+  color: #DC4950;
+}
+.order-detail-wrap .order-detail .order-body {
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 2rpx solid #F6F6F6;
+}
+.order-body .order-item {
+  position: relative;
+}
+.order-body .order-item .goods-name {
+  max-width: 160rpx;
+  /* height: 30px; */
+  /* line-height: 30px; */
+  font-size: 28rpx;
+  color: #333333;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.order-body .order-item .goods-detail {
+  padding-left: 160rpx;
+}
+.order-body .order-item .goods-detail .item-each {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28rpx;
+  color: #333333;
+  padding-bottom: 10rpx;
+}
+
+.order-detail-wrap .order-detail .order-item-each {
+  font-size: 26rpx;
+  color: #999999;
+  padding-bottom: 12rpx;
+}
+.order-detail-wrap .order-detail .order-item-each:last-child {
+   padding-bottom: 0;
+}
+
+.order-detail-wrap .order-detail .order-btn {
+  padding: 30rpx 30rpx 30rpx;
+  zoom: 1;
+}
+.operate-btn {
+  border: 2rpx solid #5B9DEA;
+  border-radius: 200rpx;
+  font-size: 26rpx;
+  color: #4A90E2;
+  /* padding: 6px 16px; */
+  width: 166rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  float: right;
+}
+.order-detail-wrap .order-detail .order-btn::after {
+   clear: both;
+   content: '.';
+   display: block;
+   width: 0;
+   height: 0;
+   visibility: hidden;
+}
+
+/* 以下都为新增，包括字体 */
+.null-page-wrap {
+  text-align: center;
+  font-size: 28rpx;
+  color: #999999;
+  padding-top: 152rpx;
+}
+.null-page-wrap .null-icon {
+  color: #BDBDBD;
+  font-size: 152rpx;
+  margin-bottom: 32rpx;
+}
+
+/** 字体图标 **/
+
+@font-face {
+  font-family: 'iconfont';  /* project id 606896 */
+  src: url('//at.alicdn.com/t/font_606896_vfs007ajnrrdaemi.eot');
+  src: url('//at.alicdn.com/t/font_606896_vfs007ajnrrdaemi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_606896_vfs007ajnrrdaemi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_606896_vfs007ajnrrdaemi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_606896_vfs007ajnrrdaemi.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-iconfonttianjia:before { content: "\e60f"; }
+
+.icon-gouwuche-copy:before { content: "\e62d"; }
+
+.icon-duihao:before { content: "\e60b"; }
+
+.icon-dizhi:before { content: "\e62e"; }
+
+.icon-tongzhi:before { content: "\e647"; }
+
+.icon-tuijian:before { content: "\e7b6"; }
+
+.icon-guanbi-:before { content: "\e659"; }
+
+.icon-bianji:before { content: "\e63b"; }
+
+.icon-zanwudingdanjilu:before { content: "\e600"; }
+
+.icon-wodehuodong-zanwuhuodong:before { content: "\e63f"; }
+
+.icon-youhuiquan:before { content: "\e62f"; }
+
+.icon-youhuiquan1:before { content: "\e65c"; }
+
+.icon-icon_shanchu:before { content: "\e641"; }
+
+.icon-tianjia:before { content: "\e644"; }
+
+.icon-Triangle:before { content: "\e645"; }
+

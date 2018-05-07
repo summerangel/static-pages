@@ -1,0 +1,120 @@
+<!--pages/OrderDetail/OrderDetail.wxml-->
+<view class='order-title'>订单详情</view>
+
+<!--订单完成状态-->
+<view class='order-status-detail'>
+  <view style='background: #fff;padding-top:20px;padding-bottom:20px;'>
+    <view class='status'>
+      <icon type="success" size="20" color='#76C91C'/>
+      <text class='status-name'>订单已完成</text>
+    </view>
+    <view class='status-text'>感谢您对我们的支持，欢迎再次光临</view>
+    <view class='status-again-btn'>再来一单</view>
+  </view>
+</view>
+<view class='gray-line'></view>
+<!--订单已取消状态-->
+<view class='order-status-detail'>
+  <view style='background: #fff;padding-top:20px;padding-bottom:20px;'>
+    <view class='status'>
+      <icon type="clear" size="20" color='#D6D6D6'/>
+      <text class='status-name'>订单已取消</text>
+    </view>
+    <view class='status-text'>感谢您对我们的支持，欢迎再次光临</view>
+    <view class='status-again-btn'>再来一单</view>
+  </view>
+</view>
+<view class='gray-line'></view>
+<!--订单待支付状态-->
+<view class='order-status-detail'>
+  <view style='background: #fff;padding-top:20px;padding-bottom:20px;'>
+    <view class='status'>
+      <icon type="waiting" size="20" color='#F5A623'/>
+      <text class='status-name'>订单待支付</text>
+    </view>
+    <view class='status-text'>感谢您对我们的支持，欢迎再次光临</view>
+    <view>
+      <view class='footer-again-btn'>再来一单</view>
+      <view class='footer-pay-btn'>立即支付</view>
+    </view>
+  </view>
+</view>
+<view class='gray-line'></view>
+
+<view class='order-pay-wrap'>
+  <view class='order-wrap'>
+  <view class='order-info'>
+    <image style='width:25px;height:25px;'
+    src="http://fuss10.elemecdn.com/e/ba/d452f0b9382bef65e7e5da063c14cpng.png?imageMogr/format/webp/thumbnail/!138.13333333333333x138.13333333333333r/gravity/Center/crop/138.13333333333333x138.13333333333333/"></image>
+    <view class='shop-name'>满江红大酒楼</view>
+  </view>
+
+  <block wx:for="{{[0, 1, 2]}}" wx:key="{{index}}">
+    <view class='goods-each'>
+    <image style='width:70px;height:47px;'
+src='https://fuss10.elemecdn.com/3/91/a2c62b16d29c3db1c0d6045ab14f5jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/'></image>
+    <view class='goods-info'>
+      <view class='goods-name-price'>
+        <view class='goods-name'>招牌红烧排骨</view>
+        <view class='goods-price'>￥55</view>
+      </view>
+      <view class='goods-num'>x <span>1</span></view>
+    </view>
+  </view>
+  </block>
+  
+  <view class='coupon-area-wrap'>
+    <view class='circle-top-left'></view>
+    <view class='circle-top-right'></view>
+     <view class='coupon-used'>
+      <view class='substract'>
+        <view class='minus'>￥</view>
+        <view>优惠券</view>
+      </view>
+      <view class='coupon-price'>-￥<span>7</span></view>
+    </view>
+    <view class='coupon-used' style='margin-bottom:0;'>
+      <view class='substract'>
+        <view class='minus'>减</view>
+        <view>满减活动</view>
+      </view>
+      <view class='coupon-price'>-￥<span>18</span></view>
+    </view>
+    <!-- <view class='coupon-can-use'>
+      <view>优惠券</view>
+      <view class='num-wrap'>
+        <view class='coupon-number'><span>1</span>张可用</view>
+        <view class='arrow-right'></view>
+      </view>
+    </view>
+    <view class='coupon-no-use'>
+      <view>商家代金券</view>
+      <view class='gray'>暂无可用</view>
+    </view> -->
+    <view class='circle-bottom-left'></view>
+    <view class='circle-bottom-right'></view>
+  </view>
+  <view class='real-pay'>
+      <view>实付</view>
+      <view class='real-pay-amount'>￥55.9</view>
+    </view>
+</view>
+</view>
+
+<view class='gray-line'></view>
+
+<view class='order-status-detail'>
+  <view style='background: #fff;padding-top:15px;'>
+    <view class='bar-list'>
+      <view>订单号码</view>
+      <view class='bar-right'>737474892745</view>
+    </view>
+    <view class='bar-list'>
+      <view>订单时间</view>
+      <view class='bar-right'>2018-03-17 18:45</view>
+    </view>
+  </view>
+</view>
+
+<view class='gray-line'></view>
+<view class='gray-line'></view>

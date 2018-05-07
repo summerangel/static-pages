@@ -1,0 +1,255 @@
+/* pages/OrderDetail/OrderDetail.wxss */
+Page {
+  background-color: #f0f0f0;
+}
+.order-title {
+  font-size: 22px;
+  color: #333333;
+  padding: 15px 20px;
+  font-weight: bold;
+  /* background-color: #F6F6F6; */
+}
+
+.order-status-detail {
+  /* background-color: #F6F6F6; */
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+.order-status-detail .status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.order-status-detail .status .status-name {
+  font-size: 16px;
+  color: #333333;
+  margin-left: 10px;
+}
+.order-status-detail .status-text {
+  font-size: 13px;
+  color: #999999;
+  padding-top: 8px;
+  padding-bottom: 15px;
+}
+.order-status-detail .status-again-btn {
+  border: 1px solid #DC4950;
+  border-radius: 100px;
+  width: 83px;
+  height: 30px;
+  line-height: 28px;
+  font-size: 13px;
+  color: #DC4950;
+  margin: auto;
+}
+.order-status-detail .footer-again-btn {
+  border: 1px solid #D6D6D6;
+  border-radius: 100px;
+  font-size: 13px;
+  color: #333333;
+  width: 83px;
+  height: 30px;
+  line-height: 28px;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+}
+ .order-status-detail .footer-pay-btn {
+  font-size: 13px;
+  color: #FFFFFF;
+  width: 83px;
+  height: 30px;
+  line-height: 28px;
+  text-align: center;
+  background: #DC4950;
+  border-radius: 100px;
+  display: inline-block;
+}
+
+.gray-line {
+  /* background: #F6F6F6; */
+  height: 10px;
+  width: 100%;
+}
+
+.order-pay-wrap {
+  /* background-color: #F6F6F6; */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.order-wrap {
+  background-color: #FFFFFF;
+}
+.order-wrap .order-info {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+.order-wrap .order-info .shop-name {
+  font-size: 14px;
+  color: #999999;
+  padding-left: 10px;
+}
+.order-wrap .goods-each {
+  display: flex;
+  padding: 15px;
+  border-top: 1px solid #F6F6F6;
+}
+.goods-info {
+  flex: 1;
+  margin-left: 10px;
+}
+.goods-info .goods-name-price {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+.goods-info .goods-name-price .goods-name {
+  
+}
+.goods-info .goods-name-price .goods-price {
+
+}
+.goods-info .goods-num {
+  font-size: 13px;
+  color: #999999;
+}
+
+.coupon-area-wrap {
+  position: relative;
+  padding: 15px;
+  border-top: 1px solid #F6F6F6;
+  border-bottom: 1px solid #F6F6F6;
+}
+.coupon-area-wrap .circle-top-left {
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  width: 14px;
+  height: 14px;
+  background-color: #f0f0f0;
+  border-radius: 14px;
+}
+.coupon-area-wrap .circle-top-right {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  width: 14px;
+  height: 14px;
+  background-color: #f0f0f0;
+  border-radius: 14px;
+}
+.coupon-area-wrap .circle-bottom-left {
+  position: absolute;
+  bottom: -7px;
+  left: -7px;
+  width: 14px;
+  height: 14px;
+  background-color: #f0f0f0;
+  border-radius: 14px;
+}
+.coupon-area-wrap .circle-bottom-right {
+  position: absolute;
+  bottom: -7px;
+  right: -7px;
+  width: 14px;
+  height: 14px;
+  background-color: #f0f0f0;
+  border-radius: 14px;
+}
+.coupon-area-wrap .coupon-used {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.coupon-area-wrap .coupon-used .substract {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+  color: #333333;
+}
+.coupon-area-wrap .coupon-used .minus {
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  font-size: 12px;
+  color: #FFFFFF;
+  background-color: #DC4950;
+  margin-right: 12px;
+  text-align: center;
+}
+.coupon-area-wrap .coupon-used .coupon-price {
+  font-size: 14px;
+  color: #DC4950;
+}
+.coupon-area-wrap .coupon-can-use {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #333333;
+  margin-bottom: 15px;
+}
+.coupon-area-wrap .coupon-can-use .num-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.coupon-area-wrap .coupon-can-use .coupon-number {
+  font-size: 14px;
+  color: #DC4950;
+  margin-right: 8px;
+}
+.coupon-area-wrap .coupon-can-use .arrow-right::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid #D6D6D6;
+  border-right: 1px solid #D6D6D6;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.coupon-area-wrap .coupon-no-use {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #333333;
+}
+
+.real-pay {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px;
+  font-size: 14px;
+  color: #333333;
+}
+.real-pay .real-pay-amount {
+  padding-left: 7px;
+  color: #DC4950;
+}
+
+.mLeft10 {
+  margin-left: 10px;
+}
+.gray {
+  color: #999999;
+}
+
+.bar-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #999999;
+  padding: 0 15px 15px 15px;
+}
+.bar-list .bar-right {
+  color: #333333;
+}

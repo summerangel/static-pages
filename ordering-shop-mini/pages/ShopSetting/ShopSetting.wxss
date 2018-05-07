@@ -1,0 +1,78 @@
+/* pages/ShopSetting/ShopSetting.wxss */
+.shop-setting-wrapper {
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+}
+.shop-setting-wrapper .shop-title {
+  font-size: 44rpx;
+  color: #333333;
+  padding-top: 18rpx;
+  padding-bottom: 72rpx;
+  border-bottom: 2rpx solid #F6F6F6;
+  font-weight: 500;
+}
+.shop-setting-wrapper .bar-list {
+
+}
+.shop-setting-wrapper .bar-list .bar-item {
+  padding-top: 40rpx; 
+  padding-bottom: 40rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32rpx;
+  color: #333333;
+  border-bottom: 2rpx solid #F6F6F6;
+}
+.shop-setting-wrapper .bar-list .bar-right {
+   display: inline-block;
+   position: relative;
+   font-size: 28rpx;
+   color: #BDBDBD;
+   text-align: right;
+}
+.placeholder {
+  text-align: right;
+  font-size: 32rpx;
+  color: #BDBDBD;
+}
+.shop-setting-wrapper .bar-list .bar-arrow {
+  display: inline-block;
+  position: relative;
+  padding-right: 44rpx;
+}
+.shop-setting-wrapper .bar-item .bar-arrow::after {
+  display: inline-block;
+  content: "";
+  height: 18rpx;
+  width: 18rpx;
+  border-width: 2rpx 2rpx 0 0;
+  border-color: #D6D6D6;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -9rpx;
+} 
+.shop-setting-wrapper .bar-item .image-style {
+  width: 88rpx;
+  height: 88rpx; 
+  border-radius:4rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.shop-setting-wrapper .confirm-btn {
+  background: #B9D8FC;
+  border-radius: 100px;
+  font-size: 17px;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 22rpx;
+  padding-bottom: 22rpx;
+  margin: 80rpx 24rpx 0 24rpx;
+}
+.shop-setting-wrapper .confirm-btn.active {
+  background: #5B9DEA;
+}

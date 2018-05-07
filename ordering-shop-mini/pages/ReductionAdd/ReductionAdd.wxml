@@ -1,0 +1,22 @@
+<!--pages/ReductionAdd/ReductionAdd.wxml-->
+<view class='reduction-add-wrapper'>
+  <view class='add-title'>新增满减活动</view>
+  <view class='info-input-wrap'>
+    <view>优惠门槛(元)</view>
+    <view class='input-wrap'>
+      <view>满</view> 
+      <input class='input-style' placeholder-class='input-plac' placeholder='输入金额'></input>
+    </view>
+  </view>
+  <view class='info-input-wrap'>
+    <view>减现金(元)</view>
+    <view class='input-wrap'>
+      <view>减</view> 
+      <input class='input-style' placeholder-class='input-plac' placeholder='输入金额'></input>
+    </view>
+  </view>
+
+  <view class='btn-wrap'>
+    <view class="confirm-add-btn {{ canConfirmable ? 'active' : '' }}">确定新增</view>
+  </view>
+</view>

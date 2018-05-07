@@ -1,0 +1,25 @@
+<!--pages/ShopSetting/ShopSetting.wxml-->
+<view class='shop-setting-wrapper'>
+  <view class='shop-title'>店铺设置</view>
+  <view class='bar-list'>
+    <view style='padding-top: 18rpx;padding-bottom: 18rpx;' class='bar-item' bindtap='chooseImage'>
+      <view>店铺头像</view>
+      <view class='bar-arrow'>
+        <image class='image-style' src='{{ shopImage }}'></image>
+      </view>
+    </view>
+    <view class='bar-item'>
+      <view>店铺名称</view>
+      <input class='bar-right' placeholder-class='placeholder' placeholder='请输入店铺名称'></input>
+    </view>
+     <view class='bar-item'>
+      <view>客服电话</view>
+      <input class='bar-right' placeholder-class='placeholder' placeholder='请输入店铺客服电话'></input>
+    </view>
+     <view class='bar-item'>
+      <view>店铺地址</view>
+      <input class='bar-right' placeholder-class='placeholder' placeholder='请输入店铺地址'></input>
+    </view>
+  </view>
+  <view class="confirm-btn {{ canConfirmable ? 'active' : '' }}">确定</view>
+</view>

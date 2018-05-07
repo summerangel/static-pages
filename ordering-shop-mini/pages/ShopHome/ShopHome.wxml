@@ -1,0 +1,109 @@
+<!--pages/ShopHome/ShopHome.wxml-->
+<!-- <view class='coupon-manage-wrap'>
+  <view class='coupon-each'>
+    <view class='img'>
+      <image src='/pages/image/home/coupon.png' style='width:50rpx;height:50rpx;'></image>
+    </view>
+    <view class='manage-wrap'>
+      <view class='manage-title'>优惠券管理</view>
+      <view class='manage-desc'>查看、发放优惠券</view>
+    </view>
+  </view>
+  <view class='coupon-each'>
+    <view class='img'>
+      <image src='/pages/image/home/activity.png' style='width:50rpx;height:50rpx;'></image>
+    </view>
+    <view class='manage-wrap'>
+      <view class='manage-title'>满减活动管理</view>
+      <view class='manage-desc'>管理数量、金额</view>
+    </view>
+  </view>
+</view> -->
+
+<view class='order-list-title'>
+  <view class='title-wrap'>
+    <view class='title-name'>订单管理</view>
+    <view class='title-num'>已接单98</view>
+  </view>
+  <view class='order-filter-wrap'>
+    <view class='filter-btn' bindtap='filterTapHandle'>
+      <view>{{ filterList[selectedFilterIndex].text }}</view>
+      <view class='iconfont icon-Triangle arrow-down'></view>
+    </view>
+    <view wx:if="{{ isExpandFilter }}" class='filter-down-show'>
+      <view class='filter-condition'>
+        <view wx:key="unique" wx:for="{{ filterList }}" class="condition-each {{ item.isSelected ? 'active' : '' }}" bindtap='filterSelectHandle' data-filter='{{ item.id }}'>{{ item.text }}</view>
+        <!-- <view class="condition-each {{ filterValue == 'yesterday' ? 'active' : '' }}" bindtap='filterSelectHandle' data-filter='yesterday'>昨日订单</view>
+        <view class="condition-each {{ filterValue == 'weekly' ? 'active' : '' }}" bindtap='filterSelectHandle' data-filter='weekly'>近7天订单</view> -->
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='order-tab-wrap'>
+  <view class="tab-each {{ currIndex == 0 ? 'active' : '' }}" bindtap='tabSelectHandle' data-index='0'>待付款(20)</view>
+  <view class="tab-each {{ currIndex == 1 ? 'active' : '' }}" bindtap='tabSelectHandle' data-index='1'>已完成(12)</view>
+  <view class="tab-each {{ currIndex == 2 ? 'active' : '' }}" bindtap='tabSelectHandle' data-index='2'>已取消(0)</view>
+</view>
+
+<block wx:if="{{ false }}" wx:for="{{ [0, 1, 2] }}" wx:key="unique">
+  <view class='order-detail-wrap'>
+  <view class='order-detail'>
+      <view class='order-title'>
+        <view>下单时间：2018.04.01 11:14</view>
+        <view class='status'>待付款</view>
+      </view>
+      <view class='order-body'>
+        <view class='order-item'>
+          <view class='goods-name'>商品名称：</view>
+          <view class='goods-detail'>
+            <view class='item-each'>
+              <view>招牌红烧排骨</view>
+              <view>x1</view>
+            </view>
+            <view class='item-each'>
+              <view>特色油炸桂鱼</view>
+              <view>x1</view>
+            </view>
+          </view>
+        </view>
+        <view class='order-item'>
+          <view class='goods-name'>顾客昵称：</view>
+          <view class='goods-detail'>
+            <view class='item-each'>
+              <view>董小姐</view>
+              <view></view>
+            </view>
+          </view>
+        </view>
+      </view> 
+      <view class='order-body'>
+        <view class='order-item-each'>订单号码：737474892745</view>
+        <view class='order-item-each'>优惠券：-¥20</view>
+        <view class='order-item-each'>满减活动：-¥16</view>
+        <view class='order-item-each'>订单金额：¥110</view>
+      </view>
+      <view class='order-btn'>
+        <view class='operate-btn' bindtap='cancelOrder'>取消订单</view>
+      </view>
+    </view>
+  </view>
+</block>
+
+<!-- 新增空态 start -->
+<block wx:if="{{ true }}">
+  <view class='null-page-wrap'>
+    <view class='iconfont icon-zanwudingdanjilu null-icon'></view>
+    <view class=''>暂无订单</view>
+  </view>
+</block>
+<!-- 新增空态 end -->
+
+<dialog id='dialog'
+    title='提示'
+    content='确定取消该订单吗？'
+    cancelText='取消'
+    confirm='确定'
+    bind:cancelEvent="_cancelEvent"
+    bind:confirmEvent="_confirmEvent"
+  ></dialog>

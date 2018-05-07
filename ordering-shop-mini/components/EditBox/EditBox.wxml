@@ -1,0 +1,17 @@
+<!--components/promptBox/promptBox.wxml-->
+<view class='edit-box-wrap' hidden="{{!isShow}}">
+    <view class='edit-mask'></view>
+    <view class='edit-body'>
+        <view class='edit-title'>
+          {{ title }}
+          <view class='iconfont icon-guanbi- box-close' catchtap='_closeBoxEvent'></view>
+        </view>
+        <view class='edit-content'>
+          <input type='text' class='edit-input' placeholder='请输入菜品分类名称' value='{{ value }}' bindblur='_inputEvent'></input>
+          <view class='iconfont icon-iconfonttianjia delete' catchtap='_deleteInputEvent'></view>
+        </view>
+        <view class='btn-wrap'>
+          <view class='confirm-btn' catchtap='_confirmEvent'>{{ confirmText }}</view>
+        </view>
+    </view>
+</view>

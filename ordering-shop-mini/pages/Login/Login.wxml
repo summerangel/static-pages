@@ -1,0 +1,21 @@
+<!--pages/Login/Login.wxml-->
+<view class='login-wrapper'>
+  <view class='image-wrap'>
+    <image style='width: 126rpx;height: 126rpx;border-radius: 126rpx;' src='https://fuss10.elemecdn.com/0/a3/2da88bf6180ea48fa3a23f4b5b9a4jpeg.jpeg'></image>
+  </view>
+  <view class='input-wrap'>
+    <input class='item-input' placeholder='请输入手机号码'></input>
+    <view class='code-get {{ (countDownNum != constDownNum) ? "waiting" : "" }}' bindtap='codeGet'>{{ codeShow }}</view>
+  </view>
+  <view class='input-wrap'>
+    <input class='item-input' placeholder='请输入验证码'></input>
+  </view>
+  <view class='btn-wrap'>
+    <view class='login-btn' bindtap='confirmLogin'>登录</view>
+    <view>登录即表示同意<span class="user-protocol">《用户服务协议》</span></view>
+  </view>
+  <view class='bottom-info-wrap'>
+    <view class='contact' bindtap='makePhoneCall'>联系客服</view>
+    <view>上海小幸运信息技术有限公司</view>
+  </view>
+</view>

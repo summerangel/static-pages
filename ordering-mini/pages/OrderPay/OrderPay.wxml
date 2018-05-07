@@ -1,0 +1,76 @@
+<!--pages/OrderPay/OrderPay.wxml-->
+<view class='summit-title'>提交订单</view>
+
+<!-- 新增输入桌号 -->
+<view class='table-info-wrap'>
+  <view class='bg-wrap'>
+    <view class='input-wrap'>
+      <view class='input-label'>桌号</view>
+      <input class='input-style' placeholder='请输入您的桌号' placeholder-class='placeholder-style'></input>
+    </view>
+    <view class='input-wrap'>
+      <view class='input-label'>备注</view>
+      <input class='input-style' placeholder='30字以内' placeholder-class='placeholder-style'></input>
+    </view>
+  </view>
+</view>
+
+<view class='order-pay-wrap'>
+  <view class='order-wrap'>
+  <view class='order-info'>
+    <image style='width:25px;height:25px;'
+    src="http://fuss10.elemecdn.com/e/ba/d452f0b9382bef65e7e5da063c14cpng.png?imageMogr/format/webp/thumbnail/!138.13333333333333x138.13333333333333r/gravity/Center/crop/138.13333333333333x138.13333333333333/"></image>
+    <view class='shop-name'>满江红大酒楼</view>
+  </view>
+
+  <block wx:for="{{[0, 1, 2]}}" wx:key="{{index}}">
+    <view class='goods-each'>
+    <image style='width:70px;height:47px;'
+src='https://fuss10.elemecdn.com/3/91/a2c62b16d29c3db1c0d6045ab14f5jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/'></image>
+    <view class='goods-info'>
+      <view class='goods-name-price'>
+        <view class='goods-name'>招牌红烧排骨</view>
+        <view class='goods-price'>￥55</view>
+      </view>
+      <view class='goods-num'>x <span>1</span></view>
+    </view>
+  </view>
+  </block>
+  
+  <view class='coupon-area-wrap'>
+    <view class='circle-top-left'></view>
+    <view class='circle-top-right'></view>
+    <view class='coupon-used'>
+      <view class='substract'>
+        <view class='minus'>减</view>
+        <view>满减活动</view>
+      </view>
+      <view class='coupon-price'>-￥<span>18</span></view>
+    </view>
+    <view class='coupon-can-use' bindtap='goCouponSelect'>
+      <view>优惠券</view>
+      <view class='num-wrap'>
+        <view class='coupon-number'><span>1</span>张可用</view>
+        <view class='arrow-right'></view>
+      </view>
+    </view>
+    <view class='coupon-no-use'>
+      <view>商家代金券</view>
+      <view class='gray'>暂无可用</view>
+    </view>
+    <view class='circle-bottom-left'></view>
+    <view class='circle-bottom-right'></view>
+  </view>
+  <view class='real-pay'>
+      <view>实付</view>
+      <view class='real-pay-amount'>￥55.9</view>
+  </view>
+</view>
+
+<view class='btn-wrap'>
+  <button class='btn-pay' catchtap="payImmediately">
+    <span>￥55.9</span>
+    <span class="mLeft10">立即支付</span>
+  </button>
+</view>
+</view>

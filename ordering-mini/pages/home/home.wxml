@@ -1,0 +1,93 @@
+<!--home.wxml-->
+<view>
+</view>
+
+<view class='shop-info-wrap'>
+  <view class='shop-logo'>
+    <image style='width: 58px;height: 58px;' src='/pages/image/shop/shop.jpg'></image>
+  </view>
+  <view class='shop-info'>
+    <view class='shop-name'>满江红酒楼</view>
+    <view class='icon-text'>
+      <view class='iconfont icon-dizhi shop-icon'></view>
+      <view class='shop-text'>上海市静安区广中路1025弄</view>
+    </view>
+  </view>
+</view>
+
+<view class='activity-bar-wrap'>
+  <view class='iconfont icon-tongzhi activity-icon'></view>
+  <view class='activity-text'>满75减5，满120减10</view>
+</view>
+
+<view class='coupon-wrap'>
+  <view class='coupon-text'>优惠券</view>
+  <view>
+    <scroll-view class="scroll-view_H" scroll-x scroll-with-animation >
+    <block wx:for="{{couponList}}" wx:key="{{id}}">
+      <view class='coupon-each'>
+        <view class='coupon-price-wrap'>
+          <view class='coupon-price-icon'>￥</view>
+          <view class='coupon-price'>{{item.price}}</view>
+        </view>
+        <view wx:if="{{item.limitPrice !== 0}}" class='coupon-use-limit'>满{{item.limitPrice}}可用</view>
+        <view wx:if="{{item.limitPrice === 0}}" class='coupon-use-limit'>满任意金额可用</view>
+        <view class='coupon-btn-wrap'>
+          <view wx:if="{{item.isAccepted}}" class='coupon-btn active'>已领取</view>
+          <view wx:if="{{!item.isAccepted}}" class='coupon-btn'>立即领取</view>
+          <view class='coupon-left-circle'></view>
+          <view class='coupon-right-circle'></view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+  </view>
+</view>
+
+<view class='hot-recommend-wrap'>
+  <view class='recommend-text'>热卖推荐</view>
+  <view class='recommend-big-pic'>
+    <image style= "width:100%;height: 224px;border-radius:2px;" src='https://fuss10.elemecdn.com/2/66/79725c2fc60f198b94da096719fa6jpeg.jpeg'></image>
+    <view class='recommend-mark'>
+      <view class='mark-one'>TOP</view>
+      <view class='mark-num'>1</view>
+    </view>
+    <view class='triangle-top'></view>
+    <view class='triangle-bottom'></view>
+    <view class='bottom-wrap'>
+      <view class='recommend-bottom'>
+      <view class='recommend-name'>招牌红烧排骨</view>
+      <view class='right-price'>
+        <span class="recommend-icon">￥</span>
+        <span class="recommend-price">55</span>
+      </view>
+    </view>
+    </view>
+  </view>
+  <view class='small-pic-wrap'>
+    <view class='recommend-big-pic mLeft11'>
+    <image style= "width:100%;height:108px;border-radius:2px;" src='https://fuss10.elemecdn.com/6/50/03dd894e02a04da158c239827eb3ejpeg.jpeg'></image>
+    <view class='bottom-wrap'>
+      <view class='recommend-bottom' style='height:62px;'>
+      <view class='recommend-name'>特色油炸桂鱼</view>
+      <view class='right-price'>
+        <span class="recommend-icon">￥</span>
+        <span class="recommend-price">25.9</span>
+      </view>
+    </view>
+    </view>
+  </view>
+  <view class='recommend-big-pic'>
+    <image style= "width:100%;height:108px;border-radius:2px;" src='https://fuss10.elemecdn.com/e/d6/3a889ccb99955721523f9a953bfd8jpeg.jpeg'></image>
+    <view class='bottom-wrap'>
+      <view class='recommend-bottom' style='height:62px;'>
+      <view class='recommend-name'>精品时蔬茼蒿</view>
+      <view class='right-price'>
+        <span class="recommend-icon">￥</span>
+        <span class="recommend-price">25.9</span>
+      </view>
+    </view>
+    </view>
+  </view>
+  </view>
+</view>

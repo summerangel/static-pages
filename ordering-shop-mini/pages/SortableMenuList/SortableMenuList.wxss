@@ -1,0 +1,353 @@
+/* pages/SortableMenuList/SortableMenuList.wxss */
+
+page {
+    background-color: #fff;
+}
+
+/* 头部 */
+.menu-tab-wrap {
+  height:67px;
+  border-bottom: 2rpx solid #F6F6F6;
+  position: relative;
+}
+.menu-tab-wrap .menu-tab {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 14rpx;
+  padding-left: 40rpx;
+}
+.menu-tab-wrap .menu-goods {
+  font-size: 40rpx;
+  color: #BDBDBD;
+  padding-bottom: 20rpx;
+  padding-right: 50rpx;
+  font-weight: bold;
+  position: relative;
+}
+.menu-tab-wrap .menu-goods.active {
+  color: #333333;
+}
+.menu-tab-wrap .menu-goods.active .tab-underline {
+  width: 68rpx;
+  height: 8rpx;
+  background-color: #333333;
+  border-radius: 8rpx;
+  
+  position: absolute;
+  bottom: 0;
+  left: 22%;
+}
+.menu-tab-wrap .menu-add-btn {
+  position: absolute;
+  top: 5%;
+  right: 40rpx;
+   color: #FDCB47; 
+  font-size: 80rpx;
+}
+
+.touchView {
+    z-index: 200;
+    /* width: 100px; */
+    width: 60%;
+    position: absolute;
+    top: 0;
+    /* left: 275px; */
+    right: 0;
+}
+
+/* .edit_row {
+    width: 100%;
+    overflow: hidden;
+    font-size: 12px;
+    height: 65px;
+    box-sizing: border-box;
+    padding: 15px 0;
+    border-bottom: 1px #ddd solid;
+}
+
+.edit_col1 {
+    float: left;
+    width: 12%;
+    text-align: center;
+}
+
+.edit_col2 {
+    float: left;
+    width: 40%;
+}
+
+.edit_col3 {
+    float: left;
+    width: 24%;
+    text-align: center;
+}
+
+.edit_col4 {
+    float: left;
+    width: 23%;
+    text-align: center;
+    position: relative;
+}
+
+.edit_del {
+    float: left;
+    padding-right: 10px;
+    color: #fd7736;
+}
+
+.edit_finish {
+    float: right;
+    padding-right: 10px;
+    width: 24%;
+    height: 40px;
+    color: #fd7736;
+}
+
+.edit_row_title .edit_col4:before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 18px;
+    background-color: #e8e8e8;
+    left: 0%;
+    top: 50%;
+    margin-top: -9px;
+}
+
+.edit_title_col1 {
+    position: relative;
+    left: 10px;
+} */
+
+/* .stay_top {
+    height: 47px;
+    line-height: 47px;
+} */
+
+/* .stay_top .edit_row {
+    height: 47px;
+    padding: 0;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: rgba(89, 89, 89, .8);
+    font-size: 14px;
+} */
+
+.edit_row_holder {
+    background-color: #fff;
+}
+
+/* .edit_row_on .ico_checker {
+    background-position: 0 -17px;
+} */
+
+.moveable_row {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* .moveable_row .edit_row {
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2)
+} */
+
+.dragSelected {
+    background-color: #ccc;
+}
+
+/* .placeholder {
+    display: inline-block;
+    width: 1px;
+    height: 1px;
+} */
+
+/* .secname {
+    font-size: 17px;
+    line-height: 1.2;
+} */
+
+/* .seccode {
+    font-size: 13px;
+    color: rgba(89, 89, 89, .6);
+    line-height: 1.2;
+} */
+/* 
+.stay_bottom {
+    height: 50px;
+} */
+
+/* .bottom_row {
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    line-height: 49px;
+    height: 49px;
+    border-top: 1px #a5a5a5 solid;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    bottom: 0;
+    font-size: 17px;
+    color: #929292;
+}
+
+.stay_bottom .all_select .ico_checker {
+    background-position: 0 -17px;
+} */
+
+
+
+
+.menu-list-wrap {
+   padding-left: 40rpx;
+   padding-right: 40rpx;
+   border-bottom: 2rpx solid #F6F6F6;
+}
+.menu-list {
+  height: 62px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-list .menu-icon {
+  display: flex;
+  align-items: center;
+}
+.menu-list .fold {
+  color: #5B9DEA;
+  font-size: 16rpx;
+}
+.menu-list .fold.expand {
+  transform: rotate(90deg);
+}
+.menu-list .item-name {
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: bold;
+  margin-left: 18rpx;
+  display: inline-block;
+}
+.menu-list .item-num {
+  font-size: 32rpx;
+  color: #999999;
+}
+
+.goods-info {
+  padding-top: 30rpx;
+  display: flex;
+  justify-content: flex-start;
+  z-index: 999;
+}
+.goods-info .icon {
+  flex: 0 0 114rpx;
+}
+.goods-info .goods-right {
+  height: 180rpx;
+  padding-left: 30rpx;
+  width: 100%;
+
+  position: relative;
+}
+.goods-info .goods-right .goods-name {
+  font-size: 32rpx;
+  color: #333333;
+}
+.goods-info .goods-right .price {
+  font-size: 36rpx;
+  color: #DC4950;
+
+  position: absolute;
+  left: 30rpx;
+  bottom: 0;
+}
+/* 新增修改,包括字体  */
+.goods-info .goods-right .iconfont {
+  font-size: 34rpx;
+}
+.goods-info .goods-right .active {
+  color: #5B9DEA;
+  font-size: 40rpx;
+  margin-top: 20rpx;
+}
+.goods-info .goods-right .disable {
+  color: #D6D6D6;
+  font-size: 40rpx;
+  margin-top: 20rpx;
+}
+.goods-info .goods-right .unshelf-btn {
+  /* width: 166rpx;
+  height: 60rpx; */
+  /* line-height: 60rpx; */
+  /* text-align: center; */
+  /* border: 2rpx solid #BDBDBD; */
+  /* border-radius: 200rpx; */
+  /* font-size: 26rpx; */
+  color: #666666;
+
+  position: absolute;
+  right: 80rpx;
+  bottom: 0;
+}
+.goods-info .goods-right .edit-btn {
+  color: #666666;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+
+/** 字体图标 **/
+
+@font-face {
+  font-family: 'iconfont';  /* project id 606896 */
+  src: url('//at.alicdn.com/t/font_606896_vfs007ajnrrdaemi.eot');
+  src: url('//at.alicdn.com/t/font_606896_vfs007ajnrrdaemi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_606896_vfs007ajnrrdaemi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_606896_vfs007ajnrrdaemi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_606896_vfs007ajnrrdaemi.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  /* font-size:16px; */
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-iconfonttianjia:before { content: "\e60f"; }
+
+.icon-gouwuche-copy:before { content: "\e62d"; }
+
+.icon-duihao:before { content: "\e60b"; }
+
+.icon-dizhi:before { content: "\e62e"; }
+
+.icon-tongzhi:before { content: "\e647"; }
+
+.icon-tuijian:before { content: "\e7b6"; }
+
+.icon-guanbi-:before { content: "\e659"; }
+
+.icon-bianji:before { content: "\e63b"; }
+
+.icon-zanwudingdanjilu:before { content: "\e600"; }
+
+.icon-wodehuodong-zanwuhuodong:before { content: "\e63f"; }
+
+.icon-youhuiquan:before { content: "\e62f"; }
+
+.icon-youhuiquan1:before { content: "\e65c"; }
+
+.icon-icon_shanchu:before { content: "\e641"; }
+
+.icon-tianjia:before { content: "\e644"; }
+
+.icon-Triangle:before { content: "\e645"; }

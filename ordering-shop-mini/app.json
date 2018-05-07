@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/ShopHome/ShopHome",
+    "pages/MenuList/MenuList",
+    "pages/SortableMenuList/SortableMenuList",
+    "pages/ShopCenter/ShopCenter",
+    "pages/MenuAdd/MenuAdd",
+    "pages/CouponList/CouponList",
+    "pages/CouponAdd/CouponAdd",
+    "pages/ReductionList/ReductionList",
+    "pages/ReductionAdd/ReductionAdd",
+    "pages/ShopSetting/ShopSetting",
+    "pages/Login/Login"
+  ],
+  "window": {
+    "backgroundColor": "#F0F0F0"
+  },
+  "tabBar": {
+    "selectedColor": "#333",
+    "list": [
+      {
+        "pagePath": "pages/ShopHome/ShopHome",
+        "text": "订单",
+        "iconPath": "pages/image/toolBar/icon_home.png",
+        "selectedIconPath": "pages/image/toolBar/icon_home_selected.png"
+      },
+      {
+        "pagePath": "pages/MenuList/MenuList",
+        "text": "菜品管理",
+        "iconPath": "pages/image/toolBar/icon_menu.png",
+        "selectedIconPath": "pages/image/toolBar/icon_menu_selected.png"
+      },
+      {
+        "pagePath": "pages/ShopCenter/ShopCenter",
+        "text": "店铺中心",
+        "iconPath": "pages/image/toolBar/icon_my.png",
+        "selectedIconPath": "pages/image/toolBar/icon_my_selected.png"
+      }
+    ]
+  }
+}

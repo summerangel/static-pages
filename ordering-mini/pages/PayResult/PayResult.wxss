@@ -1,0 +1,99 @@
+/* pages/PayResult/PayResult.wxss */
+Page {
+  background-color: #f0f0f0;
+}
+.result_contain{
+    padding:25% 0;
+    height:50%;
+}
+.icon-wrap {
+  width: 60px;
+  height: 60px;
+  border: 4px solid #40CBAF;
+  border-radius: 60px;
+  position: relative;
+  margin: auto;
+}
+.success {
+  position: absolute;
+  left: 0;
+  top: -17px;
+  font-size: 80px !important;
+  color: #40CBAF;
+}
+/* .result_img{
+    text-align:center;
+} */
+.result_content{
+    text-align: center;
+    font-size: 18px;
+    color: #333333;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.result_to_order{
+    display:block;
+    background-color:#DC4950;
+    color:#FFF;
+    font-size: 17px;
+    border-radius:83px;
+    width:70%;
+    text-align:center;
+    margin:20px auto;
+    padding:10px;
+}
+.result-to-home {
+    display:block;
+    background-color:#FFF;
+    color:#DC4950;
+    font-size: 17px;
+    border-radius:83px;
+    border: 1px solid #DC4950;
+    width:70%;
+    text-align:center;
+    margin:20px auto;
+    padding:10px;
+}
+
+/* 字体图标 */
+
+@font-face {
+  font-family: 'iconfont';  /* project id 606896 */
+  src: url('//at.alicdn.com/t/font_606896_3qvh15ej7yeng66r.eot');
+  src: url('//at.alicdn.com/t/font_606896_3qvh15ej7yeng66r.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_606896_3qvh15ej7yeng66r.woff') format('woff'),
+  url('//at.alicdn.com/t/font_606896_3qvh15ej7yeng66r.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_606896_3qvh15ej7yeng66r.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-gouwuche-copy:before { content: "\e62d"; }
+
+.icon-duihao:before { content: "\e60b"; }
+
+.icon-dizhi:before { content: "\e62e"; }
+
+.icon-tongzhi:before { content: "\e647"; }
+
+.icon-shishangquanxuanzhong:before { content: "\e634"; }
+
+.icon-shishangquan:before { content: "\e635"; }
+
+.icon-shouye:before { content: "\e639"; }
+
+.icon-shouyexuanzhong:before { content: "\e63a"; }
+
+.icon-wodexuanzhong:before { content: "\e63b"; }
+
+.icon-wode:before { content: "\e63c"; }
+
+.icon-jianhao:before { content: "\e640"; }
+
+.icon-jiahao:before { content: "\e641"; }

@@ -1,0 +1,45 @@
+<!--pages/CouponSelect/CouponSelect.wxml-->
+<!--pages/CouponList/CouponList.wxml-->
+<view class='coupon-title'>我的优惠券</view>
+
+<view class='coupon-list-wrapper'>
+  <block wx:for="{{[0, 1, 2]}}">
+    <view class='coupon-each'>
+      <view class='each-left'>
+        <view class='price-wrap'>
+          <span style="position:relative;top:-14px;">￥</span>
+          <span class="coupon-price">10</span>
+        </view>
+        <view>满任意金额可用</view>
+      </view>
+      <view class='each-right'>
+        <view class='coupon-type'>通用优惠券</view>
+        <view>限2018.3.27-2018.4.27使用</view>
+        <view wx:if="{{item !== 0}}" class='empty-circle'></view>
+        <icon wx:if="{{item === 0}}" class='go-use-coupon' type='success' size='25' color='#DC4950'></icon>
+      </view>
+    </view>
+  </block>
+  <block wx:for="{{[0, 1]}}">
+    <view class='coupon-each-wrap'>
+        <view class='coupon-each'>
+          <view class='coupon-disable'></view>
+          <view class='each-left'>
+            <view class='price-wrap'>
+              <span style="position:relative;top:-14px;color:#D6D6D6;">￥</span>
+              <span class="coupon-price" style="color:#D6D6D6;">5</span>
+            </view>
+          <view>满35可用</view>
+        </view>
+        <view class='each-right'>
+          <view class='coupon-type'>通用优惠券</view>
+          <view>限2018.3.27-2018.4.27使用</view>
+        </view>
+      </view>
+      <view class='reason-wrap'>
+        <view class='reason-title'>不可用原因：</view>
+        <view class='reason-body'>所购商品需满35元，还差14.81元可用</view>
+      </view>
+    </view>
+  </block>
+</view>

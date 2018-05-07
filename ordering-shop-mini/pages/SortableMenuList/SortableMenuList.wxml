@@ -1,0 +1,138 @@
+<!--pages/SortableMenuList/SortableMenuList.wxml-->
+<!-- <view class="stay_top">
+	<view class="edit_row edit_row_title">
+		<view class="edit_col1"><view class="edit_title_col1">删除</view></view>
+		<view class="edit_col2"><view class="placeholder"></view></view>
+		<view class="edit_col3">置顶</view>
+		<view class="edit_col4">排序</view>
+	</view>
+</view>  -->
+<view class='menu-tab-wrap'>
+  <view class='menu-tab'>
+    <view class="menu-goods {{ currIndex == 0 ? 'active' : '' }}" bindtap='tabSelect' data-index='0'>
+      上架菜品
+      <view class='tab-underline'></view>
+    </view>
+    <view class="menu-goods {{ currIndex == 1 ? 'active' : '' }}" bindtap='tabSelect' data-index='1'>
+      下架菜品
+      <view class='tab-underline'></view>
+    </view>
+  </view>
+  <navigator url='/pages/MenuAdd/MenuAdd' class='iconfont icon-tianjia menu-add-btn'></navigator>
+</view>
+
+<!-- 上架菜品区域 -->
+<view wx:if="{{ currIndex == 0 }}" style="position: relative; z-index: 199;">
+	<view wx:if="{{ dragLayerShow }}" class="touchView" style="height:{{scrollPosition.scrollViewHeight}}px;"  
+	  	  catchtouchstart="draggleTouch"
+		  catchtouchmove="draggleTouch" 
+		  catchtouchend="draggleTouch">
+	</view>
+	<movable-area class="moveable_row {{movableViewPosition.className}}"
+				  style="height: {{scrollPosition.scrollViewHeight}}px;">
+		<movable-view style="height: {{scrollPosition.everyOptionCell}}px; width: 100%; background-color: #fff;"
+					  direction="vertical" x="{{movableViewPosition.x}}" y="{{movableViewPosition.y}}"
+					  inertia="false" damping="9999"  friction="9999">
+			
+      <view class='menu-list-wrap' catchtap='cateTapHandler'>
+        <view class='menu-list'>
+          <view class='menu-icon'>
+            <span class="iconfont icon-Triangle fold {{ movableViewPosition.data.isExpand ? 'expand' : '' }}"></span>
+            <view class='item-name'>{{ movableViewPosition.data.cateName }}</view>
+          </view>
+          <view class='item-num'>{{ movableViewPosition.data.cateNum }}</view>
+        </view>
+        <view wx:if="{{ movableViewPosition.data.isExpand }}" style='padding-top: 10rpx;padding-bottom: 40rpx;'>
+          <view wx:for="{{ movableViewPosition.data.goodsList }}" class='goods-info' wx:key="unique">
+            <image src='{{ item.goodsImage }}' style='width:268rpx;height:180rpx;border-radius:4rpx;'></image>
+            <view class='goods-right'>
+              <view class='goods-name'>{{ item.goodsName }}</view>
+              <view class='price'>￥{{ item.goodsPrice }}</view>
+              <!-- <view class='unshelf-btn' catchtap='shelfGoods'>下架</view> -->
+              <view class='iconfont icon-bianji unshelf-btn' catchtap='shelfGoods'></view>
+              <view class='iconfont icon-icon_shanchu unshelf-btn' catchtap='shelfGoods'></view>
+            </view>
+          </view>
+        </view>
+      </view>
+      
+      <!-- <view class="edit_row ">
+				<view class="edit_col1" data-seccode="{{movableViewPosition.data.sDtSecCode}}" bindtap="selectOption"><view class="ico_delete"></view></view>
+				<view class="edit_col2"><view class="secname">{{movableViewPosition.data.sName}}</view><view class="seccode">{{movableViewPosition.data.sDtSecCode}}</view></view>
+				<view class="edit_col3" data-seccode="{{movableViewPosition.data.sDtSecCode}}"  bindtap="putOptionTop"><view class="ico_stay_top"></view></view>
+				<view class="edit_col4" data-seccode="{{movableViewPosition.data.sDtSecCode}}"><view class="ico_drag"></view></view>
+			</view> -->
+
+		</movable-view>
+	</movable-area>
+	<scroll-view class="edit_row_holder" scroll-y="{{scrollPosition.scrollY}}"
+				 style="height: {{scrollPosition.scrollViewHeight}}px;" bindscroll="bindscroll">
+
+    <view wx:for="{{ optionsListData }}" wx:key="categoryId" wx:for-index="parentIndex">
+      <view class='menu-list-wrap {{item.selectClass}}'>
+        <view class='menu-list' catchtap='cateTapHandler' data-parentIndex="{{parentIndex}}" data-category='{{ item }}'>
+          <view class='menu-icon'>
+            <span class="iconfont icon-Triangle fold {{ item.isExpand ? 'expand' : '' }}"></span>
+            <view class='item-name'>{{ item.cateName }}</view>
+          </view>
+          <view class='item-num'>{{ item.cateNum }}</view>
+        </view>
+        <view wx:if="{{ item.isExpand }}" style='padding-top: 10rpx; padding-bottom: 40rpx;'>
+          <view wx:for="{{ item.goodsList }}" class='goods-info' wx:key="unique">
+            <image src='{{ item.goodsImage }}' style='width:268rpx;height:180rpx;border-radius:4rpx;'></image>
+            <view class='goods-right'>
+              <view class='goods-name'>{{ item.goodsName }}</view>
+              <view data-name=' {{ item.goodsName }}' catchtap='showRecommendDialog' wx:if="{{ index == 0 }}" class='iconfont icon-tuijian active'></view>
+              <view wx:if="{{ index != 0 }}" class='iconfont icon-tuijian disable'></view>
+              <view class='price'>￥{{ item.goodsPrice }}</view>
+              <!-- <view class='unshelf-btn' catchtap='shelfGoods'>下架</view> -->
+              <view class='iconfont icon-bianji edit-btn' catchtap='shelfGoods'></view>
+              <view class='iconfont icon-icon_shanchu unshelf-btn' catchtap='shelfGoods'></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+		<!-- <block wx:for="{{optionsListData}}" wx:key="sDtSecCode">
+			<view class="edit_row  {{item.selectClass}}">
+				<view class="edit_col1" data-seccode="{{item.sDtSecCode}}" bindtap="deleteOption"><view class="ico_delete"></view></view>
+				<view class="edit_col2"><view class="secname">{{item.sName}}</view><view class="seccode">{{item.sCode}}</view></view>
+				<view class="edit_col3" data-seccode="{{item.sDtSecCode}}"  bindtap="putOptionTop"><view class="ico_stay_top"></view></view>
+				<view class="edit_col4" data-seccode="{{item.sDtSecCode}}"><view class="ico_drag"></view></view>
+			</view>
+		</block> -->
+	</scroll-view>
+</view>
+
+<!-- 下架菜品区域 -->
+<view wx:if="{{ currIndex == 1 }}" style='padding-top: 10rpx;padding-left: 40rpx;padding-right: 40rpx;'>
+      <view wx:for="{{ [0, 1, 2, 3] }}" class='goods-info' wx:key="unique">
+        <view class='icon'>
+          <image   mode="scaleToFill" src='http://fuss10.elemecdn.com/c/cd/c12745ed8a5171e13b427dbc39401jpeg.jpeg' style='width:268rpx;height:180rpx;border-radius:4rpx;'></image>
+        </view>
+        <view class='goods-right'>
+          <view class='goods-name'>招牌红烧排骨</view>
+          <view class='price'>￥55</view>
+          <view class='unshelf-btn' bindtap='shelfGoods'>重新上架</view>
+        </view>
+      </view>
+</view>
+
+<dialog id='dialog'
+    title='提示'
+    content='确定下架该菜品？'
+    cancelText='取消'
+    confirm='确定'
+    bind:cancelEvent="_cancelEvent"
+    bind:confirmEvent="_confirmEvent"
+  ></dialog>
+
+  <recommend id='recommend'
+    title='提示'
+    content='{{ recommentContent }}'
+    cancelText='取消'
+    confirm='确定'
+    bind:cancelEvent="_cancelRecommendEvent"
+    bind:confirmEvent="_confirmRecommendEvent"
+  ></recommend>

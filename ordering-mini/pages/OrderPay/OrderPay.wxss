@@ -1,0 +1,225 @@
+/* pages/OrderPay/OrderPay.wxss */
+Page {
+   background-color: #f0f0f0;
+}
+.summit-title {
+  font-size: 22px;
+  color: #333333;
+  padding: 15px 20px;
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+.order-pay-wrap {
+  background-color: #f0f0f0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.order-wrap {
+  background-color: #FFFFFF;
+}
+.order-wrap .order-info {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+.order-wrap .order-info .shop-name {
+  font-size: 14px;
+  color: #999999;
+  padding-left: 10px;
+}
+.order-wrap .goods-each {
+  display: flex;
+  padding: 15px;
+  border-top: 1px solid #F6F6F6;
+}
+.goods-info {
+  flex: 1;
+  margin-left: 10px;
+}
+.goods-info .goods-name-price {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+.goods-info .goods-name-price .goods-name {
+  
+}
+.goods-info .goods-name-price .goods-price {
+
+}
+.goods-info .goods-num {
+  font-size: 13px;
+  color: #999999;
+}
+
+.coupon-area-wrap {
+  position: relative;
+  padding: 15px;
+  border-top: 1px solid #F6F6F6;
+  border-bottom: 1px solid #F6F6F6;
+}
+.coupon-area-wrap .circle-top-left {
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  width: 14px;
+  height: 14px;
+  background-color: #f0f0f0;
+  border-radius: 14px;
+}
+.coupon-area-wrap .circle-top-right {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  width: 14px;
+  height: 14px;
+  background-color: #f0f0f0;
+  border-radius: 14px;
+}
+.coupon-area-wrap .circle-bottom-left {
+  position: absolute;
+  bottom: -7px;
+  left: -7px;
+  width: 14px;
+  height: 14px;
+  background-color: #f0f0f0;
+  border-radius: 14px;
+}
+.coupon-area-wrap .circle-bottom-right {
+  position: absolute;
+  bottom: -7px;
+  right: -7px;
+  width: 14px;
+  height: 14px;
+  background-color: #f0f0f0;
+  border-radius: 14px;
+}
+.coupon-area-wrap .coupon-used {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.coupon-area-wrap .coupon-used .substract {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+  color: #333333;
+}
+.coupon-area-wrap .coupon-used .minus {
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  font-size: 12px;
+  color: #FFFFFF;
+  background-color: #DC4950;
+  margin-right: 12px;
+  text-align: center;
+}
+.coupon-area-wrap .coupon-used .coupon-price {
+  font-size: 14px;
+  color: #DC4950;
+}
+.coupon-area-wrap .coupon-can-use {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #333333;
+  margin-bottom: 15px;
+}
+.coupon-area-wrap .coupon-can-use .num-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.coupon-area-wrap .coupon-can-use .coupon-number {
+  font-size: 14px;
+  color: #DC4950;
+  margin-right: 8px;
+}
+.coupon-area-wrap .coupon-can-use .arrow-right::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid #D6D6D6;
+  border-right: 1px solid #D6D6D6;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.coupon-area-wrap .coupon-no-use {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #333333;
+}
+
+.real-pay {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px;
+  font-size: 14px;
+  color: #333333;
+}
+.real-pay .real-pay-amount {
+  padding-left: 7px;
+  color: #DC4950;
+}
+
+.btn-wrap {
+  padding: 24px 32px;
+}
+.btn-wrap .btn-pay {
+  text-align: center;
+  background-color: #DC4950;
+  border-radius: 83px;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+
+.mLeft10 {
+  margin-left: 10px;
+}
+.gray {
+  color: #999999;
+}
+
+/* 新增输入桌号 */
+.table-info-wrap {
+  margin-bottom: 20rpx;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+}
+.table-info-wrap .bg-wrap {
+  background-color: #FFFFFF;
+  border-radius: 8rpx;
+}
+.table-info-wrap .input-wrap {
+  border-bottom: 2rpx solid #F6F6F6;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.table-info-wrap .input-wrap .input-label {
+  font-size: 16px;
+  color: #111111;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.table-info-wrap .input-wrap .input-style {
+  font-size: 16px;
+}
+.placeholder-style {
+  font-size: 16px;
+  color: #BDBDBD;
+}

@@ -1,0 +1,170 @@
+/* pages/CouponList/CouponList.wxss */
+Page {
+  background-color: #F0F0F0;
+}
+.coupon-list-wrapper {
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  margin-bottom: 30rpx;
+}
+.coupon-list-wrapper .title-wrap {
+  font-size: 44rpx;
+  color: #333333;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  background-color: #FFFFFF;
+  margin-bottom: 30rpx;
+  border-radius: 8rpx;
+}
+.card .card-body {
+  padding: 30rpx;
+  border-bottom: 2rpx solid #F6F6F6;
+  font-size: 28rpx;
+  color: #666666;
+  font-weight: 300;
+}
+.card .card-body .body-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: 400;
+}
+.card .card-body .body-title .delete {
+  color: #666666;
+}
+.card .card-body .price-area {
+  font-size: 28rpx;
+  color: #999999;
+  margin-top: 16rpx;
+  margin-bottom: 18rpx;
+}
+.card .card-body .price-mark {
+  font-size: 14px;
+  color: #DC4950;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 6rpx;
+  font-weight: bold;
+}
+.card .card-body .price {
+  font-size: 48rpx;
+  color: #DC4950;
+  font-weight: bold;
+}
+
+.card .card-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.card .card-footer .footer-each {
+  font-size: 26rpx;
+  color: #BDBDBD;
+  text-align: center;
+  width: 100%;
+}
+.card .card-footer .footer-each:first-child {
+  border-right: 2rpx solid #F6F6F6;
+}
+.card .card-footer .footer-each .value {
+  font-size: 36rpx;
+  color: #333333;
+  padding-top: 8rpx;
+}
+
+/* 以下为新增，包括字体  */
+.null-page-wrap {
+  text-align: center;
+  font-size: 28rpx;
+  color: #999999;
+  padding-top: 148rpx;
+  padding-left: 64rpx;
+  padding-right: 64rpx;
+}
+.null-page-wrap .null-icon {
+  font-size: 160rpx;
+  color: #BDBDBD;
+  margin-bottom: 32rpx;
+}
+.null-page-wrap .add-btn {
+  background: #FDCB47;
+  border-radius: 200rpx;
+  font-size: 34rpx;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 22rpx;
+  padding-bottom: 22rpx;
+  margin-top: 60rpx;
+}
+.null-page-wrap .add-btn .add {
+  font-size: 30rpx !important;
+  padding-right: 30rpx;
+  display: inline-block; 
+   transform:rotate(45deg);
+ -ms-transform:rotate(45deg); /* IE 9 */
+ -moz-transform:rotate(45deg); /* Firefox */
+ -webkit-transform:rotate(45deg); /* Safari and Chrome */
+ -o-transform:rotate(45deg); /* Opera */
+  position: relative;
+  top: 9rpx;
+}
+
+/** 字体图标 **/
+
+@font-face {
+  font-family: 'iconfont';  /* project id 606896 */
+  src: url('//at.alicdn.com/t/font_606896_vfs007ajnrrdaemi.eot');
+  src: url('//at.alicdn.com/t/font_606896_vfs007ajnrrdaemi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_606896_vfs007ajnrrdaemi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_606896_vfs007ajnrrdaemi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_606896_vfs007ajnrrdaemi.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-iconfonttianjia:before { content: "\e60f"; }
+
+.icon-gouwuche-copy:before { content: "\e62d"; }
+
+.icon-duihao:before { content: "\e60b"; }
+
+.icon-dizhi:before { content: "\e62e"; }
+
+.icon-tongzhi:before { content: "\e647"; }
+
+.icon-tuijian:before { content: "\e7b6"; }
+
+.icon-guanbi-:before { content: "\e659"; }
+
+.icon-bianji:before { content: "\e63b"; }
+
+.icon-zanwudingdanjilu:before { content: "\e600"; }
+
+.icon-wodehuodong-zanwuhuodong:before { content: "\e63f"; }
+
+.icon-youhuiquan:before { content: "\e62f"; }
+
+.icon-youhuiquan1:before { content: "\e65c"; }
+
+.icon-icon_shanchu:before { content: "\e641"; }
+
+.icon-tianjia:before { content: "\e644"; }
+
+.icon-Triangle:before { content: "\e645"; }

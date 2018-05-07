@@ -1,0 +1,79 @@
+/* pages/Login/Login.wxss */
+.login-wrapper {
+  padding: 40rpx;
+}
+.login-wrapper .image-wrap {
+  text-align: center;
+  padding-top: 22rpx;
+  padding-bottom: 30rpx;
+}
+
+.login-wrapper .input-wrap {
+  padding-top: 42rpx;
+  padding-bottom: 22rpx;
+  border-bottom: 2rpx solid #F6F6F6;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login-wrapper .input-wrap .item-input {
+  padding-top: 8rpx;
+  padding-bottom: 8rpx;
+  font-size: 32rpx;
+}
+.login-wrapper .input-wrap .input-placeholder {
+  font-size: 32rpx;
+  color: #BDBDBD;
+  font-weight: 200;
+}
+
+.login-wrapper .input-wrap .code-get {
+  border: 2rpx solid #5B9DEA;
+  font-size: 28rpx;
+  color: #4A90E2;
+  width: 180rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+.login-wrapper .input-wrap .code-get.waiting {
+  border: 2rpx solid #D6D6D6;
+  color: #D6D6D6;
+}
+
+.login-wrapper .btn-wrap {
+  padding: 60rpx 24rpx 0 24rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #999999;
+}
+.login-wrapper .login-btn {
+  background: #5B9DEA;
+  border-radius: 200rpx;
+  padding-top: 22rpx;
+  padding-bottom: 22rpx;
+  font-size: 34rpx;
+  color: #FFFFFF;
+  margin-bottom: 24rpx;
+}
+.login-wrapper .user-protocol {
+  font-size: 24rpx;
+  color: #2A2A2A;
+}
+
+.bottom-info-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  padding-bottom: 40rpx;
+  font-size: 20rpx;
+  color: #BDBDBD;
+  width: 100%;
+}
+.bottom-info-wrap .contact {
+  font-size: 28rpx;
+  color: #4A90E2;
+  padding-bottom: 20rpx;
+}

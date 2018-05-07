@@ -1,0 +1,82 @@
+<!--pages/ShopCenter/ShopCenter.wxml-->
+<view class='center-header-wrap'>
+  <view class='user-info'>
+    <view class='user-name'> <span class="name">郑先生</span> 老板 </view>
+    <view class='user-phone'>1777****2763</view>
+    <view class='order-filter-wrap'>
+      <view class="filter-btn {{ (selectedFilterIndex == 0) ? 'opacity6' : '' }}" bindtap='filterTapHandle'>
+        <view>{{ filterList[selectedFilterIndex].text }}</view>
+        <view class='iconfont icon-Triangle arrow-down'></view>
+      </view>
+      <view wx:if="{{ isExpandFilter }}" class='filter-down-show'>
+        <view class='filter-condition'>
+          <view wx:for="{{ filterList }}" wx:key="unique" class="condition-each {{ item.isSelected ? 'active' : '' }}" bindtap='filterSelectHandle' data-filter='{{ item.id }}'>{{ item.text }}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='user-image'>
+    <image style='width: 136rpx;height: 136rpx;border-radius: 136rpx;' src='https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=252614881,2004066756&fm=58'></image>
+  </view>
+</view>
+
+<view class='operate-data-wrap'>
+  <view class='operate-title'>
+    <view class='operate-name'>运营数据</view>
+    <view class='filter'>
+      <view class="filter-value {{ item.isSelected ? 'active' : '' }}" wx:for="{{ timeFilterList }}" wx:key="unique" bindtap='timeFilterSelectHandle' data-filter='{{ item.id }}'>{{ item.text }}</view>
+      <!-- <view class='filter-value'>今天</view>
+      <view class='filter-value'>近7天</view>
+      <view class='filter-value active'>近30天</view> -->
+    </view>
+  </view>
+  <view class='operate-body'>
+    <view class='body-item'>
+      <view class='equal'>=</view>
+      <view class='statics'>8345</view>
+      <view>营业额/元</view>
+    </view>
+    <view class='body-item'>
+      <view class='equal'>=</view>
+      <view class='statics'>253</view>
+      <view>用户数/人</view>
+    </view>
+  </view>
+</view>
+
+<view class='bar-list'>
+  <navigator url='/pages/CouponList/CouponList' class='bar-item'>
+    <view class='name'>优惠券管理</view>
+    <view class='right-arrow'></view>
+  </navigator>
+   <navigator url='/pages/ReductionList/ReductionList' class='bar-item'>
+    <view class='name'>满减活动</view>
+    <view class='right-arrow'></view>
+  </navigator>
+</view>
+
+<view class='bar-list'>
+  <navigator url='/pages/ShopSetting/ShopSetting' class='bar-item'>
+    <view class='name'>店铺设置</view>
+    <view class='right-arrow'>暂无设置</view>
+  </navigator>
+
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+      <view class='bar-item'>
+        <view class='name'>营业时间</view>
+        <view class='right-arrow'>{{ selectedShow }}</view>
+      </view>
+    </picker>
+
+</view>
+
+<view class='logout-btn' bindtap='confirmLogout'>退出登录</view>
+
+<dialog id='dialog'
+    title='提示'
+    content='确定退出登录吗？'
+    cancelText='取消'
+    confirm='确定'
+    bind:cancelEvent="_cancelEvent"
+    bind:confirmEvent="_confirmEvent"
+  ></dialog>

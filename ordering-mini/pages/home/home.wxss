@@ -1,0 +1,277 @@
+/* home.wxss */
+/* 商家信息 */
+.shop-info-wrap {
+  display: flex;
+  padding: 13px 20px 25px 20px;
+}
+
+.shop-info-wrap .shop-logo {
+  width: 58px;
+  height: 58px;
+}
+
+.shop-info-wrap .shop-info {
+  padding-left: 15px;
+}
+
+.shop-info-wrap .shop-info .shop-name {
+  font-size: 20px;
+  color: #333333;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.shop-info-wrap .shop-info .icon-text {
+  display: flex;
+}
+.shop-info-wrap .shop-info .icon-text .shop-icon {
+  font-size: 19px !important;
+  color: #999999;
+}
+.shop-info-wrap .shop-info .icon-text .shop-text {
+   font-size: 14px;
+   color: #999999;
+}
+
+/* 活动栏 */
+.activity-bar-wrap {
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  background-color: #F6F6F6;
+}
+.activity-bar-wrap .activity-icon {
+  font-size: 22px;
+  color: #DC4950;
+}
+.activity-bar-wrap .activity-text {
+  font-size: 14px;
+  color: #333333;
+  padding-left: 10px;
+}
+
+/* 优惠券 */
+.coupon-wrap {
+  padding: 40px 20px;
+}
+.coupon-wrap .coupon-text {
+  font-size: 16px;
+  color: #333333;
+  font-weight: bold;
+}
+.scroll-view_H {
+  width: 100%;
+  white-space: nowrap;
+  /* border-bottom:1px solid #F6F6F6; */
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.coupon-wrap .coupon-each {
+  width: 140px;
+  height: 150px;
+  background-color: #F6F6F6;
+  border-radius: 2px;
+  text-align: center;
+  margin-top: 20px;
+  display: inline-block;
+  margin-right: 12px;
+}
+.coupon-wrap .coupon-each .coupon-price-wrap {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  padding-top: 10px;
+}
+.coupon-wrap .coupon-each .coupon-price-wrap .coupon-price-icon {
+  font-size: 16px;
+  color: #DC4950;
+  margin-top: 8px;
+}
+.coupon-wrap .coupon-each .coupon-price-wrap .coupon-price {
+  font-size: 36px;
+  color: #DC4950;
+}
+.coupon-wrap .coupon-each .coupon-use-limit {
+  font-size: 11px;
+  color: #999999;
+  margin-bottom: 14px;
+}
+.coupon-wrap .coupon-each .coupon-btn-wrap {
+  text-align: center;
+  position: relative;
+  border-top: 1px dashed #fff;
+  padding: 13px 20px 14px 20px;
+}
+.coupon-btn-wrap .coupon-btn {
+  font-size: 13px;
+  color: #DC4950;
+  padding: 6px 16px;
+  border: 1px solid #DC4950;
+  border-radius: 100px;
+}
+.coupon-btn.active {
+  border-color: #D6D6D6;
+  color: #999999;
+}
+.coupon-btn-wrap .coupon-left-circle {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  background-color: #fff;
+}
+.coupon-btn-wrap .coupon-right-circle {
+   position: absolute;
+   top: -6px;
+   right: -6px;
+   width: 12px;
+   height: 12px;
+   border-radius: 12px;
+   background-color: #fff;
+}
+
+/* 热门推荐 */
+.hot-recommend-wrap {
+  padding: 0 20px 0 20px;
+}
+.hot-recommend-wrap .recommend-text {
+  font-size: 16px;
+  color: #333333;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+.hot-recommend-wrap .recommend-big-pic {
+  position: relative;
+  width: 100%;
+  margin-bottom: 14px;
+}
+.hot-recommend-wrap .recommend-big-pic .recommend-mark {
+  background-color: #DC4950;
+  width: 30px;
+  height: 40px;
+  color: #fff;
+  text-align: center;
+  padding-top: 5px;
+  position: absolute;
+  top: -2px;
+  left: 10px;
+}
+.hot-recommend-wrap .recommend-big-pic .recommend-mark .mark-one {
+  font-size: 12px;
+}
+.hot-recommend-wrap .recommend-big-pic .recommend-mark .mark-num {
+  font-size: 16px;
+}
+.hot-recommend-wrap .recommend-big-pic .bottom-wrap .recommend-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 74px; 
+  color: #fff;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  opacity: 0.9;
+  background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, #000000 100%);
+}
+.recommend-bottom .recommend-name {
+  font-size: 16px;
+  padding-left: 10px;
+  padding-top: 20px;
+}
+.recommend-bottom .right-price {
+  padding-top: 20px;
+}
+.recommend-bottom .right-price .recommend-icon {
+  font-size: 14px;
+}
+.recommend-bottom .right-price .recommend-price {
+  font-size: 24px;
+  padding-right: 10px;
+}
+
+.hot-recommend-wrap .small-pic-wrap {
+  display: flex;
+}
+.hot-recommend-wrap .small-pic-wrap .recommend-icon {
+  font-size: 12px;
+}
+.hot-recommend-wrap .small-pic-wrap .recommend-name {
+  font-size: 12px;
+}
+.hot-recommend-wrap .small-pic-wrap .recommend-price {
+  font-size: 14px;
+}
+.recommend-big-pic .triangle-top {
+   border-bottom: 10px solid transparent;
+   border-top: 0px solid transparent;
+   border-left: 15px solid #DC4950;
+
+   position: absolute;
+   top: 43px;
+   left: 10px;
+}
+.recommend-big-pic .triangle-bottom {
+   border-bottom: 10px solid transparent;
+   border-top: 0 solid transparent;
+   border-right: 15px solid #DC4950;
+
+   position: absolute;
+   top: 43px;
+   left: 25px;
+}
+
+.mLeft11 {
+  margin-right: 11px;
+}
+
+/* 字体图标 */
+
+@font-face {
+  font-family: 'iconfont';  /* project id 606896 */
+  src: url('//at.alicdn.com/t/font_606896_3qvh15ej7yeng66r.eot');
+  src: url('//at.alicdn.com/t/font_606896_3qvh15ej7yeng66r.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_606896_3qvh15ej7yeng66r.woff') format('woff'),
+  url('//at.alicdn.com/t/font_606896_3qvh15ej7yeng66r.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_606896_3qvh15ej7yeng66r.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-gouwuche-copy:before { content: "\e62d"; }
+
+.icon-duihao:before { content: "\e60b"; }
+
+.icon-dizhi:before { content: "\e62e"; }
+
+.icon-tongzhi:before { content: "\e647"; }
+
+.icon-shishangquanxuanzhong:before { content: "\e634"; }
+
+.icon-shishangquan:before { content: "\e635"; }
+
+.icon-shouye:before { content: "\e639"; }
+
+.icon-shouyexuanzhong:before { content: "\e63a"; }
+
+.icon-wodexuanzhong:before { content: "\e63b"; }
+
+.icon-wode:before { content: "\e63c"; }
+
+.icon-jianhao:before { content: "\e640"; }
+
+.icon-jiahao:before { content: "\e641"; }

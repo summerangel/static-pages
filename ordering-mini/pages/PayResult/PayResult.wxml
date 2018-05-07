@@ -1,0 +1,13 @@
+<!--pages/PayResult/PayResult.wxml-->
+<view class="result_contain">
+    <view class='icon-wrap'>
+      <view class='iconfont icon-duihao success'></view>
+    </view>
+    <view class="result_content">支付成功</view>
+    <navigator url="/pages/OrderDetail/OrderDetail">
+        <text class="result_to_order" >查看订单</text>
+    </navigator>
+     <navigator url="{{'/pages/home/home'}}" open-type="switchTab">
+        <text class="result-to-home" >返回首页</text>
+     </navigator>
+</view>

@@ -1,0 +1,180 @@
+/* pages/FriendsOrdering/FriendsOrdering.wxss */
+Page {
+  background-color: #f0f0f0;
+}
+.friends-ordering {
+  padding: 20px 20px;
+  /* background-color: #F6F6F6; */
+}
+.friends-ordering .friends-ordering-title {
+  font-size: 22px;
+  color: #333333;
+  font-weight: bold;
+}
+.friends-ordering .ordering-invite {
+  font-size: 14px;
+  color: #666666;
+  padding-top: 10px;
+  padding-bottom: 25px;
+}
+.friends-ordering .ordering-invite .invite-name {
+  color: #333333;
+  font-weight: bold;
+}
+
+.friends-ordering .shop-wrap {
+  background-color: #fff;
+  border-radius: 2px;
+  text-align: center;
+  padding: 20px 12px; 
+}
+.friends-ordering .shop-wrap .shop-name {
+  font-size: 16px;
+  color: #333333;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  font-weight: bold;
+}
+.friends-ordering .shop-wrap .icon-text {
+  font-size: 13px;
+  color: #999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.friends-ordering .shop-wrap .icon-text .shop-icon {
+  color: #999999;
+  padding-right: 5px;
+  font-size: 18px !important;
+}
+.friends-ordering .shop-wrap .participate-in-ordering {
+  background: #DC4950;
+  border-radius: 100px;
+  text-align: center;
+  color: #fff;
+  height: 46px;
+  line-height: 46px;
+  margin-top: 15px;
+}
+
+.friends-ordering .order-completed-num {
+  font-size: 13px;
+  color: #999999;
+  padding-top: 15px;
+}
+
+.order-person-wrap {
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 10px 15px 20px 15px;
+  margin-top: 10px;
+}
+.order-person-wrap .inviter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #F6F6F6;
+}
+.inviter .inviter-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.inviter .inviter-info .inviter-name {
+  font-size: 14px;
+  color: #333333;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.inviter .inviter-info .inviter-mark {
+  font-size: 10px;
+  color: #4A90E2;
+  border: 1px solid #4A90E2;
+  border-radius: 2px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.control-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 13px;
+  color: #666666;
+}
+.inviter .add-goods {
+  font-size: 13px;
+  color: #40CBAF;
+  border: 1px solid #40CBAF;
+  width: 80px;
+  height: 27px;
+  line-height: 27px;
+  text-align: center;
+  border-radius: 100px;
+  margin-right: 10px;
+}
+.order-person-wrap .no-order-now {
+  font-size: 14px;
+  color: #999999;
+  padding-top: 13px;
+}
+.order-person-wrap .ordering-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #333333;
+  padding-top: 15px;
+}
+.ordering-bar .bar-right {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #333333;
+}
+.ordering-bar .bar-right .goods-price {
+  color: #DC4950;
+}
+
+/* 字体图标 */
+
+@font-face {
+  font-family: 'iconfont';  /* project id 606896 */
+  src: url('//at.alicdn.com/t/font_606896_zedz97v8779wl8fr.eot');
+  src: url('//at.alicdn.com/t/font_606896_zedz97v8779wl8fr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_606896_zedz97v8779wl8fr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_606896_zedz97v8779wl8fr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_606896_zedz97v8779wl8fr.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-gouwuche-copy:before { content: "\e62d"; }
+
+.icon-duihao:before { content: "\e60b"; }
+
+.icon-dizhi:before { content: "\e62e"; }
+
+.icon-tongzhi:before { content: "\e647"; }
+
+.icon-shishangquanxuanzhong:before { content: "\e634"; }
+
+.icon-shishangquan:before { content: "\e635"; }
+
+.icon-shouye:before { content: "\e639"; }
+
+.icon-shouyexuanzhong:before { content: "\e63a"; }
+
+.icon-wodexuanzhong:before { content: "\e63b"; }
+
+.icon-wode:before { content: "\e63c"; }
+
+.icon-icon_shanchu:before { content: "\e641"; }

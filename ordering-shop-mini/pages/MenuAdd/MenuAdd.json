@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "editBox": "/components/EditBox/EditBox"
+  },
+  "navigationBarTitleText": "",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black"
+}

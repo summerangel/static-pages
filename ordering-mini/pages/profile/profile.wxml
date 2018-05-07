@@ -1,0 +1,66 @@
+<!--profile.wxml-->
+<view class='user-wrapper'>
+  <view class='user-name'>
+    董小姐
+    <view class='name-underline'></view>
+  </view>
+  <image style='width:68px;height:68px;border-radius:68px;' src='https://fuss10.elemecdn.com/0/a3/2da88bf6180ea48fa3a23f4b5b9a4jpeg.jpeg'></image>
+</view>
+
+<view class='bar-wrapper'>
+  <view class='my-order'>
+    <view class='my-order-title'>
+      <view>我的订单</view>
+      <view class='order-all'>全部订单</view>
+    </view>
+    <view wx:if="{{false}}" class='no-order'>暂无订单</view>
+    <view  wx:if="{{true}}" class='order-list-swiper'>
+      <scroll-view class="scroll-view_H" scroll-x scroll-with-animation >
+        <block wx:for="{{[0, 1, 2, 3]}}" wx:key="{{index}}">
+          <view class='item-each'>
+            <view class='item-title'>
+              <view wx:if="{{false}}" class='order-status-finished'>订单已完成</view>
+              <view wx:if="{{false}}" class="oder-status-cancel">订单已取消</view>
+              <view class='order-status-wait-pay'>订单待支付</view>
+              <view>2018-03-17</view>
+            </view>
+            <view class='item-body'>
+              <view class='item-body-each'>
+                <view>招牌红烧排骨</view>
+                <view>x1</view>
+              </view>
+              <view class='item-body-each'>
+                <view>招牌红烧排骨</view>
+                <view>x1</view>
+              </view>
+              <view style='font-size:11px;color: #999;'>
+                <span>等3</span>
+                <span wx:if="{{false}}">共2</span>
+              件商品
+              </view>
+            </view>
+            <view class='item-footer'>
+              <view class='order-status-wait-pay'>￥55.1</view>
+              <view wx:if="{{false}}" class='oder-status-cancel'>￥55.1</view>
+              <view wx:if="{{false}}" class='footer-again-btn'>再来一单</view>
+              <navigator url="/pages/OrderPay/OrderPay" class='footer-pay-btn'>立即支付</navigator>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+  <navigator url="/pages/CouponList/CouponList" class='bar-list'>
+    <view>我的优惠券</view>
+    <view class='arrow-right'>
+      有3张可用优惠券
+    </view>
+  </navigator>
+  <view class='bar-list'>
+    <view>客服电话</view>
+    <view class='arrow-right'>
+      18729387623
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,458 @@
+/* ordering.wxss */
+
+/* tab */
+.order-tab {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.scroll-view_H {
+  width: 100%;
+  white-space: nowrap;
+  border-bottom:1px solid #F6F6F6;
+}
+
+.order-tab-item {
+   -ms-flex: 1;
+    flex: 1;
+    text-align: center; 
+    width: 100px;
+    display: inline-block;
+    font-size: 14px;
+    color: #999;
+    padding-top:15px;
+}
+.order-tab-item .selected-bar, .order-tab-item-active .selected-bar {
+    height: 3px;
+    width:25px;
+    background-color: #fff;
+    border-radius: 3px;
+    display:block;
+    margin:auto;
+    margin-top:15px;
+}
+
+.order-tab-item-active {
+    color: #333;
+    font-weight: bold;
+}
+.order-tab-item-active .selected-bar {
+   background-color: #333;
+}
+
+.goods {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  bottom: 46px;
+  overflow: hidden;
+  top:54px;
+}
+
+.goods .foods-wrapper {
+  flex: 1;
+  min-height: 100%;
+}
+
+.goods .foods-wrapper .food-list .title {
+  padding-left: 14px;
+  height: 26px;
+  line-height: 26px;
+  border-left: 2px solid #d9dde1;
+  font-size: 12px;
+  color: rgb(147, 153, 159);
+  background: #f3f5f7;
+}
+
+.goods .foods-wrapper .food-list .food-item {
+  display: flex;
+  margin: 18px;
+  padding-bottom: 18px;
+  position: relative;
+  border-bottom:1px solid rgba(7,17,27,0.1);
+}
+
+.goods .foods-wrapper .food-list .food-item:last-child {
+  border: none;
+  margin-bottom: 0px;
+}
+
+.goods .foods-wrapper .food-list .food-item .icon {
+  flex: 0 0 57px;
+  margin-right: 15px;
+}
+
+.goods .foods-wrapper .food-list .food-item .content {
+  flex: 1;
+  position:relative;
+}
+
+.goods .foods-wrapper .food-list .food-item .content .name {
+  margin: 2px 0 8px 0;
+  font-size: 16px;
+  color: #333333;
+}
+
+.goods .foods-wrapper .food-list .food-item .content .price {
+  font-weight: 700;
+  /* line-height: 24px; */
+  font-size: 18px;
+  color: #DC4950;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.goods .foods-wrapper .food-list .food-item .content .price .now {
+  margin-right: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #DC4950;
+}
+
+.cartControl-wrapper {
+  position: absolute;
+  right: 0;
+  bottom: 0; 
+}
+
+/* cartControl 样式 */
+
+.cartControl-wrapper .cartControl {
+  font-size: 0;
+}
+
+.cartControl-wrapper .cartControl .cart-decrease {
+  display: inline-block; 
+  font-size: 24px;
+  width: 23px;
+  height: 23px;
+  line-height: 20px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #DC4950;
+  border-radius: 2px;
+  color: #DC4950;
+}
+
+.cartControl-wrapper .cartControl .cart-count {
+   display: inline-block; 
+   font-size: 14px; 
+  text-align: center;
+  color: #333;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.cartControl-wrapper .cartControl .cart-add {
+   display: inline-block; 
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  line-height: 20px;
+  text-align: center;
+  background: #DC4950;
+  border-radius: 2px;
+  color: #fff;
+}
+
+/* shopcart 样式 */
+
+.invite-person {
+  position: fixed;
+  left: 0px;
+  bottom: 83px;
+  z-index: 40;
+
+  background: #FFFFFF;
+  border: 1px solid #DC4950;
+  box-shadow: 0 2px 6px 0 rgba(171,171,171,0.50);
+  border-radius: 0 100px 100px 0;
+  border-left-color: #fff;
+  padding: 8px 14px;
+  font-size: 14px;
+  color: #DC4950;
+}
+
+.shopCart {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  z-index: 101;
+  width: 100%;
+  height: 48px;
+}
+
+.shopCart .content {
+  display: flex;
+  background: #3A3A3A;
+}
+
+.shopCart .content .content-left {
+  flex: 1;
+}
+
+.shopCart .content .content-left .logo-wrapper {
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  margin: 0 12px;
+  padding: 6px;
+  width: 56px;
+  height: 56px;
+  line-height:49px;
+  box-sizing: border-box;
+  vertical-align: top;
+  border-radius: 50%;
+  background: #3A3A3A;
+}
+
+.shopCart .content .content-left .logo-wrapper .num {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 16px;
+  font-size: 14px;
+  color: #fff;
+  background: #40CBAF;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.shopCart .content .content-left .logo-wrapper .logo {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-radius: 50%;
+  background: #545454;
+}
+
+.shopCart .content .content-left .logo-wrapper .logo.highlight {
+  background:#fff;
+}
+
+.shopCart .content .content-left .logo-wrapper .logo .icon-gouwuche {
+  line-height: 44px;
+  font-size: 24px;
+  color: #80858a;
+}
+
+.shopCart .content .content-left .logo-wrapper .logo .gouwuche {
+  color: #999;
+  font-size:28px;
+}
+.shopCart .content .content-left .logo-wrapper .logo .gouwuche.highlight {
+  color: #DC4950;
+}
+
+.shopCart .content .content-left .price {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 12px;
+  line-height: 24px;
+  /* padding-right: 12px; */
+  box-sizing: border-box;
+  /* border-right: 1px solid rgba(255, 255, 255, 0.1); */
+  font-size: 24px;
+  /* font-weight: 700; */
+  color: #fff;
+}
+
+.shopCart .content .content-left .price.highlight {
+  color: #fff;
+}
+
+.shopCart .content .content-left .no-goods-selected {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 12px;
+  line-height: 24px;
+  font-size: 13px;
+  color: #999;
+}
+
+.shopCart .content .content-right {
+  flex: 0 0 105px;
+  width: 105px;
+}
+
+.shopCart .content .content-right .pay {
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 700;
+  background: #2b333b;
+}
+
+.shopCart .content .content-right .pay.enough {
+  background: #DC4950;
+  color: #fff;
+  font-size: 17px;
+}
+
+.shopCart .ball-container .ball {
+  position: fixed;
+  left: 32px;
+  bottom: 22px;
+  z-index: 200;
+  transition: all 0.6s cubic-bezier(0.49, -0.29, 0.75, 0.41);
+}
+
+.shopCart .ball-container .ball .inner {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgb(0, 160, 220);
+  transition: all 0.4s linear;
+}
+
+.shopcart-list {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-height: 600px;
+  background-color: #F6F6F6;
+  overflow-y: auto;
+  transform: translateY(101%);
+  transition: .5s;
+}
+
+.shopcart-list.show {
+    bottom: 48px;
+    transform: translateY(0);
+}
+
+.shopcart-list .list-header {
+  height: 38px;
+  line-height: 38px;
+  padding: 0 20px;
+  background: #F6F6F6;
+}
+
+.shopcart-list .list-header .title {
+  float: left;
+  font-size: 13px;
+  color: #999;
+}
+
+.shopcart-list .list-header .empty {
+  float: right;
+  font-size: 13px;
+  color: #666;
+}
+
+.shopcart-list .list-content {
+  padding: 0 20px;
+  max-height: 217px;
+  /* overflow: hidden; */
+  overflow-y: auto;
+  background: #fff;
+}
+
+.shopcart-list .list-content .shopcart-food {
+  position: relative;
+  padding: 20px 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #F6F6F6;
+}
+
+.shopcart-list .list-content .shopcart-food .name {
+  line-height: 24px;
+  font-size: 14px;
+  color: #333;
+}
+
+.shopcart-list .list-content .shopcart-food .price {
+  position: absolute;
+  right: 90px;
+  bottom: 20px;
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* .cartControl-wrapper {
+  position: absolute;
+  right: 0;
+  bottom: 6px;
+} */
+
+.list-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 40;
+  -webkit-backdrop-filter: 1;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.list-mask :fade-enter-active, :fade-leave-active {
+  opacity: 1;
+  transition: all 0.5s;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.food-list :fade-enter, :fade-leave-active {
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hidden {
+  overflow-y: hidden;
+}
+
+/* 字体图标 */
+
+@font-face {
+  font-family: 'iconfont';  /* project id 606896 */
+  src: url('//at.alicdn.com/t/font_606896_3qvh15ej7yeng66r.eot');
+  src: url('//at.alicdn.com/t/font_606896_3qvh15ej7yeng66r.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_606896_3qvh15ej7yeng66r.woff') format('woff'),
+  url('//at.alicdn.com/t/font_606896_3qvh15ej7yeng66r.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_606896_3qvh15ej7yeng66r.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-gouwuche-copy:before { content: "\e62d"; }
+
+.icon-duihao:before { content: "\e60b"; }
+
+.icon-dizhi:before { content: "\e62e"; }
+
+.icon-tongzhi:before { content: "\e647"; }
+
+.icon-shishangquanxuanzhong:before { content: "\e634"; }
+
+.icon-shishangquan:before { content: "\e635"; }
+
+.icon-shouye:before { content: "\e639"; }
+
+.icon-shouyexuanzhong:before { content: "\e63a"; }
+
+.icon-wodexuanzhong:before { content: "\e63b"; }
+
+.icon-wode:before { content: "\e63c"; }
+
+.icon-jianhao:before { content: "\e640"; }
+
+.icon-jiahao:before { content: "\e641"; }
+
+

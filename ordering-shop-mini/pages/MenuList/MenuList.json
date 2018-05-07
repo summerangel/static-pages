@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "dialog": "/components/promptBox/promptBox"
+  },
+  "navigationBarTitleText": "",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black"
+}

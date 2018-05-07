@@ -1,0 +1,12 @@
+<!--components/promptBox/promptBox.wxml-->
+<view class='prompt-box-wrap' hidden="{{!isShow}}">
+    <view class='prompt-mask'></view>
+    <view class='prompt-dialog'>
+        <view class='dialog-title'>{{ title }}</view>
+        <view class='dialog-content'>{{ content }}</view>
+        <view class='dialog-footer'>
+          <view class='dialog-btn' catchtap='_cancelEvent'>{{ cancelText }}</view>
+          <view class='dialog-btn' catchtap='_confirmEvent'>{{ confirmText }}</view>
+        </view>
+    </view>
+</view>
