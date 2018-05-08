@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>basic information</title>
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="release.css">
+</head>
+<body>
+<div class="wrapRelease">
+    <div class="header"></div>
+    <div class="aside"></div>
+    <div class="container">
+        <div class="row">
+            <div class="pull-left sub_til col-md-12">
+                <div class="pull-left" style="width: 2px;background-color: #01a9df;height: 13px;margin-right: 10px"></div>
+                <div class="pull-left fonts">发布产品</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="tabs">
+                    <div class="tabs_content active">
+                        <span class="fonts">产品分类</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="tabs">
+                    <div class="tabs_content tabs_bg">
+                        <span class="fonts">基础信息</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="tabs">
+                    <div class="tabs_content tabs_bg">
+                        <span class="fonts">信息描述</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 25px;margin-bottom: 25px">
+            <div class="col-md-3">
+                <div class="out_bor current">
+                    <div class="col_content">
+                        <span class="icon iconfont icon-xingcheng icon-size"></span>
+                        <p class="fonts">线路</p>
+                        <span class="icon iconfont icon-sanjiaogouxuan col_icon"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="out_bor">
+                    <div class="col_content">
+                        <span class="icon iconfont icon-shop icon-size"></span>
+                        <p class="fonts">服务</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="out_bor">
+                    <div class="col_content">
+                        <span class="icon iconfont icon-shop icon-size "></span>
+                        <p class="fonts">酒店</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="out_bor">
+                    <div class="col_content">
+                        <span class="icon iconfont icon-shop icon-size"></span>
+                        <p class="fonts">门票</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 25px;margin-bottom: 25px">
+            <div class="col-md-3">
+                <div class="out_bor">
+                    <div class="col_content">
+                        <span class="icon iconfont icon-xingcheng icon-size "></span>
+                        <p class="fonts">娱乐</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="out_bor">
+                    <div class="col_content">
+                        <span class="icon iconfont icon-shop icon-size "></span>
+                        <p class="fonts">购物</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="out_bor">
+                    <div class="col_content">
+                        <span class="icon iconfont icon-shop icon-size "></span>
+                        <p class="fonts">休闲</p>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="col-md-3">-->
+            <!--<div class="out_bor">-->
+            <!--<div class="col_content">-->
+            <!--<span class="icon iconfont icon-shop col_icon"></span>-->
+            <!--<p class="fonts">门票</p>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="line"></div>
+        <div class="next_btn">
+            <input type="button" value="下一步">
+        </div>
+    </div>
+</div>
+<script src="../../lib/jquery-1.10.2/jquery.min.js"></script>
+<script src="../../plugin/StringBuilder.Min.js"></script>
+<script src="../../plugin/header.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        //初始化头部和左边导航
+        $('.header').headerPlugin({});
+        $('.aside').navAsidePlugin({});
+    });
+</script>
+</body>
+</html>

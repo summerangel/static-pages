@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单管理</title>
+    <link rel="stylesheet" href="../../js/jquery-easyui-1.5/themes/default/easyui.css"/>
+    <link rel="stylesheet" type="text/css" href="../../js/jquery-easyui-1.5/themes/icon.css"/>
+    <link rel="stylesheet" href="../../css/font-awesome-4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../css/common.css"/>
+    <script src="../../js/jquery-easyui-1.5/jquery.min.js"></script>
+    <script src="../../js/jquery-easyui-1.5/jquery.easyui.min.js"></script>
+    <script src="../../js/jquery-easyui-1.5/locale/easyui-lang-zh_CN.js"></script>
+</head>
+<body class="easyui-layout">
+<div data-options="region:'north'">
+    <div class="wrapSearch">
+        <div class="wrapTime">
+            <span class="mLeft50 font12" style="cursor: pointer;">本月</span>
+            <span class="mLeft50 font12" style="cursor: pointer;">本周</span>
+        </div>
+        <div class="wrapDate">
+            <span class="mLeft50 font12">日期范围：</span>
+            <input class="easyui-datebox" style="width: 180px;">
+            <span class="">——</span>
+            <input class="easyui-datebox" style="width: 180px;">
+        </div>
+        <input class="easyui-searchbox mLeft50" data-options="prompt:'请输入用户名称电话或邮箱'" style="width: 180px;">
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div data-options="region:'center'">
+    <table id="table"></table>
+</div>
+<div id="tip"></div>
+<div id="confirm"></div>
+<div id="success"></div>
+<script type="text/javascript">
+    $('#table').datagrid({
+        fitColumns: true,
+        url: 'orderlist.json',
+        columns: [[
+            {field: 'contract_date', title: '签约日期', width: 100, align: 'center', sortable: true},
+            {field: 'contract_no', title: '合同编号', width: 100, align: 'center', sortable: true},
+            {field: 'user_name', title: '会员名', width: 100, align: 'center'},
+            {field: 'phone', title: '手机', width: 100, align: 'center'},
+            {field: 'order_num', title: '订购额', width: 100, align: 'center'},
+            {field: 'product_no', title: '产品编号', width: 100, align: 'center'},
+            {field: 'product_name', title: '产品名称', width: 100, align: 'center'},
+            {field: 'product_saler', title: '所属承销商', width: 100, align: 'center'},
+            {field: 'product_employer', title: '所属员工', width: 100, align: 'center'},
+            {field: 'product_jinfu', title: '所属金服', width: 100, align: 'center'},
+            {field: 'order_status', title: '订单状态', width: 100, align: 'center'}
+        ]],
+        pagination: true,
+//            sortName:'date,no',
+//            sortName:'no',
+//            multiSort:true,
+        sortOrder: 'desc',
+        toolbar: [{
+            text: '导入订单',
+            iconCls: 'icon fa fa-plus',
+            handler: function () {
+                $('#tip').dialog({
+                    title: '订单导入提示信息',
+                    width: 500,
+                    height: 300,
+                    closed: false,
+                    cache: false,
+                    href: '_tipsInfo.html',
+                    modal: true
+                });
+            }
+        }, {
+            text: '下载模板',
+            iconCls: 'icon fa fa-download',
+            handler: function () {
+
+            }
+        }, '-', {
+            text: '导出报表',
+            iconCls: 'icon fa fa-undo',
+            handler: function () {
+                $('#confirm').dialog({
+                    title: '导出报表确认',
+                    width: 400,
+                    height: 200,
+                    closed: false,
+                    cache: false,
+                    href: '_orderConfirm.html',
+                    modal: true,
+                    buttons: [{
+                        text: 'Ok',
+                        iconCls: 'icon-ok',
+                        handler: function () {
+                            $('#confirm').dialog('close');
+                            $('#success').dialog({
+                                title: '导出成功',
+                                width: 400,
+                                height: 250,
+                                closed: false,
+                                cache: false,
+                                href: '_exportSuccess.html',
+                                modal: true
+                            });
+                        }
+                    }, {
+                        text: 'Cancel',
+                        handler: function () {
+                            alert('cancel');
+                        }
+                    }]
+                });
+            }
+        }]
+    });
+</script>
+</body>
+</html>

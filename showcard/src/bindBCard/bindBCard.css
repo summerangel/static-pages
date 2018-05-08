@@ -1,0 +1,90 @@
+.wrapBindBCard {
+  min-width: 1200px;
+  overflow: hidden;
+}
+
+.wrapBindBCard .midArea {
+  width: 100%;
+  background: #eee;
+}
+.wrapBindBCard .midArea .bindInfo {
+  width: 31.25%;
+  height: 740px;
+  margin: 0 auto;
+  text-align: center;
+}
+.wrapBindBCard .midArea .bindInfo h2 {
+  font-size: 24px;
+  line-height: 151px;
+}
+.wrapBindBCard .midArea .bindInfo .form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 30px;
+}
+.wrapBindBCard .midArea .bindInfo .form-horizontal .form-group .col-sm-3,
+.wrapBindBCard .midArea .bindInfo .form-horizontal .form-group .col-sm-2,
+.wrapBindBCard .midArea .bindInfo .form-horizontal .form-group .col-sm-8,
+.wrapBindBCard .midArea .bindInfo .form-horizontal .form-group .col-sm-4 {
+  padding-left: 0;
+  /*padding-right: 0;*/
+}
+.wrapBindBCard .midArea .bindInfo .form-horizontal .form-group .col-sm-3 .form-control,
+.wrapBindBCard .midArea .bindInfo .form-horizontal .form-group .col-sm-2 .form-control,
+.wrapBindBCard .midArea .bindInfo .form-horizontal .form-group .col-sm-8 .form-control,
+.wrapBindBCard .midArea .bindInfo .form-horizontal .form-group .col-sm-4 .form-control {
+  height: 27px;
+  height:45px \9\0;
+  line-height:29px \9\0;
+  padding:6px 12px 6px 12px \9\0;
+  border-radius: 4px;
+  width: 95%;
+}
+.wrapBindBCard .midArea .bindInfo .form-horizontal .form-group .col-sm-4 .bindBtn {
+  background-color: #dab866;
+  color: #fff;
+  font-size: 22px;
+  width: 174px;
+  margin: 38px 0 auto;
+  line-height: 26px;
+}
+.wrapBindBCard .midArea .bindInfo .form-horizontal .form-group .col-sm-4 .bindBtn:hover {
+  background-color: #cda951;
+}
+.wrapBindBCard .midArea .bindInfo .form-horizontal .form-group .col-sm-8 .selectMenu {
+	
+ /*  height: 40px;
+  width: 104%; */
+  outline: none;
+  border: 1px solid #ccc;
+}
+.wrapBindBCard .midArea .bindInfo .form-horizontal .form-group .col-sm-8 .selectMenu:hover {
+  border: 1px solid #dab866;
+}
+.wrapBindBCard .midArea .bindInfo .form-horizontal .getVCode {
+  font-size: 12px;
+  padding: 6px 1px;
+  margin-left: 26px;
+  margin-top: 4px;
+  color: #fff;
+  background-color: #dab866;
+  border: none;
+  outline: none;
+}
+.wrapBindBCard .midArea .bindInfo .form-horizontal .getVCode:hover {
+  background-color: #cda951;
+}
+
+/*兼容ie11 */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.wrapBindBCard .midArea .bindInfo .form-horizontal .form-group .col-sm-3 .form-control,
+.wrapBindBCard .midArea .bindInfo .form-horizontal .form-group .col-sm-2 .form-control,
+.wrapBindBCard .midArea .bindInfo .form-horizontal .form-group .col-sm-8 .form-control,
+.wrapBindBCard .midArea .bindInfo .form-horizontal .form-group .col-sm-4 .form-control {
+  /* height: 26px; */
+  height:45px;
+  line-height:29px;
+  padding:6px 12px 6px 12px;
+  width: 95%;
+}
+}

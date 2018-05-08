@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单列表</title>
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="../../lib/jquery.bootgrid-1.3.1/jquery.bootgrid.min.css">-->
+    <link rel="stylesheet" href="../../lib/layer2.4/skin/layer.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <!--<link rel="stylesheet" href="../../css/app.min.css">-->
+    <link rel="stylesheet" href="ordernew.css">
+</head>
+<body>
+<div class="wrapOrderNew wrapProductList">
+    <div class="header"></div>
+    <div class="aside"></div>
+    <div class="home">
+        <div class="order_list">
+            <div class="order_status order_other">
+                <div class="order_title">
+                    <div class="order_item order_selected">
+                        <span class="item_status">
+                            <span class="status">所有订单</span>
+                            <span class="underline">&nbsp;</span>
+                        </span>
+                        <span class="vertical_line">|</span>
+                    </div>
+                    <div class="order_item">
+                        <span class="item_status">
+                            <span class="status">待付款</span>
+                            <span class="underline">&nbsp;</span>
+                        </span>
+                        <span class="vertical_line">|</span>
+                    </div>
+                    <div class="order_item">
+                        <span class="item_status">
+                            <span class="status">待发货</span>
+                            <span class="underline">&nbsp;</span>
+                        </span>
+                        <span class="vertical_line">|</span>
+                    </div>
+                    <div class="order_item">
+                        <span class="item_status">
+                            <span class="status">待收货</span>
+                            <span class="underline">5</span>
+                        </span>
+                        <span class="vertical_line">|</span>
+                    </div>
+                    <div class="order_item">
+                        <span class="item_status">
+                            <span class="status">待评价</span>
+                            <span class="underline">1</span>
+                        </span>
+                        <span class="vertical_line">|</span>
+                    </div>
+                    <div class="order_item">
+                        <span class="item_status font14">
+                            <span class="status">分阶段</span>
+                            <span class="underline">&nbsp;</span>
+                        </span>
+                        <span class="vertical_line">|</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form class="container">
+            <div class="single_search">
+                <input type="text" placeholder="输入商品标题或订单号进行搜索" class="search_input">
+                <button type="submit" class="search_btn">订单搜索</button>
+                <button id="more_search" type="button" class="search_more_btn">
+                    <span>精简筛选条件</span>
+                    <img src="https://img.alicdn.com/tps/TB1HuWrIVXXXXcaXpXXXXXXXXXX.png">
+                </button>
+
+                <button id="simple_search" style="display: none;" type="button" class="search_more_btn">
+                    <span>更多筛选条件</span>
+                    <img src="https://img.alicdn.com/tps/TB1jK1dIVXXXXXzXVXXXXXXXXXX.png">
+                </button>
+            </div>
+            <div class="more-part" style="display: none;">
+                <div class="wrap_search mBottom16">
+                    <div class="floatL width30">
+                        <div>
+                            <span class="wrap_search_name">订单类型</span>
+                            <span class="input_box_default trade-select input_width input_box input_box-enabled">
+                                <span class="input_box-selection input_box-selection--single" role="combobox"
+                                      aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                                    <span class="input_box-selection__rendered">
+                                        <span>全部</span>
+                                    </span>
+                                    <span class="input_box-arrow" tabindex="-1" style="outline:none;">
+                                        <b></b>
+                                    </span>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="floatL width45">
+                        <span class="wrap_search_name">成交时间</span>
+                        <input class="time input_width" placeholder="请选择时间范围起始" type="text">
+                        <span class="margin03">-</span>
+                        <input class="time input_width" placeholder="请选择时间范围结束" type="text"></div>
+                    <div class="floatL width25">
+                        <div class="floatR">
+                            <span class="wrap_search_name">卖家昵称</span>
+                            <input class="time input_width" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="wrap_search mBottom16">
+                    <div class="floatL width30">
+                        <div>
+                            <span class="wrap_search_name">评价状态</span>
+                            <span class="input_box_default trade-select input_width input_box input_box-enabled">
+                                <span class="input_box-selection input_box-selection--single" role="combobox"
+                                      aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                                    <span class="input_box-selection__rendered">
+                                        <span>全部</span>
+                                    </span>
+                                    <span class="input_box-arrow" tabindex="-1" style="outline:none;">
+                                        <b></b>
+                                    </span>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="floatL width45">
+                        <div>
+                            <span class="wrap_search_name">交易状态</span>
+                            <span class="input_box_default trade-select input_width input_box input_box-enabled">
+                                <span class="input_box-selection input_box-selection--single" role="combobox"
+                                      aria-autocomplete="list"
+                                      aria-haspopup="true" aria-expanded="false" tabindex="0">
+                                    <span class="input_box-selection__rendered">
+                                        <span>全部</span>
+                                    </span>
+                                    <span class="input_box-arrow" tabindex="-1" style="outline:none;">
+                                        <b></b>
+                                    </span>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="floatL width25">
+                        <div class="floatR">
+                            <span class="wrap_search_name">售后服务</span>
+                            <span class="input_box_default trade-select input_width input_box input_box-enabled">
+                                <span class="input_box-selection input_box-selection--single"
+                                      role="combobox" aria-autocomplete="list"
+                                      aria-haspopup="true" aria-expanded="false" tabindex="0">
+                                    <span class="input_box-selection__rendered">
+                                        <span>全部</span>
+                                    </span>
+                                    <span class="input_box-arrow" tabindex="-1" style="outline:none;">
+                                        <b></b>
+                                    </span>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrap_search">
+                    <button class="wrap_search_btn wrap_search_btn_reset">
+                        搜索
+                    </button>
+                </div>
+            </div>
+        </form>
+        <table class="wrap_table_base wrap_table">
+            <colgroup>
+                <col class="width38">
+                <col class="width10">
+                <col class="width5">
+                <col class="width12">
+                <col class="width12">
+                <col class="width11">
+                <col class="width12">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th style="text-align: center;">宝贝</th>
+                <th style="text-align: center;">单价</th>
+                <th style="text-align: center;">数量</th>
+                <th style="text-align: center;">商品操作</th>
+                <th style="text-align: center;">实付款</th>
+                <th style="text-align: center;">交易状态</th>
+                <th style="text-align: center;">交易操作</th>
+            </tr>
+            </tbody>
+        </table>
+        <div class="wrap_check_all">
+            <div style="float:left;">
+                <label class="mLeft20">
+                    <input type="checkbox" value="false" class="mRight5">
+                    <span >全选</span>
+                </label>
+                <div class="confirm_name">
+                    <button class="btn_base btn_reset btn_height mRight5">批量确认收货</button>
+                </div>
+            </div>
+            <!--<div style="float:right;width:;">-->
+                <!--<div class="simple-pagination-mod__container___w_LBK">-->
+                    <!--<button class="btn_base btn_reset btn_height mRight6" disabled="">上一页</button>-->
+                    <!--<button class="btn_base btn_reset btn_height">下一页</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="clearfix"></div>
+        </div>
+        <div class="table_list margin10_0">
+            <div class="borderdaf3ff">
+                <table class="wrap_table_detail wrap_table_detail_set">
+                    <colgroup>
+                        <col class="width38">
+                        <col class="width10">
+                        <col class="width5">
+                        <col class="width12">
+                        <col class="width12">
+                        <col class="width11">
+                        <col class="width12">
+                    </colgroup>
+                    <tbody class="bgColoreaf8ff">
+                    <tr>
+                        <td class="textL borderNone">
+                            <label class="mLeft20">
+                                <input type="checkbox" class="mLeft3">
+                                <span class="tr_time">2016-10-10</span>
+                            </label>
+                            <span>
+                                <span>订单号</span>
+                                <span>: </span>
+                                <span>2503695838178500</span>
+                            </span>
+                        </td>
+                        <td colspan="2" class="wrap_shop_name borderNone">
+                            <span class="noWrap">
+                                <a href="#" class="wrap_shop_name" title="小米 红米Note3" target="_blank">小米 红米Note3</a>
+                            </span>
+                        </td>
+                        <td class="borderNone">
+                            <!--<span id="webww4">-->
+                            <!--<span class="ww-light ww-large" data-display="inline">-->
+                            <!--<a href="https://amos.alicdn.com/getcid.aw?v=3&amp;groupid=0&amp;s=1&amp;charset=utf-8&amp;uid=tb1462642_2012&amp;site=cntaobao&amp;groupid=0&amp;s=1&amp;fromid=cntaobao爱兰文思" target="_blank" class="ww-inline ww-online" title="点此可以直接和卖家交流选好的宝贝，或相互交流网购体验，还支持语音视频噢。"></a>-->
+                            <!--</span>-->
+                            <!--</span>-->
+                        </td>
+                        <td colspan="4" class="borderNone">
+
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr>
+                        <td class="wrap_shop_detail borderNone">
+                            <div class="wrap_shop_new textL mLeft20">
+                                <div class="floatL" style="width:80px;">
+                                    <a href="#" class="wrap_shop_img" target="_blank">
+                                        <img src="https://img11.360buyimg.com/n7/jfs/t3196/154/2853681627/226132/c4803b39/57e6b348N47f649c0.jpg">
+                                        <span> </span>
+                                    </a>
+                                </div>
+                                <div style="margin-left:90px;">
+                                    <p>
+                                        <a href="#" target="_blank">
+                                            <span> </span>
+                                            <span style="line-height:16px;">小米 红米Note3 高配全网通版 3GB+32GB 金色 移动联通电信4G手机 双卡双待</span>
+                                            <span> </span>
+                                        </a>
+                                        <a href="#" target="_blank"> [交易快照] </a>
+                                        <span></span>
+                                    </p>
+                                    <p>
+                                        <span class="wrap_shop_p">
+                                            <span>颜色分类</span>
+                                            <span>：</span>
+                                            <span>图色</span>
+                                        </span>
+                                        <span class="wrap_shop_p">
+                                            <span>尺码</span>
+                                            <span>：</span>
+                                            <span>单一码</span>
+                                        </span>
+                                    </p>
+                                    <p>
+                                    </p>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="borderNone">
+                            <div class="font_set">
+                                <p>
+                                    <span>￥</span>
+                                    <span>49.00</span>
+                                </p>
+                            </div>
+                        </td>
+                        <td class="borderNone">
+                            <div>
+                                <p>1</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <p style="margin-bottom:3px;">
+                                    <a href="#" class="text_set" target="_blank">退款/退货</a>
+                                </p>
+                                <p style="margin-bottom:3px;cursor: pointer;">
+                                    <span class="text_set">投诉卖家</span>
+                                </p>
+                            </div>
+                        </td>
+                        <td class="">
+                            <div>
+                                <div class="font_set">
+                                    <p>
+                                        <strong>
+                                            <span>￥</span>
+                                            <span>94.00</span>
+                                        </strong>
+                                    </p>
+                                </div>
+                                <p style="color:#6c6c6c;font-family:verdana;">
+                                    <span>(含运费：</span>
+                                    <span>￥0.00</span>
+                                    <span></span>
+                                    <span></span>
+                                    <span>)</span>
+                                </p>
+                                <div style="font-family:verdana;">
+                                    <div>
+
+                                    </div>
+                                </div>
+                                <p>
+                                    <a href="#" title="手机订单" style="margin-right:5px;" target="_blank">
+                                        <img src="//img.alicdn.com/tps/i1/T1xRBqXdNAXXXXXXXX-46-16.png"></a>
+                                </p>
+                            </div>
+                        </td>
+                        <td class="">
+                            <div>
+                                <p style="margin-bottom:3px;">
+                                    <span class="text_set">快件已揽收</span>
+                                </p>
+                                <div>
+                                    <p style="margin-bottom:3px;">
+                                        <a href="#" class="text_set color333" target="_blank" id="viewDetail">订单详情</a>
+                                    </p>
+                                    <p style="margin-bottom:3px;">
+                                        <a href="#" class="text_set color333" target="_blank" id="huabeiBill">花呗账单</a>
+                                    </p>
+                                    <p style="margin-bottom:3px;">
+                                        <a href="#" class="text_set colorf40" target="_blank">查看物流</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="left_time">
+                            <div>
+                                <p style="margin-bottom:3px;">
+                                    <span class="text_set text-mod__grey___pVXyl">
+                                        <i class="tm-iconfont icon-time" style="margin-right: 4px;color: #999;font-size: 15px;vertical-align: middle;"></i>
+                                        <span class="text">还剩8天1时</span>
+                                    </span>
+                                </p>
+                                <p style="margin-bottom:3px;">
+                                    <a href="#" class="wrap_btn_default wrap_btn_reset font_weight" target="_blank">确认收货</a>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="table_list margin10_0">
+            <div class="borderdaf3ff">
+                <table class="wrap_table_detail wrap_table_detail_set">
+                    <colgroup>
+                        <col class="width38">
+                        <col class="width10">
+                        <col class="width5">
+                        <col class="width12">
+                        <col class="width12">
+                        <col class="width11">
+                        <col class="width12">
+                    </colgroup>
+                    <tbody class="bgColoreaf8ff">
+                    <tr>
+                        <td class="textL borderNone">
+                            <label class="mLeft20">
+                                <input type="checkbox" class="mLeft3">
+                                <span class="tr_time">2016-10-10</span>
+                            </label>
+                            <span>
+                                <span>订单号</span>
+                                <span>: </span>
+                                <span>2503695838178500</span>
+                            </span>
+                        </td>
+                        <td colspan="2" class="wrap_shop_name borderNone">
+                            <span class="noWrap">
+                                <a href="#" class="wrap_shop_name" title="小米 红米Note3" target="_blank">小米 红米Note3</a>
+                            </span>
+                        </td>
+                        <td class="borderNone">
+                            <!--<span id="webww4">-->
+                            <!--<span class="ww-light ww-large" data-display="inline">-->
+                            <!--<a href="https://amos.alicdn.com/getcid.aw?v=3&amp;groupid=0&amp;s=1&amp;charset=utf-8&amp;uid=tb1462642_2012&amp;site=cntaobao&amp;groupid=0&amp;s=1&amp;fromid=cntaobao爱兰文思" target="_blank" class="ww-inline ww-online" title="点此可以直接和卖家交流选好的宝贝，或相互交流网购体验，还支持语音视频噢。"></a>-->
+                            <!--</span>-->
+                            <!--</span>-->
+                        </td>
+                        <td colspan="4" class="borderNone">
+
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr>
+                        <td class="wrap_shop_detail borderNone">
+                            <div class="wrap_shop_new textL mLeft20">
+                                <div class="floatL" style="width:80px;">
+                                    <a href="#" class="wrap_shop_img" target="_blank">
+                                        <img src="https://img11.360buyimg.com/n7/jfs/t3196/154/2853681627/226132/c4803b39/57e6b348N47f649c0.jpg">
+                                        <span> </span>
+                                    </a>
+                                </div>
+                                <div style="margin-left:90px;">
+                                    <p>
+                                        <a href="#" target="_blank">
+                                            <span> </span>
+                                            <span style="line-height:16px;">小米 红米Note3 高配全网通版 3GB+32GB 金色 移动联通电信4G手机 双卡双待</span>
+                                            <span> </span>
+                                        </a>
+                                        <a href="#" target="_blank"> [交易快照] </a>
+                                        <span></span>
+                                    </p>
+                                    <p>
+                                        <span class="wrap_shop_p">
+                                            <span>颜色分类</span>
+                                            <span>：</span>
+                                            <span>图色</span>
+                                        </span>
+                                        <span class="wrap_shop_p">
+                                            <span>尺码</span>
+                                            <span>：</span>
+                                            <span>单一码</span>
+                                        </span>
+                                    </p>
+                                    <p>
+                                    </p>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="borderNone">
+                            <div class="font_set">
+                                <p>
+                                    <span>￥</span>
+                                    <span>49.00</span>
+                                </p>
+                            </div>
+                        </td>
+                        <td class="borderNone">
+                            <div>
+                                <p>1</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <p style="margin-bottom:3px;">
+                                    <a href="#" class="text_set" target="_blank">退款/退货</a>
+                                </p>
+                                <p style="margin-bottom:3px;cursor: pointer;">
+                                    <span class="text_set">投诉卖家</span>
+                                </p>
+                            </div>
+                        </td>
+                        <td class="">
+                            <div>
+                                <div class="font_set">
+                                    <p>
+                                        <strong>
+                                            <span>￥</span>
+                                            <span>94.00</span>
+                                        </strong>
+                                    </p>
+                                </div>
+                                <p style="color:#6c6c6c;font-family:verdana;">
+                                    <span>(含运费：</span>
+                                    <span>￥0.00</span>
+                                    <span></span>
+                                    <span></span>
+                                    <span>)</span>
+                                </p>
+                                <div style="font-family:verdana;">
+                                    <div>
+
+                                    </div>
+                                </div>
+                                <p>
+                                    <a href="#" title="手机订单" style="margin-right:5px;" target="_blank">
+                                        <img src="//img.alicdn.com/tps/i1/T1xRBqXdNAXXXXXXXX-46-16.png"></a>
+                                </p>
+                            </div>
+                        </td>
+                        <td class="">
+                            <div>
+                                <p style="margin-bottom:3px;">
+                                    <span class="text_set">快件已揽收</span>
+                                </p>
+                                <div>
+                                    <p style="margin-bottom:3px;">
+                                        <a href="#" class="text_set color333" target="_blank" id="viewDetail">订单详情</a>
+                                    </p>
+                                    <p style="margin-bottom:3px;">
+                                        <a href="#" class="text_set color333" target="_blank" id="huabeiBill">花呗账单</a>
+                                    </p>
+                                    <p style="margin-bottom:3px;">
+                                        <a href="#" class="text_set colorf40" target="_blank">查看物流</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="left_time">
+                            <div>
+                                <p style="margin-bottom:3px;">
+                                    <span class="text_set text-mod__grey___pVXyl">
+                                        <i class="tm-iconfont icon-time" style="margin-right: 4px;color: #999;font-size: 15px;vertical-align: middle;"></i>
+                                        <span class="text">还剩8天1时</span>
+                                    </span>
+                                </p>
+                                <p style="margin-bottom:3px;">
+                                    <a href="#" class="wrap_btn_default wrap_btn_reset font_weight" target="_blank">确认收货</a>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="borderNone">
+                            <div class="wrap_shop_new textL mLeft20">
+                                <div class="floatL" style="width:80px;">
+                                    <a href="#" class="wrap_shop_img" target="_blank">
+                                        <img src="https://img13.360buyimg.com/n7/jfs/t3247/344/2840599033/230905/e234c934/57e6b0acNfaae380f.jpg">
+                                        <span> </span>
+                                    </a>
+                                </div>
+                                <div style="margin-left:90px;">
+                                    <p>
+                                        <a href="#" target="_blank">
+                                            <span> </span>
+                                            <span style="line-height:16px;">小米 红米 3S 全网通 2GB内存 16GB ROM 经典金色 移动联通电信4G手机 双卡双待</span>
+                                            <span> </span>
+                                        </a>
+                                        <a href="#" target="_blank"> [交易快照] </a>
+                                        <span></span>
+                                    </p>
+                                    <p>
+                                        <span class="wrap_shop_p">
+                                            <span>颜色分类</span>
+                                            <span>：</span>
+                                            <span>白色</span>
+                                        </span>
+                                        <span class="wrap_shop_p">
+                                            <span>尺码</span>
+                                            <span>：</span>
+                                            <span>M</span>
+                                        </span>
+                                    </p>
+                                    <p>
+                                    </p>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="borderNone">
+                            <div class="font_set">
+                                <p>
+                                    <span>￥</span>
+                                    <span>45.00</span>
+                                </p>
+                            </div>
+                        </td>
+                        <td class="borderNone">
+                            <div>
+                                <p>1</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <p style="margin-bottom:3px;">
+                                    <a href="#" class="text_set text-mod__hover___eiGGu" target="_blank">退款/退货</a>
+                                </p>
+                                <p style="margin-bottom:3px;cursor: pointer;">
+                                    <span class="text_set">投诉卖家</span>
+                                </p>
+                            </div>
+                        </td>
+                        <td class="borderTopNone">
+
+                        </td>
+                        <td class="borderTopNone">
+
+                        </td>
+                        <td class="borderTopNone">
+
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="table_list margin10_0">
+            <div class="borderdaf3ff">
+                <table class="wrap_table_detail wrap_table_detail_set">
+                    <colgroup>
+                        <col class="width38">
+                        <col class="width10">
+                        <col class="width5">
+                        <col class="width12">
+                        <col class="width12">
+                        <col class="width11">
+                        <col class="width12">
+                    </colgroup>
+                    <tbody class="bgColoreaf8ff">
+                    <tr>
+                        <td class="textL borderNone">
+                            <label class="mLeft20">
+                                <input type="checkbox" class="mLeft3">
+                                <span class="tr_time">2016-10-10</span>
+                            </label>
+                            <span>
+                                <span>订单号</span>
+                                <span>: </span>
+                                <span>2503695838178500</span>
+                            </span>
+                        </td>
+                        <td colspan="2" class="wrap_shop_name borderNone">
+                            <span class="noWrap">
+                                <a href="#" class="wrap_shop_name" title="小米 红米Note3" target="_blank">小米 红米Note3</a>
+                            </span>
+                        </td>
+                        <td class="borderNone">
+                            <!--<span id="webww4">-->
+                                <!--<span class="ww-light ww-large" data-display="inline">-->
+                                    <!--<a href="https://amos.alicdn.com/getcid.aw?v=3&amp;groupid=0&amp;s=1&amp;charset=utf-8&amp;uid=tb1462642_2012&amp;site=cntaobao&amp;groupid=0&amp;s=1&amp;fromid=cntaobao爱兰文思" target="_blank" class="ww-inline ww-online" title="点此可以直接和卖家交流选好的宝贝，或相互交流网购体验，还支持语音视频噢。"></a>-->
+                                <!--</span>-->
+                            <!--</span>-->
+                        </td>
+                        <td colspan="4" class="borderNone">
+
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr>
+                        <td class="wrap_shop_detail borderNone">
+                            <div class="wrap_shop_new textL mLeft20">
+                                <div class="floatL" style="width:80px;">
+                                    <a href="#" class="wrap_shop_img" target="_blank">
+                                        <img src="https://img11.360buyimg.com/n7/jfs/t3196/154/2853681627/226132/c4803b39/57e6b348N47f649c0.jpg">
+                                        <span> </span>
+                                    </a>
+                                </div>
+                                <div style="margin-left:90px;">
+                                    <p>
+                                        <a href="#" target="_blank">
+                                            <span> </span>
+                                            <span style="line-height:16px;">小米 红米Note3 高配全网通版 3GB+32GB 金色 移动联通电信4G手机 双卡双待</span>
+                                            <span> </span>
+                                        </a>
+                                        <a href="#" target="_blank"> [交易快照] </a>
+                                        <span></span>
+                                    </p>
+                                    <p>
+                                        <span class="wrap_shop_p">
+                                            <span>颜色分类</span>
+                                            <span>：</span>
+                                            <span>图色</span>
+                                        </span>
+                                        <span class="wrap_shop_p">
+                                            <span>尺码</span>
+                                            <span>：</span>
+                                            <span>单一码</span>
+                                        </span>
+                                    </p>
+                                    <p>
+                                    </p>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="borderNone">
+                            <div class="font_set">
+                                <p>
+                                    <span>￥</span>
+                                    <span>49.00</span>
+                                </p>
+                            </div>
+                        </td>
+                        <td class="borderNone">
+                            <div>
+                                <p>1</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <p style="margin-bottom:3px;">
+                                    <a href="#" class="text_set" target="_blank">退款/退货</a>
+                                </p>
+                                <p style="margin-bottom:3px;cursor: pointer;">
+                                    <span class="text_set">投诉卖家</span>
+                                </p>
+                            </div>
+                        </td>
+                        <td class="">
+                            <div>
+                                <div class="font_set">
+                                    <p>
+                                        <strong>
+                                            <span>￥</span>
+                                            <span>94.00</span>
+                                        </strong>
+                                    </p>
+                                </div>
+                                <p style="color:#6c6c6c;font-family:verdana;">
+                                    <span>(含运费：</span>
+                                    <span>￥0.00</span>
+                                    <span></span>
+                                    <span></span>
+                                    <span>)</span>
+                                </p>
+                                <div style="font-family:verdana;">
+                                    <div>
+
+                                    </div>
+                                </div>
+                                <p>
+                                    <a href="#" title="手机订单" style="margin-right:5px;" target="_blank">
+                                        <img src="//img.alicdn.com/tps/i1/T1xRBqXdNAXXXXXXXX-46-16.png"></a>
+                                </p>
+                            </div>
+                        </td>
+                        <td class="">
+                            <div>
+                                <p style="margin-bottom:3px;">
+                                    <span class="text_set">快件已揽收</span>
+                                </p>
+                                <div>
+                                    <p style="margin-bottom:3px;">
+                                    <a href="#" class="text_set color333" target="_blank" id="viewDetail">订单详情</a>
+                                </p>
+                                    <p style="margin-bottom:3px;">
+                                        <a href="#" class="text_set color333" target="_blank" id="huabeiBill">花呗账单</a>
+                                    </p>
+                                    <p style="margin-bottom:3px;">
+                                        <a href="#" class="text_set colorf40" target="_blank">查看物流</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="left_time">
+                            <div>
+                                <p style="margin-bottom:3px;">
+                                    <span class="text_set text-mod__grey___pVXyl">
+                                        <i class="tm-iconfont icon-time" style="margin-right: 4px;color: #999;font-size: 15px;vertical-align: middle;"></i>
+                                        <span class="text">还剩8天1时</span>
+                                    </span>
+                                </p>
+                                <p style="margin-bottom:3px;">
+                                    <a href="#" class="wrap_btn_default wrap_btn_reset font_weight" target="_blank">确认收货</a>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="borderNone">
+                            <div class="wrap_shop_new textL mLeft20">
+                                <div class="floatL" style="width:80px;">
+                                    <a href="#" class="wrap_shop_img" target="_blank">
+                                        <img src="https://img13.360buyimg.com/n7/jfs/t3247/344/2840599033/230905/e234c934/57e6b0acNfaae380f.jpg">
+                                        <span> </span>
+                                    </a>
+                                </div>
+                                <div style="margin-left:90px;">
+                                    <p>
+                                        <a href="#" target="_blank">
+                                            <span> </span>
+                                            <span style="line-height:16px;">小米 红米 3S 全网通 2GB内存 16GB ROM 经典金色 移动联通电信4G手机 双卡双待</span>
+                                            <span> </span>
+                                        </a>
+                                        <a href="#" target="_blank"> [交易快照] </a>
+                                        <span></span>
+                                    </p>
+                                    <p>
+                                        <span class="wrap_shop_p">
+                                            <span>颜色分类</span>
+                                            <span>：</span>
+                                            <span>白色</span>
+                                        </span>
+                                        <span class="wrap_shop_p">
+                                            <span>尺码</span>
+                                            <span>：</span>
+                                            <span>M</span>
+                                        </span>
+                                    </p>
+                                    <p>
+                                    </p>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="borderNone">
+                            <div class="font_set">
+                                <p>
+                                    <span>￥</span>
+                                    <span>45.00</span>
+                                </p>
+                            </div>
+                        </td>
+                        <td class="borderNone">
+                            <div>
+                                <p>1</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <p style="margin-bottom:3px;">
+                                    <a href="#" class="text_set text-mod__hover___eiGGu" target="_blank">退款/退货</a>
+                                </p>
+                                <p style="margin-bottom:3px;cursor: pointer;">
+                                    <span class="text_set">投诉卖家</span>
+                                </p>
+                            </div>
+                        </td>
+                        <td class="borderTopNone">
+
+                        </td>
+                        <td class="borderTopNone">
+
+                        </td>
+                        <td class="borderTopNone">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="borderNone">
+                            <div class="wrap_shop_new textL mLeft20">
+                                <div class="floatL" style="width:80px;">
+                                    <a href="#" class="wrap_shop_img" target="_blank">
+                                        <img src="https://img13.360buyimg.com/n7/jfs/t3247/344/2840599033/230905/e234c934/57e6b0acNfaae380f.jpg">
+                                        <span> </span>
+                                    </a>
+                                </div>
+                                <div style="margin-left:90px;">
+                                    <p>
+                                        <a href="#" target="_blank">
+                                            <span> </span>
+                                            <span style="line-height:16px;">小米 红米 3S 全网通 2GB内存 16GB ROM 经典金色 移动联通电信4G手机 双卡双待</span>
+                                            <span> </span>
+                                        </a>
+                                        <a href="#" target="_blank"> [交易快照] </a>
+                                        <span></span>
+                                    </p>
+                                    <p>
+                                        <span class="wrap_shop_p">
+                                            <span>颜色分类</span>
+                                            <span>：</span>
+                                            <span>白色</span>
+                                        </span>
+                                        <span class="wrap_shop_p">
+                                            <span>尺码</span>
+                                            <span>：</span>
+                                            <span>M</span>
+                                        </span>
+                                    </p>
+                                    <p>
+                                    </p>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="borderNone">
+                            <div class="font_set">
+                                <p>
+                                    <span>￥</span>
+                                    <span>45.00</span>
+                                </p>
+                            </div>
+                        </td>
+                        <td class="borderNone">
+                            <div>
+                                <p>1</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <p style="margin-bottom:3px;">
+                                    <a href="#" class="text_set text-mod__hover___eiGGu" target="_blank">退款/退货</a>
+                                </p>
+                                <p style="margin-bottom:3px;cursor: pointer;">
+                                    <span class="text_set">投诉卖家</span>
+                                </p>
+                            </div>
+                        </td>
+                        <td class="borderTopNone">
+
+                        </td>
+                        <td class="borderTopNone">
+
+                        </td>
+                        <td class="borderTopNone">
+
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="wrap_check_all">
+            <div style="float:left;">
+                <label class="mLeft20">
+                    <input type="checkbox" value="true" class="mRight5">
+                    <span>全选</span>
+                </label>
+                <div class="confirm_name">
+                    <button class="btn_base btn_reset btn_height mRight5">批量确认收货</button>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<script src="../../lib/jquery-1.10.2/jquery.min.js"></script>
+<!--<script src="../../lib/jquery.bootgrid-1.3.1/jquery.bootgrid.min.js"></script>-->
+<script src="../../lib/layer2.4/layer.js"></script>
+<script src="../../plugin/StringBuilder.Min.js"></script>
+<script src="../../plugin/header.js"></script>
+<script>
+    $(function () {
+        //初始化头部和左边导航
+        $('.header').headerPlugin({});
+        $('.aside').navAsidePlugin({});
+        //订单状态切换
+        $('.order_item').each(function (index, val) {
+            $(val).click(function(){
+                $(val).siblings().removeClass('order_selected');
+                $(val).addClass('order_selected');
+            });
+        });
+        //更多搜索条件
+        $('.search_more_btn').click(function(){
+            var $value_simple=$('#simple_search');
+            var $value_more=$('#more_search');
+            if($value_simple.css('display')=='inline-block' && $value_more.css('display')=='none'){
+                $value_simple.css('display','none');
+                $value_more.css('display','inline-block');
+                $('.more-part').css('display','none');
+            }
+            else if($value_simple.css('display')=='none' && $value_more.css('display')=='inline-block'){
+                $value_simple.css('display','inline-block');
+                $value_more.css('display','none');
+                $('.more-part').css('display','block');
+            }
+        });
+        //全选功能
+        $('.wrap_check_all :checkbox').each(function(index,val){
+            $(val).click(function(){
+                var isChecked=$(this).is(':checked');
+                $(".table_list table td input[type='checkbox']").each(function(index,val){
+                    if(isChecked){
+                        $(val).prop('checked',true);
+                    }
+                    else{
+                        $(val).prop('checked',false);
+                    }
+                });
+            });
+        });
+    })
+</script>
+</body>
+</html>

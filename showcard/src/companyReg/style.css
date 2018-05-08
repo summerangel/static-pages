@@ -1,0 +1,82 @@
+.wrapCompanyReg {
+  min-width: 1200px;
+  overflow: hidden;
+}
+.wrapCompanyReg .content {
+  width: 100%;
+  background-color: #eee;
+  padding-top: 34px;
+  padding-bottom: 60px;
+}
+.wrapCompanyReg .content .form {
+  width: 64%;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 34px;
+}
+.wrapCompanyReg .content .form .form-group .form-control {
+  height: 27px;
+  height:45px \9\0;
+  line-height:29px \9\0;
+  padding:6px 12px 6px 12px \9\0;
+  border-radius: 4px;
+  margin-bottom: 5%;
+}
+.wrapCompanyReg .content .form .form-group .control-label {
+  padding-right: 0px;
+  text-align: right;
+  line-height: 28px;
+}
+.wrapCompanyReg .content .form .form-group .col-sm-10 {
+  padding-left: 3%;
+  padding-top: 1%;
+}
+.wrapCompanyReg .content .form .form-group .col-sm-10 .account_info {
+  width: 56px;
+  height: 23px;
+  border-bottom: 1px solid #6697da;
+  color: #6697da;
+}
+.wrapCompanyReg .content .form .form-group .red_tip {
+  height: 16px;
+  color: red;
+  line-height: 48px;
+  margin-left: 10px;
+}
+.wrapCompanyReg .content .form .form-group .pBtn {
+  font-size: 24px;
+  color: #fff;
+  padding: 1% 31%;
+  background: #6697da;
+  border: none;
+  margin-bottom: 10%;
+  outline: none;
+}
+.wrapCompanyReg .content .form .form-group .pBtn:hover {
+  color: #fff;
+  background: #6697da;
+}
+.wrapCompanyReg .content .form .red_tip_ex {
+  height: 16px;
+  color: red;
+  line-height: 37px;
+  margin-left: 10px;
+  position: relative;
+  top: 4px;
+  right: 8px;
+}
+.wrapCompanyReg .content .form .require {
+  text-align: right;
+  font-size: 12px;
+  color: #959595;
+}
+
+/*兼容ie11 */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.wrapCompanyReg .content .form .form-group .form-control {
+		  height:45px;
+		  line-height:29px;
+		  padding:6px 12px 6px 12px;
+	}
+}

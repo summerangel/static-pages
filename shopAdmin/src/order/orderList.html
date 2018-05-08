@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单列表</title>
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../lib/jquery.bootgrid-1.3.1/jquery.bootgrid.min.css">
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="orderList.css" />
+</head>
+<body>
+<div class="wrapOrderList">
+    <div class="header"></div>
+    <div class="aside"></div>
+    <div class="container">
+        <!---->
+        <div class="row mt"  style="padding-right: 10px">
+            <div class="pull-left sub_til col-md-12 ">
+                <div class="pull-left sub_titles"></div>
+                <div class="pull-left fonts">全部订单</div>
+            </div>
+        </div>
+        <!---->
+        <div class="row mt"  style="padding-right: 10px">
+            <div class="col_code">
+                <div class="col_content p_15">
+                    <label>消费码 :</label>
+                    <input type="text">
+                    <a href="#" class="btn-danger">验证消费码</a>
+                </div>
+            </div>
+        </div>
+        <!---->
+        <div class="row mt"  style="padding-right: 10px">
+            <div class="col_code p_10 controls pd_15">
+                <div class="controls">
+                    <label>产品名称 :</label>
+                    <input type="text" placeholder="">
+
+                    <label>订单编码 :</label>
+                    <input type="text" placeholder="">
+
+                    <label>联系人 :</label>
+                    <input type="text" placeholder="">
+                </div>
+                <div class="controls controls-row">
+                    <label>下单时间 :</label>
+                    <input class="span5" type="datetime-local" placeholder="">-<input class="span5" type="datetime-local"
+                                                                                      placeholder="">
+
+                    <label style="margin-left: 44px;">上架时间 :</label>
+                    <span class="out_line">
+                        <select class="span2">
+                            <option value="请选择" selected>-请选择-</option>
+                            <option value="">-2016-10-08-</option>
+                            <option value="">-2016-10-09-</option>
+                            <option value="">-2016-10-10-</option>
+                        </select>
+                    </span>
+                </div>
+                <div class="search_btn">
+                    <a href="#" class="btn-success">查询</a>
+                    <a href="#" class="btn-warning">重置</a>
+                </div>
+            </div>
+        </div>
+        <!---->
+        <div class="row" style="padding-right: 10px">
+            <table class="table table-hover table-bordered">
+                <thead>
+                <tr class="controls fonts">
+                    <th><input type="checkbox" style="width: 30px"></th>
+                    <th>订单编号</th>
+                    <th>产品名称</th>
+                    <th>产品价格 (万元)</th>
+                    <th>产品类型</th>
+                    <th>产品数量 (件)</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input type="checkbox" style="width: 30px"></td>
+                    <td>23979279281</td>
+                    <td>秀券</td>
+                    <td>100000.00</td>
+                    <td>金融</td>
+                    <td>1000</td>
+                    <td><a href="#">订单详情</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" style="width: 30px"></td>
+                    <td>23979279281</td>
+                    <td>秀券</td>
+                    <td>100000.00</td>
+                    <td>金融</td>
+                    <td>1000</td>
+                    <td><a href="#">订单详情</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" style="width: 30px"></td>
+                    <td>23979279281</td>
+                    <td>秀券</td>
+                    <td>100000.00</td>
+                    <td>金融</td>
+                    <td>1000</td>
+                    <td><a href="#">订单详情</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" style="width: 30px"></td>
+                    <td>23979279281</td>
+                    <td>秀券</td>
+                    <td>100000.00</td>
+                    <td>金融</td>
+                    <td>1000</td>
+                    <td><a href="#">订单详情</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" style="width: 30px"></td>
+                    <td>23979279281</td>
+                    <td>秀券</td>
+                    <td>100000.00</td>
+                    <td>金融</td>
+                    <td>1000</td>
+                    <td><a href="#">订单详情</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" style="width: 30px"></td>
+                    <td>23979279281</td>
+                    <td>秀券</td>
+                    <td>100000.00</td>
+                    <td>金融</td>
+                    <td>1000</td>
+                    <td><a href="#">订单详情</a></td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="pager" style="text-align: left;">
+                            <li><a href="#" class="bor_none">当前</a></li>
+                            <li><span>1/5</span></li>
+                            <li><a href="#" class="bor_none">页</a></li>
+                            <li><a href="#" class="bor_none">每条</a></li>
+                            <li><span>6</span></li>
+                            <li><a href="#" class="bor_none">条</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="pager" style="text-align: right;">
+                            <li><a href="#">首页</a></li>
+                            <li><a href="#">上一页</a></li>
+                            <li><span>1</span></li>
+                            <li><a href="#">下一页</a></li>
+                            <li><a href="#">末页</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+<script src="../../lib/jquery-1.10.2/jquery.min.js"></script>
+<script src="../../plugin/StringBuilder.Min.js"></script>
+<script src="../../plugin/header.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        //初始化头部和左边导航
+        $('.header').headerPlugin({});
+        $('.aside').navAsidePlugin({});
+    });
+</script>
+</body>
+</html>

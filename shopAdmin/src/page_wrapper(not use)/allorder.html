@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全部订单</title>
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="page.css">
+    <script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../lib/jquery-1.10.2/jquery.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <!---->
+    <div class="row mt">
+        <div class="pull-left sub_til col-md-12 ">
+            <div class="pull-left sub_titles"></div>
+            <div class="pull-left fonts">全部订单</div>
+        </div>
+    </div>
+    <!---->
+    <div class="row mt">
+        <div class="col_code">
+            <div class="col_content p_15">
+                <label>消费码 :</label>
+                <input type="text">
+                <a href="#">验证消费码</a>
+            </div>
+        </div>
+    </div>
+    <div class="row mt">
+        <div class="col_code p_10 controls pd_15">
+            <div class="controls">
+                <label>产品名称 :</label>
+                <input type="text" placeholder="">
+
+                <label>订单编码 :</label>
+                <input type="text" placeholder="">
+
+                <label>联系人 :</label>
+                <input type="text" placeholder="">
+            </div>
+            <div class="controls controls-row">
+                <label>下单时间 :</label>
+                <input class="span5" type="datetime-local" placeholder="">-<input class="span5" type="datetime-local"
+                                                                                  placeholder="">
+
+                <label>上架时间 :</label>
+                <span class="out_line">
+                    <select class="span2">
+                        <option value="请选择" selected>-请选择-</option>
+                        <option value="">-2016-10-08-</option>
+                        <option value="">-2016-10-09-</option>
+                        <option value="">-2016-10-10-</option>
+                    </select>
+                </span>
+            </div>
+            <div class="search_btn">
+                <a href="#">查询</a>
+                <a href="#">重置</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr class="controls fonts">
+                <th>订单编号</th>
+                <th>产品名称</th>
+                <th>产品价格 (万元)</th>
+                <th>产品类型</th>
+                <th>产品数量 (件)</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>23979279281</td>
+                <td>秀券</td>
+                <td>100000.00</td>
+                <td>金融</td>
+                <td>1000</td>
+                <td><a href="#">订单详情</a></td>
+            </tr>
+            <tr>
+                <td>23979279281</td>
+                <td>秀券</td>
+                <td>100000.00</td>
+                <td>金融</td>
+                <td>1000</td>
+                <td><a href="#">订单详情</a></td>
+            </tr>
+            <tr>
+                <td>23979279281</td>
+                <td>秀券</td>
+                <td>100000.00</td>
+                <td>金融</td>
+                <td>1000</td>
+                <td><a href="#">订单详情</a></td>
+            </tr>
+            <tr>
+                <td>23979279281</td>
+                <td>秀券</td>
+                <td>100000.00</td>
+                <td>金融</td>
+                <td>1000</td>
+                <td><a href="#">订单详情</a></td>
+            </tr>
+            <tr>
+                <td>23979279281</td>
+                <td>秀券</td>
+                <td>100000.00</td>
+                <td>金融</td>
+                <td>1000</td>
+                <td><a href="#">订单详情</a></td>
+            </tr>
+            <tr>
+                <td>23979279281</td>
+                <td>秀券</td>
+                <td>100000.00</td>
+                <td>金融</td>
+                <td>1000</td>
+                <td><a href="#">订单详情</a></td>
+            </tr>
+            <tr>
+                <td>23979279281</td>
+                <td>秀券</td>
+                <td>100000.00</td>
+                <td>金融</td>
+                <td>1000</td>
+                <td>
+                    <a href="#" role="button" data-toggle="modal" onclick="showbox();close(id);">订单详情</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal -->
+         <div id="orderInfo" class="col_code modal_header_bg mt" >
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <span id="myModalLabel" class="fonts">订单详情页</span>
+        </div>
+        <div class=" mt modal-body">
+            <div class=" modal_tabs mt">
+                <a href="#" class="fonts pull-left curr">订单详情</a>
+                <a href="#" class="fonts pull-left">操作日志</a>
+                <div class="clear"></div>
+            </div>
+            <div class="tab_content">
+                <div class="tab_content_title mt_10">
+                    <div class="sub_titles pull-left"></div>
+                    <div class="fonts">订单信息</div>
+                </div>
+                <div class=" code_wrap mt">
+                    <div class="row code_content">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>订单编号 : <span>80100988809821</span></li>
+                                <li>联系人 : <span>乌克兰</span></li>
+                                <li>联系电话 : <span>139****5555</span></li>
+                                <li>下单时间 : <span>2016-10-09 15:28:01</span></li>
+                                <li>出单时间 : <span>2016-10-10 10:11:00</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 side_r">
+                            <div class="tips">
+                                <span>待支付待确认</span>
+                            </div>
+                            <div class="btn">
+                                <a href="#">确认订单</a>
+                                <a href="#">取消订单</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tab_content_title mt_10">
+                    <div class="sub_titles pull-left"></div>
+                    <div class="fonts mt_10">
+                        <span>参与人信息</span>
+                        <span class="pull-right"><a href="#" class="fonts">修改</a></span>
+                    </div>
+                    <table class="table">
+                        <thead>
+                        <tr style="background-color: #f6f6f6;">
+                            <th>姓名</th>
+                            <th>手机号</th>
+                            <th>证件类型</th>
+                            <th>证件号</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>猫咪</td>
+                            <td>139****5555</td>
+                            <td>身份证</td>
+                            <td>21022019880121****</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tab_content_title mt_10">
+                    <div class="sub_titles pull-left"></div>
+                    <div class="fonts mt_10">
+                        <span>商品信息</span>
+                        <span class="pull-right"><a href="#" class="fonts">修改</a></span>
+                    </div>
+                    <table class="table">
+                        <thead>
+                        <tr style="background-color: #f6f6f6;">
+                            <th>产品名称</th>
+                            <th>产品编号</th>
+                            <th>规格</th>
+                            <th>数量</th>
+                            <th>单价</th>
+                            <th>总价</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>马尔代夫</td>
+                            <td>TB-10-08</td>
+                            <td>5星-20座大巴</td>
+                            <td>2</td>
+                            <td>$298</td>
+                            <td>$576</td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tab_content_title mt_10">
+                    <div class="sub_titles pull-left"></div>
+                    <div class="fonts mt_10">
+                        <span>其他信息</span>
+                        <span class="pull-right"><a href="#" class="fonts">修改</a></span>
+                    </div>
+                    <table class="table">
+                        <thead>
+                        <tr style="background-color: #f6f6f6;">
+                            <th>分销来源</th>
+                            <th>预计佣金</th>
+                            <th>佣金结算状态</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>店家:猫咪</td>
+                            <td>$36</td>
+                            <td>未知</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<script>
+    $(function(){
+        $("tr td a").each(function(index){
+            $(this).click(function(){
+                $("#orderInfo").css("display","block");
+            })
+        });
+        function close(id) {
+            $("body").click(function () {
+                $("#orderInfo").css("display","none");
+            })
+        }
+    })
+</script>
+</body>
+</html>

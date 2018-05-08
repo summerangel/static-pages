@@ -1,0 +1,43 @@
+.wrapSetPwdSuc {
+    min-width: 1200px;
+    overflow: hidden;
+}
+
+.wrapSetPwdSuc .midArea {
+    width: 100%;
+    background: #eee;
+}
+.wrapSetPwdSuc .midArea .setArea{
+    padding: 115px 0;
+}
+.wrapSetPwdSuc .midArea .setArea .dialog{
+    background-color: #fff;
+    width: 42.2%;
+    margin: 0 auto;
+    padding: 5.51% 0;
+}
+.dialogInfo{
+    width: 42%;
+    margin: auto;
+}
+.wrapSetPwdSuc .midArea .setArea .dialog img{
+    width: 100px;
+    float: left;
+    margin-right: 15px;
+}
+.wrapSetPwdSuc .midArea .setArea .dialog h3{
+    line-height: 100px;
+}
+.wrapSetPwdSuc .backBtn{
+    background: #dab866;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 13%;
+    padding: 2.65% 17.7% !important;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+.wrapSetPwdSuc .backBtn:hover{
+    background: #cda951;
+}

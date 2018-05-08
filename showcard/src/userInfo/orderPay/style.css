@@ -1,0 +1,102 @@
+.wrapOrderPay {
+  background-color: #eee;
+  min-width: 1200px;
+  overflow: hidden;
+}
+.wrapOrderPay .wrap_info {
+  background-color: #fff;
+  width: 70%;
+  margin: auto;
+  margin-top: 2%;
+  padding-bottom: 5%;
+  margin-bottom: 18%;
+}
+.wrapOrderPay .wrap_info .info_top {
+  border-bottom: 1px solid #ccc;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: MicrosoftYaHei;
+  color: #888888;
+  background-color: #f4f2ea;
+  font-size: 12px;
+}
+.wrapOrderPay .wrap_info .info_top .inner_top {
+  width: 90%;
+  margin: auto;
+}
+.wrapOrderPay .wrap_info .info_top .time_tip {
+  float: left;
+}
+.wrapOrderPay .wrap_info .info_top .should {
+  float: right;
+  padding-top: 10px;
+}
+.wrapOrderPay .wrap_info .info_content {
+  background-color: #f4f2ea;
+  width: 90%;
+  margin: auto;
+  margin-top: 15px;
+  border: 1px solid #ccc;
+  padding-bottom: 12%;
+}
+.wrapOrderPay .wrap_info .info_content .money {
+  padding-top: 10px;
+  padding-left: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+  font-size: 12px;
+}
+.wrapOrderPay .wrap_info .info_content .money .money_left {
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+.wrapOrderPay .wrap_info .info_content .money .money_able {
+  width: 60%;
+}
+.wrapOrderPay .wrap_info .info_content .money .money_able .howmuch {
+  padding-left: 10px;
+  color: #d8b866;
+}
+.wrapOrderPay .wrap_info .info_content .money .money_able .not_enough {
+  float: right;
+  color: #c21b1b;
+  padding-right: 30%;
+}
+.wrapOrderPay .wrap_info .info_content .money .money_able .input_xiuquan {
+  width: 20%;
+  margin-left: 10px;
+  border: 1px solid #dab866;
+  margin-right: 10px;
+}
+.wrapOrderPay .wrap_info .info_content .pay_div {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  font-size: 12px;
+}
+.wrapOrderPay .wrap_info .info_content .pay_div .pay_pwd {
+  float: left;
+  font-size: 14px;
+}
+.wrapOrderPay .wrap_info .info_content .pay_div .pay_input {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.wrapOrderPay .wrap_info .info_content .pay_div .pay_forget {
+  font-size: 12px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #282828;
+  color: #282828;
+  cursor: pointer;
+}
+.wrapOrderPay .wrap_info .info_content .pay_btn {
+  background-color: #dab866;
+  color: #fff;
+  font-size: 12px;
+  width: 15%;
+  text-align: center;
+  border-radius: 4px;
+  margin-left: 20%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}

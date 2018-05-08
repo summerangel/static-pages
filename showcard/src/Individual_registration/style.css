@@ -1,0 +1,143 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.wrapIndvPersonal {
+  min-width: 1200px;
+  overflow: hidden;
+}
+.wrapIndvPersonal .content {
+  width: 100%;
+  margin-top: 140px;
+  /*
+  background: url("../../images/background.jpg");
+  */
+}
+.wrapIndvPersonal .loginBox {
+  min-width: 1200px;
+  background: #eee;
+}
+.wrapIndvPersonal .pBtn{
+  font-size: 24px;
+  color: #fff;
+  padding: 1% 31%;
+  background: #dab866;
+  border: none;
+ /* margin-bottom: 12%;*/
+  /*margin-top: 10%;*/
+  outline: none;
+  }
+.wrapIndvPersonal .pBtn:hover{
+  color: #fff;
+  background: #cda951;
+}
+/*
+
+button:focus {outline:none;
+outline: 0;
+}
+button:focus {outline:none;} !*for IE*!
+
+button::-moz-focus-inner {border-color: transparent;} !*for mozilla*!
+*/
+
+
+.wrapIndvPersonal .getCode {
+  margin-left: -1%;
+  background: #dab866;
+  border: none;
+  margin-top: .5%;
+  line-height: 32px;
+  color: #fff;
+  padding: 0 4px;
+}
+.wrapIndvPersonal .getCode:hover{
+  color: #fff;
+  background: #cda951;
+}
+.wrapIndvPersonal .form-control{
+	height:45px \9\0;
+	line-height:29px \9\0;
+	padding:6px 12px 6px 12px;
+	margin-bottom: 5%;
+}
+.wrapIndvPersonal .form-horizontal{
+	margin-left:8% \9\0;
+}
+.wrapIndvPersonal form input:focus:invalid{border: 1px solid #dab866}
+.wrapIndvPersonal form input:focus:valid{border: 1px solid #dab866}
+
+
+/*login success 页面*/
+.success .milContent{
+  width: 100%;
+  background: #eee;
+  padding-top: 10%;
+  padding-bottom: 15%;
+ }
+
+.success .milContent .sucBox{
+ /* width: 400px;
+  height: 300px;
+  border: 1px solid #dab866;
+  margin: 0 auto;
+  border-radius: 7px;
+  background: #fff;
+  text-align: center;*/
+  width: 42%;
+  /* height: 36%; */
+  border: 1px solid #dab866;
+  margin: 0 auto;
+  border-radius: 2%;
+  background: #fff;
+  text-align: center;
+  padding-bottom: 10%;
+}
+.sucBox .msg{
+  width: 350px;
+  /*margin-top: 20%;
+  margin-left: 5%;*/
+  display: inline-block;
+  margin-top: 20%;
+  margin-bottom: 50px;
+}
+.sucBox img{
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-right: 20px;
+}
+.sucBox h3{
+  line-height: 100px;
+}
+.sucBox .sucBtn{
+  width: 170px;
+  height: 30px;
+  background-color: #dab866;
+  color: #fcfaf5;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 10px;
+  outline: none;
+}
+.sucBox .sucBtn:hover{
+  background-color: #cda951;
+}
+.sucBox a{
+  font-size: 12px;
+  color: #878484;
+  border-bottom: 1px solid #0f0f0f;
+  text-decoration: none;
+}
+
+/*兼容ie11 */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	 .wrapIndvPersonal .form-control {
+		  height:45px;
+		  line-height:29px;
+		  padding:6px 12px 6px 12px;
+	}
+	.wrapIndvPersonal .form-horizontal{
+	margin-left:8%;
+}
+}

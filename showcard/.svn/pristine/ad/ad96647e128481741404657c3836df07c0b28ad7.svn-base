@@ -1,0 +1,10 @@
+/* 个人中心ie样式兼容 */  /* */
+.wrapInfoCenter .content .main .m_content .myasset .mya-history .h-ulist {
+	line-height:78px; 
+}
+.wrapInfoCenter .content .main .m_content .myasset .mya-ulike .u-like .u-l-list .u-l-l-number {
+  line-height:50px;
+}
+.wrapInfoCenter .content .main .m_content .myasset .mya-ulike .u-like .u-l-list .u-l-l-tip {
+  line-height: 17px;
+}

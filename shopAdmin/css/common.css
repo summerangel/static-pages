@@ -1,0 +1,479 @@
+@import "//at.alicdn.com/t/font_1476881889_5664225.css";
+/* 清除内外边距 */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+fieldset,
+lengend,
+button,
+input,
+textarea,
+th,
+td {
+  /* table elements 表格元素 */
+  margin: 0;
+  padding: 0;
+  font-family: "microsoft yahei";
+}
+/* 设置默认字体 */
+body,
+button,
+input,
+select,
+textarea {
+  /* for ie */
+  /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+  font-family: "microsoft yahei", sans-serif;
+  /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+}
+h1 {
+  font-size: 18px;
+  /* 18px / 12px = 1.5 */
+}
+h2 {
+  font-size: 16px;
+}
+h3 {
+  font-size: 14px;
+}
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+/* 将斜体扶正 */
+code,
+kbd,
+pre,
+samp,
+tt {
+  font-family: "Courier New", Courier, monospace;
+}
+/* 统一等宽字体 */
+small {
+  font-size: 12px;
+}
+/* 小于 12px 的中文很难阅读，让 small 正常化 */
+/* 重置列表元素 */
+ul,
+ol {
+  list-style: none;
+}
+/* 重置文本格式元素 */
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: none;
+}
+abbr[title],
+acronym[title] {
+  /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+q:before,
+q:after {
+  content: '';
+}
+/* 重置表单元素 */
+legend {
+  color: #000;
+}
+/* for ie6 */
+fieldset,
+img {
+  border: none;
+}
+/* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 使得表单元素在 ie 下能继承字体大小 */
+}
+/* 重置表格元素 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* 重置 hr */
+hr {
+  border: none;
+  height: 1px;
+}
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html {
+  overflow-x: hidden;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+ .clearfix {
+  display: inline-block;
+}
+ .clearfix {
+  display: block;
+}
+/* 共用样式，头部和左边导航 */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  border-width: 0;
+  border-radius: 0;
+  z-index: 1025;
+  background-color: #f6f6f6;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+}
+.header .nav_header {
+  position: fixed;
+  width: 180px;
+  background-color: #01a9df;
+  color: #01a9df !important;
+}
+.header .nav_header .navbar-brand {
+  display: inline-block;
+  float: none !important;
+  height: auto;
+  padding: 0 15px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 50px;
+}
+.header .nav_header .navbar-brand .admin_logo {
+  color: #01a9df !important;
+  font-size: 30px;
+}
+.header .header_right {
+  margin-left: 60px;
+  display: block !important;
+  height: auto !important;
+  padding-bottom: 0;
+  overflow: visible !important;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+  position: relative;
+  background-color: #fff;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.header .header_right .nav_right {
+  float: right !important;
+  margin-bottom: 0px;
+}
+.header .header_right .nav_right .dropdown {
+  float: left;
+  position: relative;
+  display: block;
+  border-left: 1px solid #e4e4e4;
+  padding-left: 10px;
+  padding-right: 15px;
+}
+.header .header_right .nav_right .dropdown a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  line-height: 20px;
+  position: relative;
+  display: block;
+  text-decoration: none;
+}
+.header .header_right .nav_right .dropdown a .badge {
+  position: relative;
+  top: -3px;
+  border-radius: 4px;
+  background-color: #f05050;
+  padding: 2px 5px!important;
+  font-size: 85%;
+}
+.header .header_right .nav_right .dropdown a .title {
+  color: #333;
+  font-weight: 500;
+}
+.header .header_right .nav_right .dropdown a .caret {
+  color: #666;
+}
+.header .header_right .nav_right .dropdown .tongzhi {
+  font-size: 19px;
+  color: #666;
+}
+.header .header_right .nav_right .dropdown .dropdown_set {
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  top: 51px;
+  left: 6px;
+  display: none;
+  color: #666666;
+}
+.header .header_right .nav_right .dropdown .dropdown_set .arrowup {
+  position: absolute;
+  top: -9px;
+  left: 36px;
+  color: #999;
+}
+.header .header_right .nav_right .dropdown .dropdown_set .set_ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+.header .header_right .nav_right .dropdown .dropdown_set .set_ul .set_li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 26px;
+  border: 1px solid #e6e6e6;
+  font-size: 12px;
+  background-color: #f6f6f6;
+  cursor: pointer;
+}
+.header .header_right .nav_right .dropdown .dropdown_set .selected {
+  background-color: #e4e4e4 !important;
+  color: #333 !important;
+  font-weight: 500;
+}
+.aside {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 1010;
+  width: 60px;
+  float: left;
+  background-color: #303030;
+}
+.aside .nav_aside {
+  z-index: 1000;
+  overflow: hidden;
+}
+.aside .nav_aside .aside_wrap {
+  position: relative;
+  height: 100%;
+  overflow-x: hidden;
+}
+.aside .nav_aside .aside_wrap .navi {
+  width: 60px;
+  position: fixed;
+  top: 53px;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+}
+.aside .nav_aside .aside_wrap .navi .nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.aside .nav_aside .aside_wrap .navi .nav li {
+  position: relative;
+  display: block;
+}
+.aside .nav_aside .aside_wrap .navi .nav li a {
+  position: relative;
+  padding: 0;
+  text-align: center;
+  border: none;
+  display: block;
+  font-weight: 400;
+  text-transform: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 12px;
+  color: #b3b3b3;
+}
+.aside .nav_aside .aside_wrap .navi .nav li a i {
+  font-size: 16px;
+  color: #b3b3b3;
+}
+.aside .nav_aside .aside_wrap .navi .nav li a .nav_name {
+  display: block;
+  margin-top: 5px;
+}
+.aside .nav_aside .aside_wrap .navi .nav .nav_selected {
+  background-color: #424242;
+  color: #fff;
+  cursor: pointer;
+}
+.aside .nav_aside .aside_wrap .navi .nav .nav_selected i {
+  color: #fff;
+}
+.aside .nav_aside .aside_wrap .second_navi {
+  position: fixed;
+  top: 53px;
+  height: 100%;
+  background-color: #e6e6e6;
+  left: 60px;
+  overflow-y: auto;
+}
+.aside .nav_aside .aside_wrap .second_navi .second_nav {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  width: 120px;
+}
+.aside .nav_aside .aside_wrap .second_navi .second_nav .second_li a {
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  text-decoration: none;
+  font-size: 12px;
+}
+.aside .nav_aside .aside_wrap .second_navi .second_nav .second_li a .second_name {
+  color: #666666;
+}
+.aside .nav_aside .aside_wrap .second_navi .second_nav .second_li a:hover,
+.aside .nav_aside .aside_wrap .second_navi .second_nav .second_li .second_selected {
+  background-color: #fff;
+  color: #333 !important;
+  font-weight: 500;
+  text-decoration: none;
+}
+.aside .nav_aside .aside_wrap .second_navi .second_nav .second_li:first-child a {
+  padding-top: 25px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.aside .nav_aside .aside_wrap .second_navi .second_nav .second_li:first-child a:hover {
+  background-color: #e6e6e6;
+}
+.floatL {
+  float: left;
+}
+.floatR {
+  float: right;
+}
+.textL {
+  text-align: left !important;
+}
+.textR {
+  text-align: right !important;
+}
+.textC {
+  text-align: center !important;
+}
+.color9f9e9a {
+  color: #9f9e9a;
+}
+.color64b44b {
+  color: #64b44b;
+}
+.colorf9b71e {
+  color: #f9b71e;
+}
+.color0249c7 {
+  color: #0249c7;
+}
+.colorf27e67 {
+  color: #f27e67;
+}
+.color2addea {
+  color: #2addea;
+}
+.bgColorf6f6f6 {
+  background-color: #f6f6f6;
+}
+.bgColor11cd6f {
+  background-color: #11cd6f;
+}
+.bgColorfeb724 {
+  background-color: #feb724;
+}
+.bgColorfb5500 {
+  background-color: #fb5500;
+}
+.bgColor1baeed {
+  background-color: #1baeed;
+}
+.bgColorf27e67 {
+  background-color: #f27e67;
+}
+.font12 {
+  font-size: 12px;
+}
+.font13 {
+  font-size: 13px;
+}
+.font14 {
+  font-size: 14px;
+}
+.font15 {
+  font-size: 15px;
+}
+.pLeft0 {
+  padding-left: 0px;
+}
+.pLeft10 {
+  padding-left: 10px !important;
+}
+.pRight0 {
+  padding-right: 0px !important;
+}
+.pRight5 {
+  padding-right: 5px !important;
+}
+.pRight10 {
+  padding-right: 10px !important;
+}
+.pTop8 {
+  padding-top: 8px !important;
+}
+.pTop10 {
+  padding-top: 10px !important;
+}
+.pTop25 {
+  padding-top: 25px !important;
+}
+.pBottom10 {
+  padding-bottom: 10px !important;
+}
+.pBottom26 {
+  padding-bottom: 26px !important;
+}
+.pBottom38 {
+  padding-bottom: 38px !important;
+}
+.mBottom0 {
+  margin-bottom: 0px !important;
+}
+.mBottom16 {
+  margin-bottom: 16px;
+}
+.mLeft20 {
+  margin-left: 20px;
+}
+.mRight5 {
+  margin-right: 5px;
+}
+.mRight6 {
+  margin-right: 6px;
+}

@@ -1,0 +1,288 @@
+[
+  {
+    "id": 0,
+    "name": "店铺",
+    "icon": "icon iconfont icon-shop",
+    "children": [
+      {
+        "id": 0,
+        "icon": "icon iconfont icon-shop",
+        "name": "店铺管理"
+      },
+      {
+        "id": 1,
+        "name": "首页(示例)",
+        "href":"../home/home.html"
+      },
+      {
+        "id": 2,
+        "name": "列表(table示例)",
+        "href":"../order/order_list.html"
+      },
+      {
+        "id": 3,
+        "name": "订单详情(示例)",
+        "href":"../orderDetail/orderDetail.html"
+      },
+      {
+        "id": 4,
+        "name": "产品列表(bootgrid示例)",
+        "href":"../product/productList.html"
+      },
+      {
+        "id": 5,
+        "name": "新增(示例)",
+        "href":"../release/release.html"
+      },
+      {
+        "id": 6,
+        "name": "登录页(示例)",
+        "href":"../sign_in/sign_in.html"
+      },
+      {
+        "id": 7,
+        "name": "新订单列表(bootgrid示例)",
+        "href":"../order/ordernew.html"
+      },
+      {
+        "id": 8,
+        "name": "新增风险评估问题(示例)",
+        "href":"../riskEvaluation/riskEvaluation.html"
+      },
+      {
+        "id": 9,
+        "name": "风险评估调查管理(示例)",
+        "href":"../riskManage/riskManage.html"
+      },
+      {
+        "id": 10,
+        "name": "layer弹框(示例)",
+        "href":"../layerDemo/layerDemo.html"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "产品",
+    "icon": "icon iconfont icon-product",
+    "children": [
+      {
+        "id": 0,
+        "icon": "icon iconfont icon-product",
+        "name": "产品管理"
+      },
+      {
+        "id": 1,
+        "name": "产品中心",
+        "href":"#"
+      },
+      {
+        "id": 2,
+        "name": "基本信息1",
+        "href":"#"
+      },
+      {
+        "id": 3,
+        "name": "认证信息1",
+        "href":"#"
+      },
+      {
+        "id": 4,
+        "name": "资金管理1",
+        "href":"#"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "行程",
+    "icon": "icon iconfont icon-xingcheng",
+    "children": [
+      {
+        "id": 0,
+        "icon": "icon iconfont icon-xingcheng",
+        "name": "行程管理"
+      },
+      {
+        "id": 1,
+        "name": "行程中心2",
+        "href":"#"
+      },
+      {
+        "id": 2,
+        "name": "基本信息2",
+        "href":"#"
+      },
+      {
+        "id": 3,
+        "name": "认证信息2",
+        "href":"#"
+      },
+      {
+        "id": 4,
+        "name": "资金管理2",
+        "href":"#"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "订单",
+    "icon": "icon iconfont icon-order",
+    "children": [
+      {
+        "id": 0,
+        "icon": "icon iconfont icon-order",
+        "name": "订单管理"
+      },
+      {
+        "id": 1,
+        "name": "订单中心3",
+        "href":"#"
+      },
+      {
+        "id": 2,
+        "name": "基本信息3",
+        "href":"#"
+      },
+      {
+        "id": 3,
+        "name": "认证信息3",
+        "href":"#"
+      },
+      {
+        "id": 4,
+        "name": "资金管理3",
+        "href":"#"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "分销",
+    "icon": "icon iconfont icon-category",
+    "children": [
+      {
+        "id": 0,
+        "icon": "icon iconfont icon-category",
+        "name": "分销管理"
+      },
+      {
+        "id": 1,
+        "name": "分销中心4",
+        "href":"#"
+      },
+      {
+        "id": 2,
+        "name": "基本信息4",
+        "href":"#"
+      },
+      {
+        "id": 3,
+        "name": "认证信息4",
+        "href":"#"
+      },
+      {
+        "id": 4,
+        "name": "资金管理4",
+        "href":"#"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "店员",
+    "icon": "icon iconfont icon-employer",
+    "children": [
+      {
+        "id": 0,
+        "icon": "icon iconfont icon-employer",
+        "name": "店员管理"
+      },
+      {
+        "id": 1,
+        "name": "店员中心5",
+        "href":"#"
+      },
+      {
+        "id": 2,
+        "name": "基本信息5",
+        "href":"#"
+      },
+      {
+        "id": 3,
+        "name": "认证信息5",
+        "href":"#"
+      },
+      {
+        "id": 4,
+        "name": "资金管理5",
+        "href":"#"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "数据",
+    "icon": "icon iconfont icon-data",
+    "children": [
+      {
+        "id": 0,
+        "icon": "icon iconfont icon-data",
+        "name": "数据管理"
+      },
+      {
+        "id": 1,
+        "name": "数据中心6",
+        "href":"#"
+      },
+      {
+        "id": 2,
+        "name": "基本信息6",
+        "href":"#"
+      },
+      {
+        "id": 3,
+        "name": "认证信息6",
+        "href":"#"
+      },
+      {
+        "id": 4,
+        "name": "资金管理6",
+        "href":"#"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "帮助",
+    "icon": "icon iconfont icon-help",
+    "children": [
+      {
+        "id": 0,
+        "icon": "icon iconfont icon-help",
+        "name": "帮助管理"
+      },
+      {
+        "id": 1,
+        "name": "帮助中心",
+        "href":"#"
+      },
+      {
+        "id": 2,
+        "name": "基本信息7",
+        "href":"#"
+      },
+      {
+        "id": 3,
+        "name": "认证信息7",
+        "href":"#"
+      },
+      {
+        "id": 4,
+        "name": "资金管理7",
+        "href":"#"
+      }
+    ]
+  }
+]

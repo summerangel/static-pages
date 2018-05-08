@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <title>table_example</title>
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../lib/bootstrap-table-master/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" href="../../css/common.css"/>
+    <link rel="stylesheet" href="../../src/table_example/example.css">
+</head>
+<body>
+<div class="panel-body" style="padding-bottom:0px;">
+    <div class="panel panel-default">
+        <div class="panel-heading">查询条件</div>
+        <div class="panel-body">
+            <form id="formSearch" class="form-horizontal">
+                <div class="form-group" style="margin-top:15px">
+                    <label class="control-label col-sm-1" for="txt_search_departmentname">产品名称</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="txt_search_departmentname">
+                    </div>
+                    <label class="control-label col-sm-1" for="txt_search_statu">状态</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="txt_search_statu">
+                    </div>
+                    <div class="col-sm-4" style="text-align:left;">
+                        <button type="button" style="margin-left:50px" id="btn_query" class="btn btn-primary">查询
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="toolbar" class="btn-group">
+        <button id="btn_add" type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
+        </button>
+        <button id="btn_edit" type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>修改
+        </button>
+        <button id="btn_delete" type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除
+        </button>
+    </div>
+    <table id="reportTable" class="table table-bordered table-condensed table-striped" style="font-size: 12px;">
+    </table>
+</div>
+
+<script src="../../lib/jquery-1.10.2/jquery.min.js"></script>
+<script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../lib/bootstrap-table-master/dist/bootstrap-table.min.js"></script>
+<script src="../../lib/bootstrap-table-master/dist/locale/bootstrap-table-zh-CN.js"></script>
+<script src="../../lib/bootstrap-table-master/dist/extensions/toolbar/bootstrap-table-toolbar.min.js"></script>
+
+<script>
+    $(function () {
+        $('#reportTable').bootstrapTable({
+            url: 'example.json',
+            toolbar: '#toolbar',    //工具按钮用哪个容器
+            columns: [{
+                field: 'state',
+                checkbox: true,
+                align: 'center',
+                 title: 'Item ID'
+            }, {
+                field: 'id',
+                title: '序号',
+//                sortable: true,
+                align: 'center'
+            },{
+                field: 'serial_num',
+                align: 'center',
+                 title: '订单编号'
+            }, {
+                field: 'pro_name',
+                align: 'center',
+                title: '产品名称'
+            }, {
+                field: 'pro_price',
+                align: 'center',
+                title: '产品价格 (万元)',
+                sortable: true
+            }, {
+                field: 'pro_num',
+                align: 'center',
+                sortable: true,
+                title: '产品数量 (件)'
+            }, {
+                field: 'categories',
+                align: 'center',
+                title: '产品类型'
+            }, {
+                field: 'order_info',
+                align: 'center',
+                title: '订单详情'
+            }, {
+                field: 'id',
+                align: 'center',
+                title: '操作',
+                formatter: function (value, row, index) {
+                    var e = '<a href="#" mce_href="#" onclick="edit(\'' + row.id + '\')" class=\"btn btn-xs btn-primary command-edit\">编辑</a> ';
+                    var d = '<a href="#" mce_href="#" onclick="del(\'' + row.id + '\')" class=\"btn btn-xs btn-danger command-delete\">删除</a> ';
+                    return e + d;
+                }
+            }],
+            onLoadSuccess: function () {
+
+            },
+
+            onLoadError: function () {
+
+                mif.showErrorMessageBox("数据加载失败！");
+
+            },
+//            height: 420,
+            checkboxHeader: true,
+            singleSelect: false,
+            pagination: true, //分页
+            showColumns: true, //显示隐藏列
+            showRefresh: true,  //显示刷新按钮
+            search: true,//是否显示右上角的搜索框
+            sidePagination: "",//server服务端处理分页
+            clickToSelect: true, //点击行即可选中单选/复选框
+            showToggle: true,     //是否显示详细视图和列表视图的切换按钮
+            sortName: 'MeterMeasureHistoryID',
+            sortOrder: 'desc',
+            pageNumber: 1,
+            pageSize: 6,
+            pageList: [6, 10, 20]
+        });
+    });
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../lib/jquery.bootgrid-1.3.1/jquery.bootgrid.min.css">
+    <link rel="stylesheet" href="../../lib/layer2.4/skin/layer.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/app.min.css">
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+<div class="wrapProductList">
+    <div class="header"></div>
+    <div class="aside"></div>
+    <div class="home">
+        <div style="overflow: auto !important;">
+            <div class="">
+                <div class="col-xs-12">
+                    <!--<button class="btn m-b-xs btn-sm btn-primary btn-addon"><i class="icon iconfont icon-jiahao1"></i>Primary</button>-->
+                    <button class="btn m-b-xs btn-sm btn-info btn-addon"><i class="icon iconfont icon-jiahao1"></i>导出商品</button>
+                    <button class="btn m-b-xs btn-sm btn-danger btn-addon"><i class="icon iconfont icon-shanchu"></i>全部删除</button>
+                </div>
+            </div>
+            <div class="">
+                <div class="col-xs-12">
+                    <table id="grid-data" class="table table-condensed table-hover table-striped table-bordered">
+                        <thead>
+                        <tr style="background-color: #f6f6f6;font-size: 12px;color: #666;">
+                            <th data-header-align="center" data-align="center" data-identifier="true" data-column-id="id" data-type="numeric">ID</th>
+                            <th data-header-align="center"  data-align="center" data-column-id="sender">邮箱</th>
+                            <th data-header-align="center"  data-align="center" data-column-id="received" data-order="desc">接收时间</th>
+                            <th data-header-align="center"  data-align="center" data-column-id="commands" data-formatter="commands" data-sortable="false">操作</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../lib/jquery-1.10.2/jquery.min.js"></script>
+<script src="../../lib/jquery.bootgrid-1.3.1/jquery.bootgrid.min.js"></script>
+<script src="../../lib/layer2.4/layer.js"></script>
+<script src="../../plugin/StringBuilder.Min.js"></script>
+<script src="../../plugin/header.js"></script>
+<script>
+    $(function(){
+        //初始化头部和左边导航
+        $('.header').headerPlugin({});
+        $('.aside').navAsidePlugin({});
+        var grid = $("#grid-data").bootgrid({
+            ajax: true,
+            rowCount: [5, 10],
+//            caseSensitive: false,
+            labels: {
+                loading:'正在加载中...',
+                noResults: "没有结果",
+                search:'请输入ID进行查询',
+                refresh:'刷新'
+            },
+//            Styling:{
+//                icon:'icon iconfont',
+//
+//            },
+            searchSettings: {
+                characters: 1
+            },
+            post: function ()
+            {
+                return {
+                    id: "1"
+                };
+            },
+            url: "../../plugin/productList.json",
+            selection: true,
+            multiSelect: true,
+            rowSelect: true,
+            formatters: {
+                "commands": function(column, row)
+                {
+                    var a=$("#grid-data").bootgrid("getCurrentRows");
+                    return "<button type=\"button\" class=\"btn btn-xs btn-primary command-edit\" data-row-id=\"" + row.id + "\"><span class=\"icon iconfont icon-fankui\"></span>编辑</button> " +
+                            "<button type=\"button\" class=\"btn btn-xs btn-danger command-delete\" data-row-id=\"" + row.id + "\"><span class=\"icon iconfont icon-shanchu\"></span>删除</button>";
+                }
+            }
+        }).on("loaded.rs.jquery.bootgrid", function()
+        {
+            /* Executes after data is loaded and rendered */
+            grid.find(".command-edit").on("click", function(e)
+            {
+                alert("You pressed edit on row: " + $(this).data("row-id"));
+            }).end().find(".command-delete").on("click", function(e)
+            {
+                //询问框
+                layer.confirm('您确定要删除这条记录？', {
+                    btn: ['确认','取消'] //按钮
+                }, function(){
+                    layer.msg('删除成功', {icon: 1});
+                }, function(){
+
+                });
+//                alert("You pressed delete on row: " + $(this).data("row-id"));
+            });
+        });
+
+
+        $('.btn-addon').click(function(){
+            //询问框
+            layer.confirm('您确定要删除这条记录？', {
+                btn: ['确认','取消'] //按钮
+            }, function(){
+                layer.msg('删除成功', {icon: 1});
+            }, function(){
+
+            });
+        });
+
+    })
+</script>
+</body>
+</html>

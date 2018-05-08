@@ -1,0 +1,170 @@
+html {
+  background-color: #fff;
+}
+.wrapHome .home {
+  padding-left: 195px;
+  padding-top: 77px;
+  padding-bottom: 30px;
+  width: 100%;
+}
+.wrapHome .home .shop_info .wrap_shop {
+  background-color: #fdf9ed;
+  padding-left: 10px;
+  padding-top: 20px;
+}
+.wrapHome .home .shop_info .name {
+  font-size: 15px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+.wrapHome .home .shop_info .info_li {
+  float: left;
+  font-size: 12px;
+  position: relative;
+}
+.wrapHome .home .shop_info .info_li .not_identify {
+  color: #9f9e9a;
+  float: left;
+  position: relative;
+  padding-right: 80px;
+  padding-bottom: 30px;
+}
+.wrapHome .home .shop_info .info_li .arrowup {
+  position: absolute;
+  left: 18px;
+  top: 11px;
+  color: #e4e4e4;
+}
+.wrapHome .home .shop_info .info_li .show_wrap_info,
+.wrapHome .home .shop_info .info_li .show_status_info {
+  display: none;
+}
+.wrapHome .home .shop_info .info_li .wrap_info {
+  position: absolute;
+  top: 22px;
+  left: -65px;
+  font-size: 12px;
+  border: 2px solid #e4e4e4;
+  padding: 5px;
+  background-color: #fff;
+}
+.wrapHome .home .shop_info .info_li .wrap_info .identify_title {
+  float: left;
+  padding-top: 5px;
+  padding-right: 8px;
+}
+.wrapHome .home .shop_info .info_li .wrap_info .identify_btn {
+  float: left;
+  background-color: #f44042;
+  color: #fff;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.wrapHome .home .shop_detail .item {
+  width: 30%;
+  float: left;
+  padding-top: 32px;
+  padding-bottom: 25px;
+}
+.wrapHome .home .shop_detail .item .product {
+  font-size: 22px;
+  color: #fff;
+  padding: 12px;
+  border-radius: 50%;
+}
+.wrapHome .home .shop_detail .wrap_qiandai {
+  padding-top: 30px;
+  padding-left: 10px;
+  background-color: #f6f6f6;
+}
+.wrapHome .home .shop_detail .wrap_qiandai .account .qiandai {
+  font-size: 22px;
+  color: #fff;
+  padding: 12px;
+  border-radius: 50%;
+  background-color: #f27e67;
+}
+.wrapHome .home .shop_detail .wrap_qiandai .account .zijin {
+  margin-left: 20px;
+  font-size: 14px;
+}
+.wrapHome .home .shop_detail .wrap_qiandai .zijin_info {
+  padding-left: 68px;
+  width: 100%;
+  padding-top: 30px;
+}
+.wrapHome .home .shop_detail .wrap_qiandai .zijin_info .left_div {
+  float: left;
+  text-align: center;
+  padding-right: 10px;
+  border-right: 1px solid #e4e4e4;
+  width: 42%;
+}
+.wrapHome .home .shop_detail .wrap_qiandai .zijin_info .right_div {
+  float: left;
+  text-align: center;
+  padding-left: 16px;
+  width: 45%;
+}
+.wrapHome .home .shop_detail .wrap_qiandai .detail {
+  padding-top: 32px;
+  padding-bottom: 25px;
+  padding-right: 40px;
+  text-align: right;
+  color: #0249c7;
+  cursor: pointer;
+}
+.wrapHome .home .shop_function .box {
+  position: relative;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  margin-top: 25px;
+  width: 100%;
+}
+.wrapHome .home .shop_function .box .box_header {
+  color: #444;
+  display: block;
+  padding: 10px;
+  padding-left: 0px;
+  position: relative;
+}
+.wrapHome .home .shop_function .box .box_header .box_title {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
+  margin-left: -7px;
+}
+.wrapHome .home .shop_function .box .box_body {
+  padding: 10px;
+  padding-left: 0px;
+}
+.wrapHome .home .shop_function .box .box_body .visit {
+  background-color: #f6f6f6;
+  padding-top: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.wrapHome .home .shop_function .box .box_body .visit_img {
+  padding-bottom: 13px;
+  padding-top: 13px;
+  background-color: #f6f6f6;
+}
+.wrapHome .home .shop_function .box .box_body .visit_img img {
+  width: 19%;
+}
+.wrapHome .home .shop_function .box .box_body .box_icon {
+  background-color: #f6f6f6;
+  padding-top: 23px;
+  padding-left: 10px;
+  padding-bottom: 23px;
+  margin-bottom: 10px;
+}
+.wrapHome .home .shop_function .box .box_body .product {
+  font-size: 12px;
+  color: #fff;
+  padding: 3px;
+  border-radius: 50%;
+  margin-right: 5px;
+}

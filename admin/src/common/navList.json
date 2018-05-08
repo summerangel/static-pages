@@ -1,0 +1,139 @@
+[
+  {
+    "id": "001",
+    "iconCls": "fa fa-home ",
+    "title": "首页",
+    "content": [
+      {
+        "text": "东金中心首页",
+        "href":"../home/dongjingCenterHome.html"
+      },
+      {
+        "text": "金服首页",
+        "href":"../home/jinfuHome.html"
+      },
+      {
+        "text": "金服团队leader首页",
+        "href":"../home/teamLeaderHome.html"
+      },
+      {
+        "text": "团队员工首页",
+        "href":"../home/teamEmployerHome.html"
+      },
+      {
+        "text": "承销商首页",
+        "href":"../home/salerHome.html"
+      }
+    ]
+  },
+  {
+    "id": "002",
+    "iconCls": "fa fa-line-chart ",
+    "title": "销售概况",
+    "content": [
+      {
+        "text": "东金中心概况",
+        "href":"../market/dongjingCenter.html"
+      },
+      {
+        "text": "金服概况",
+        "href":"../market/jinfu.html"
+      },
+      {
+        "text": "金服团队leader",
+        "href":"../market/teamLeader.html"
+      },
+      {
+        "text": "团队员工",
+        "href":"../market/teamEmployer.html"
+      },
+      {
+        "text": "承销商",
+        "href":"../market/saler.html"
+      }
+    ]
+  },
+  {
+    "id": "003",
+    "iconCls": "fa fa-users ",
+    "title": "客户管理",
+    "content": [
+      {
+        "text": "客户列表",
+        "href":"../custom/customList.html"
+      },
+      {
+        "text": "客户编辑",
+        "href":"../custom/customEdit.html"
+      }
+    ]
+  },
+  {
+    "id": "004",
+    "iconCls": "fa fa-user",
+    "title": "员工管理",
+    "content": [
+      {
+        "text": "员工列表",
+        "href":"../employer/employerList.html"
+      },
+      {
+        "text": "添加员工",
+        "href":"../employer/employerAdd.html"
+      },
+      {
+        "text": "员工查询页",
+        "href":"../employer/employerQuery.html"
+      },
+      {
+        "text": "员工编辑页",
+        "href":"../employer/employerEdit.html"
+      }
+    ]
+  },
+  {
+    "id": "005",
+    "iconCls": "fa fa-globe ",
+    "title": "承销商管理",
+    "content": [
+      {
+        "text": "添加承销商",
+        "href":"../saler/addUnderWriter.html"
+      },
+      {
+        "text": "编辑承销商",
+        "href":"../saler/editor.html"
+      },
+      {
+        "text": "查询承销商",
+        "href":"../saler/query.html"
+      },
+      {
+        "text": "承销商列表",
+        "href":"../saler/clientList.html"
+      }
+    ]
+  },
+  {
+    "id": "006",
+    "iconCls": "fa fa-table ",
+    "title": "订单管理",
+    "content": [
+      {
+        "text": "订单列表",
+        "href":"../order/orderList.html"
+      }
+    ]
+  },
+  {
+    "id": "007",
+    "iconCls": "fa fa-usd ",
+    "title": "财务管理",
+    "content": [
+      {
+        "text": "财务管理",
+        "state": "closed"
+      }
+    ]
+  }
+]

@@ -1,0 +1,43 @@
+<div class="wrapFilter">
+    <div class="bar bar-header">
+        <h1 class="title">
+            <i class="iconfont icon-arrowleft floatL icon-font-add" ng-mousedown="goback()"></i>
+            滤芯详情
+            <i class="iconfont icon-shouye floatR icon-font-add" ng-mousedown="go('#/index')"></i>
+        </h1>
+    </div>
+    <div class="content has-header">
+        <div class="row">
+            <div class="col textC color999">
+                滤芯状态<span ng-if="!pageData.dataJson.isOutCleanDate">正常</span><span ng-if="pageData.dataJson.isOutCleanDate">异常</span>
+            </div>
+        </div>
+        <div class="row centerYuan">
+            <div class="col textC yuan">
+                <div  ng-if="!pageData.controllerDetailJson.isOutCleanDate" data-radial-indicator="indicatorOption" data-radial-indicator-id="indicator1">
+                    <div class=""></div>
+                </div>
+                <div class="square borderOver" ng-if="pageData.controllerDetailJson.isOutCleanDate">
+                    <div class="liu">
+                        <span class="font43">{{pageData.percent}}</span>%
+                    </div>
+                    <div class="guokongqi">
+                        已过使用寿命{{pageData.controllerDetailJson.filterScreenTimeLimit-pageData.controllerDetailJson.filterHours}}小时，请尽快清洗
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapBottom">
+            <div class="row mTop13">
+                <div class="col textC filter" ng-mousedown="pageFunc.resetFilter()">
+                    滤网已清洗
+                </div>
+            </div>
+            <div class="row">
+                <div class="col clean textR" ng-mousedown="go('#/cleanmethod')">
+                    清洗指南
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

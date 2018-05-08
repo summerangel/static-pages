@@ -1,0 +1,245 @@
+.wrapOrderRecord {
+  min-width: 1200px;
+  overflow: hidden;
+}
+.wrapOrderRecord .content {
+  width: 100%;
+  background-color: #f9f9f9;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.wrapOrderRecord .content .w {
+  width: 67%;
+  margin: 0 auto;
+}
+.wrapOrderRecord .content .main {
+  position: relative;
+}
+.wrapOrderRecord .content .main .m_nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 175px;
+  background-color: #f4f2ea;
+  box-shadow: -3px 3px 5px #d9d7cf;
+  height: 100%;
+}
+.wrapOrderRecord .content .main .m_nav .assets-nav {
+  width: 175px;
+  bottom: auto;
+  top: 0px;
+}
+.wrapOrderRecord .content .main .m_nav .assets-nav .an-userinfo {
+  min-height: 175px;
+  text-align: center;
+  padding: 18px 10px 0;
+}
+.wrapOrderRecord .content .main .m_nav .assets-nav .an-userinfo .u-img {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: auto;
+}
+.wrapOrderRecord .content .main .m_nav .assets-nav .an-userinfo .u-img img {
+  max-width: 100%;
+  width: 50px;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+}
+.wrapOrderRecord .content .main .m_nav .assets-nav .an-userinfo .u-name {
+  height: 24px;
+  font-size: 12px;
+  line-height: 24px;
+}
+.wrapOrderRecord .content .main .m_nav .assets-nav .an-userinfo .u-ext {
+  height: 32px;
+  margin-bottom: 10px;
+  line-height: 32px;
+  color: #838a96;
+}
+.wrapOrderRecord .content .main .m_nav .assets-nav .an-userinfo .u-ext .u-security {
+  font-size: 0;
+}
+.wrapOrderRecord .content .main .m_nav .assets-nav .an-userinfo .u-ext .u-security .img_header {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  font-size: 12px;
+  margin: 6px 3px;
+  border-radius: 50%;
+  line-height: 18px;
+  text-align: center;
+}
+.wrapOrderRecord .content .main .m_nav .assets-nav .an-userinfo .u-ext .u-security .u-security-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  margin: 6px 3px;
+  border: 1px solid #f9ecc7;
+  border-radius: 50%;
+  line-height: 18px;
+  text-align: center;
+}
+.wrapOrderRecord .content .main .m_nav .assets-nav .an-list {
+  margin-top: -1px;
+  padding-bottom: 13px;
+}
+.wrapOrderRecord .content .main .m_nav .assets-nav .an-list .l-item {
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+}
+.wrapOrderRecord .content .main .m_nav .assets-nav .an-list .l-item a {
+  color: #333333;
+  font-size: 12px;
+}
+.wrapOrderRecord .content .main .m_nav .assets-nav .an-list .l-item a:hover {
+  text-decoration: none;
+}
+.wrapOrderRecord .content .main .m_nav .assets-nav .an-list .l-item a:link {
+  text-decoration: none;
+}
+.wrapOrderRecord .content .main .m_nav .assets-nav .an-list .current {
+  width: 175px;
+  height: 32px;
+  background-color: #fff;
+  line-height: 32px;
+}
+.wrapOrderRecord .content .main .m_nav .assets-nav .an-list .current a {
+  color: #d8b669;
+}
+.wrapOrderRecord .content .main .m_nav .assets-nav .an-list .current a:hover {
+  text-decoration: none;
+}
+.wrapOrderRecord .content .main .m_nav .assets-nav .an-list .current a:link {
+  text-decoration: none;
+}
+.wrapOrderRecord .content .main .m_content {
+  position: relative;
+  z-index: 20;
+  margin-left: 175px;
+  background-color: #fff;
+  font-size: 14px;
+  font-family: Arial, "Microsoft Yahei", "\5FAE\8F6F\96C5\9ED1";
+  line-height: 1.5;
+  zoom: 1;
+}
+.wrapOrderRecord .content .main .m_content .myasset {
+  background-color: #fff;
+  box-shadow: 3px 3px 5px #d9d7cf;
+  min-height: 600px;
+}
+.wrapOrderRecord .content .main .m_content .myasset .can_use {
+  padding-left: 5%;
+  padding-top: 3%;
+  border-bottom: 1px solid #ccc;
+}
+.wrapOrderRecord .content .main .m_content .myasset .time_choose {
+  padding-top: 4%;
+  padding-bottom: 1%;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+}
+.wrapOrderRecord .content .main .m_content .myasset .time_choose .time {
+  float: left;
+  width: 15%;
+  text-align: right;
+  font-size: 12px;
+  line-height: 24px;
+}
+.wrapOrderRecord .content .main .m_content .myasset .time_choose .wrap_time_input .start {
+  width: 17%;
+}
+.wrapOrderRecord .content .main .m_content .myasset .time_choose .wrap_time_input .choosed {
+  color: #d8b669;
+}
+.wrapOrderRecord .content .main .m_content .myasset .cate_status {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  border-bottom: 1px solid #ccc;
+}
+.wrapOrderRecord .content .main .m_content .myasset .cate_status .wrap_form .cate {
+  float: left;
+  width: 15%;
+  text-align: right;
+  font-size: 12px;
+  line-height: 24px;
+}
+.wrapOrderRecord .content .main .m_content .myasset .cate_status .wrap_form .wrap_ul {
+  width: 80%;
+  float: left;
+  padding-left: 4%;
+}
+.wrapOrderRecord .content .main .m_content .myasset .cate_status .wrap_form .wrap_ul .wrap_li {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 2px;
+  float: left;
+  margin-right: 10px;
+  color: #adadad;
+}
+.wrapOrderRecord .content .main .m_content .myasset .mBottom2Per {
+  margin-bottom: 2%;
+}
+.wrapOrderRecord .content .main .m_content .myasset .table_title .cate {
+  float: left;
+  width: 13%;
+  text-align: right;
+  font-size: 12px;
+  line-height: 24px;
+}
+.wrapOrderRecord .content .main .m_content .myasset .table_title .create_time {
+  float: left;
+  width: 15%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 24px;
+}
+.wrapOrderRecord .content .main .m_content .myasset .table_title .name {
+  float: left;
+  width: 38%;
+  text-align: left;
+  font-size: 12px;
+  line-height: 24px;
+}
+.wrapOrderRecord .content .main .m_content .myasset .table_title .money {
+  float: left;
+  width: 10%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 24px;
+}
+.wrapOrderRecord .content .main .m_content .myasset .table_title .status {
+  float: left;
+  width: 10%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 24px;
+}
+.wrapOrderRecord .content .main .m_content .myasset .table_title .operate {
+  float: left;
+  width: 10%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 24px;
+}
+.wrapOrderRecord .pTopPerOne {
+  padding-bottom: 1%;
+  padding-top: 1%;
+  border-bottom: 1px solid #ccc;
+}
+.wrapOrderRecord .pAllPer {
+  padding-bottom: 4%;
+  padding-top: 4%;
+  border-bottom: 1px solid #ccc;
+  color: #adadad;
+}
+.wrapOrderRecord .pAll {
+  padding-left: 8px;
+  padding-right: 8px;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content=""/>
+    <title>提现</title>
+    <link rel="stylesheet" href="../../css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <!--<link rel="stylesheet" href="withDrawSuc.css">-->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../css/bootstrap/js/html5shiv.js"></script>
+    <script src="../../css/bootstrap/js/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../../js/jquery-1.10.2/jquery.min.js"></script>
+    <script>
+        $(function(){
+            function resize() {
+                $(".midArea").css("min-height",$(window).height()-180);
+//                $(".myasset").css("min-height",$(window).height()-180);
+//                $(".bottom_table").css("min-height",$(window).height()-380);
+            }
+            resize();
+            $(window).resize(function() {
+                resize();
+            });
+
+        })
+    </script>
+</head>
+<body>
+<div class="wrapWithDrawSuc">
+    <div class="header_linkto">
+        <div class="header_top">
+            <div class="text_left"><img src="../../images/shouye.jpg">秀卡首页</div>
+            <div class="text_right">尊敬的xiuka88<span>退出登录</span></div>
+        </div>
+        <div class="header_logo">
+            <a href="#"><img class="img" src="../../images/logo.png"/></a>
+            <div class="order_confirm"><a href="#">提现</a></div>
+            <div class="cRegistration current"><img class="header_center" src="../../images/header_center.png" alt=""/>个人中心</a>
+            </div>
+        </div>
+    </div>
+    <div class="midArea">
+        <div class="setArea">
+            <div class="dialog">
+                <div class="dialogInfo">
+                    <img src="../../images/success.png" alt="">
+                    <h3>操作成功</h3>
+                    <span>本次提现 0.00元</span>
+                    <br>
+                    <button class="backBtn">返回个人中心</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        @Northeast-Asia. All rights reserved. 沪ICP备08104990号-1 京公网安备11010502026369
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+

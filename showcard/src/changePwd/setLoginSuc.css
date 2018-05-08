@@ -1,0 +1,44 @@
+.wrapSetLoginSuc {
+  min-width: 1200px;
+  overflow: hidden;
+}
+.wrapSetLoginSuc .container-fluid {
+  width: 100%;
+  background: #eee;
+  height: auto;
+  padding: 0;
+  margin: 0 auto;
+}
+.wrapSetLoginSuc .container-fluid .midInfo {
+  background-color: #fff;
+  margin: auto;
+  width: 65.6%;
+  height: auto;
+  margin-top: 2.73%;
+  margin-bottom: 2.73%;
+}
+.wrapSetLoginSuc .container-fluid .midInfo .dialog {
+  width: 30%;
+  margin: 0 auto;
+  padding: 21.3% 0;
+}
+.wrapSetLoginSuc .container-fluid .midInfo .dialog img {
+  width: 100px;
+  float: left;
+  padding-right: 12%;
+}
+.wrapSetLoginSuc .container-fluid .midInfo .dialog h3 {
+  line-height: 100px;
+}
+.wrapSetLoginSuc .container-fluid .midInfo .dialog .sucBtn {
+  width: 188px;
+  height: 35px;
+  background-color: #dab866;
+  color: #fcfaf5;
+  border: none;
+  margin-top: 12%;
+  outline: none;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+.wrapSetLoginSuc{min-width:1200px;overflow:hidden}.wrapSetLoginSuc .container-fluid{width:100%;background:#eee;height:auto;padding:0;margin:0 auto}.wrapSetLoginSuc .container-fluid .midInfo{background-color:#fff;margin:2.73% auto;width:65.6%;height:auto}.wrapSetLoginSuc .container-fluid .midInfo .dialog{width:30%;margin:0 auto;padding:21.3% 0}.wrapSetLoginSuc .container-fluid .midInfo .dialog img{width:100px;float:left;padding-right:12%}.wrapSetLoginSuc .container-fluid .midInfo .dialog h3{line-height:100px}.wrapSetLoginSuc .container-fluid .midInfo .dialog .sucBtn{width:188px;height:35px;background-color:#dab866;color:#fcfaf5;border:none;margin-top:12%;outline:0;border-radius:4px;-webkit-border-radius:4px}

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>风险测评</title>
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/app.min.css">
+    <link rel="stylesheet" href="riskEvaluation.css">
+</head>
+<body>
+<div class="wrapRiskEvaluation">
+    <div class="header"></div>
+    <div class="aside"></div>
+    <div class="container home">
+        <div class="row wrap_risk">
+            <div class="col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading font-bold">
+                        <i class="icon iconfont icon-bi-copy color2addea"></i>
+                        新增风险调查问题
+                    </div>
+                    <div class="panel-body">
+                        <form class="bs-example form-horizontal ng-pristine ng-valid">
+                            <!-- <div class="form-group">
+                                <label class="col-xs-2 control-label">问卷模板：</label>
+                                <div class="col-xs-5">
+                                    <input type="text" class="form-control" placeholder="年龄">
+                                    <span class="help-block m-b-none">Example block-level help text here.</span>
+                                </div>
+                            </div> -->
+                            <div class="line_hor line-dashed b-b line-lg pull-in"></div>
+                            <div class="wrap_area">
+                                <div class="wrap_question 1">
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            问题【<span class="qu_index">1</span>】
+                                        </div>
+                                    </div>
+                                    <div class="line_hor line-dashed b-b line-lg pull-in"></div>
+                                    <div class="form-group">
+                                        <label class="col-xs-2 control-label">调查内容：</label>
+                                        <div class="col-xs-5">
+                                            <input type="text" class="form-control" dis="question" placeholder="请输入调查内容">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-2 control-label">排序：</label>
+                                        <div class="col-xs-5">
+                                            <input type="text" class="form-control" dis="sort" placeholder="请输入排序">
+                                        </div>
+                                    </div>
+                                    <div class="wrap_answer">
+                                        <div class="question 1">
+                                            <div class="form-group mBottom0">
+                                                <label class="col-xs-2 control-label">答案【<span class="an_index">1</span>】</label>
+                                                <div class="col-xs-10">
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <div class="col-xs-2 pLeft0">
+                                                                <select class="form-control" dis="answerCode">
+                                                                    <option value="A">A</option>
+                                                                    <option value="B">B</option>
+                                                                    <option value="C">C</option>
+                                                                    <option value="D">D</option>
+                                                                    <option value="E">E</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-xs-4">
+                                                                <input type="text" class="form-control" dis="answer" placeholder="请输入答案">
+                                                            </div>
+                                                            <div class="col-xs-6">
+                                                                <div class="form-group">
+                                                                    <label class="col-xs-3 control-label">分数：</label>
+                                                                    <div class="col-xs-5">
+                                                                        <input type="text" class="form-control" dis="score" placeholder="请输入分数">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-xs-offset-2 col-xs-10">
+                                            <button id="addAnswer_1" type="button" class="btn btn-sm btn-info">新增答案</button>
+                                        </div>
+                                    </div>
+                                    <div class="line_hor line-dashed b-b line-lg pull-in"></div>
+                                </div>
+                            </div>
+                            <div class="form-group add_question">
+                                <div class="col-xs-12">
+                                    <button id="addQuestion_1" type="button" class="btn btn-sm btn-info">新增问题</button>
+                                </div>
+                            </div>
+                            <div class="line_hor line-dashed b-b line-lg pull-in"></div>
+                            <div class="form-group">
+                                <div class="col-sm-4 col-sm-offset-2">
+                                    <button type="submit" class="btn btn-primary" id="submit">提交</button>
+                                    <button type="submit" class="btn btn-default">取消</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../lib/jquery-1.10.2/jquery.min.js"></script>
+<script src="../../plugin/StringBuilder.Min.js"></script>
+<script src="../../plugin/header.js"></script>
+<script>
+    $(function(){
+        //初始化头部和左边导航
+        $('.header').headerPlugin({});
+        $('.aside').navAsidePlugin({});
+        function appendAnswer(pid,len){
+            if(len<=5){
+                $('.'+pid+' .delAnswer_'+(len-1)).css('display','none'); //新增一个答案移除之前的删除按钮
+                var str=new StringBuilder();
+                str.AppendFormat('<div class="question '+len+'">');
+                str.AppendFormat('<div class="form-group mBottom0">');
+                str.AppendFormat('<label class="col-xs-2 control-label">答案【<span class="an_index">'+len+'</span>】</label>');
+                str.AppendFormat('<div class="col-xs-10">');
+                str.AppendFormat('<div class="row">');
+                str.AppendFormat('<div class="col-xs-12">');
+                str.AppendFormat('<div class="col-xs-2 pLeft0">');
+                str.AppendFormat('<select class="form-control" dis="answerCode">');
+                str.AppendFormat('<option value="A">A</option>');
+                str.AppendFormat('<option value="B">B</option>');
+                str.AppendFormat('<option value="C">C</option>');
+                str.AppendFormat('<option value="D">D</option>');
+                str.AppendFormat('<option value="E">E</option>');
+                str.AppendFormat('</select></div>');
+                str.AppendFormat('<div class="col-xs-4">');
+                str.AppendFormat('<input type="text" class="form-control" dis="answer" placeholder="请输入答案"></div>');
+                str.AppendFormat('<div class="col-xs-6">');
+                str.AppendFormat('<div class="form-group">');
+                str.AppendFormat('<label class="col-xs-3 control-label">分数：</label>');
+                str.AppendFormat('<div class="col-xs-5">');
+                str.AppendFormat('<input type="text" class="form-control" dis="score" placeholder="请输入分数"></div>');
+                if(len>1){
+                    str.AppendFormat('<button type="button" class="btn btn-sm btn-danger an_delete delAnswer_'+len+'" pid="'+len+'">删除答案</button>');
+                }
+                str.AppendFormat('</div></div></div></div></div></div></div>');
+            }
+//            else{
+//                $('.'+pid+' #addAnswer_'+pid).remove(); //当达到5个答案时移除到新增答案按钮
+//            }
+            if(len==5){
+                $('.'+pid+' #addAnswer_'+pid).css('display','none'); //当达到5个答案时移除到新增答案按钮
+            }
+            return str;
+        }
+        //新增问题
+        $('.add_question button').click(function(){
+            var len=$('.wrap_question').clone().length+1;
+            var str=new StringBuilder();
+            str.AppendFormat('<div class="wrap_question '+len+'">');
+            str.AppendFormat('<div class="form-group">');
+            str.AppendFormat('<div class="col-xs-12">');
+            str.AppendFormat('问题【<span class="qu_index">'+len+'</span>】');
+            if(len>1){
+                str.AppendFormat('<button type="button" class="btn btn-sm btn-danger floatR qu_delete" pid="'+len+'">删除问题</button>');
+            }
+            str.AppendFormat('<div class="clearfix"></div></div></div>');
+            str.AppendFormat('<div class="line_hor line-dashed b-b line-lg pull-in"></div>');
+            str.AppendFormat('<div class="form-group">');
+            str.AppendFormat('<label class="col-xs-2 control-label">调查内容：</label>');
+            str.AppendFormat('<div class="col-xs-5">');
+            str.AppendFormat('<input type="text" class="form-control"  dis="question" placeholder="请输入调查内容">');
+            str.AppendFormat('</div></div>');
+            str.AppendFormat('<div class="form-group">');
+            str.AppendFormat('<label class="col-xs-2 control-label">排序：</label>');
+            str.AppendFormat('<div class="col-xs-5">');
+            str.AppendFormat('<input type="text" class="form-control" dis="sort" placeholder="请输入排序">');
+            str.AppendFormat('</div></div>');
+
+            str.AppendFormat('<div class="wrap_answer">');
+            str.AppendFormat('<div class="question 1">');
+            str.AppendFormat('<div class="form-group mBottom0">');
+            str.AppendFormat('<label class="col-xs-2 control-label">答案【<span class="an_index">1</span>】</label>');
+            str.AppendFormat('<div class="col-xs-10">');
+            str.AppendFormat('<div class="row">');
+            str.AppendFormat('<div class="col-xs-12">');
+            str.AppendFormat('<div class="col-xs-2 pLeft0">');
+            str.AppendFormat('<select class="form-control" dis="answerCode">');
+            str.AppendFormat('<option value="A">A</option>');
+            str.AppendFormat('<option value="B">B</option>');
+            str.AppendFormat('<option value="C">C</option>');
+            str.AppendFormat('<option value="D">D</option>');
+            str.AppendFormat('<option value="E">E</option>');
+            str.AppendFormat('</select></div>');
+            str.AppendFormat('<div class="col-xs-4">');
+            str.AppendFormat('<input type="text" class="form-control" dis="answer" placeholder="请输入答案"></div>');
+            str.AppendFormat('<div class="col-xs-6">');
+            str.AppendFormat('<div class="form-group">');
+            str.AppendFormat('<label class="col-xs-3 control-label">分数：</label>');
+            str.AppendFormat('<div class="col-xs-5">');
+            str.AppendFormat('<input type="text" class="form-control" dis="score" placeholder="请输入分数">');
+            str.AppendFormat('</div></div></div></div></div></div></div></div></div>');
+
+            str.AppendFormat('<div class="form-group add_answer">');
+            str.AppendFormat('<div class="col-xs-offset-2 col-xs-10">');
+            str.AppendFormat('<button id="addAnswer_'+len+'" pid="'+len+'" type="button" class="btn btn-sm btn-info">新增答案</button>');
+            str.AppendFormat('</div></div></div>');
+            str.AppendFormat('<div class="line_hor line-dashed b-b line-lg pull-in"></div></div>');
+            $('.wrap_area').append(str.ToString());
+            //删除问题
+            $('.qu_delete').click(function(){
+                var p_class=$(this).attr('pid');
+                $("."+p_class).remove();
+            });
+            //新增答案
+            $('#addAnswer_'+len).click(function(){
+                var pid=$(this).attr('pid');
+                var newlen=$('.'+pid+' .question').clone().length+1;
+                $('.'+pid+' .wrap_answer').append(appendAnswer(pid,newlen).ToString());
+                //删除答案
+                $('.'+pid+' .delAnswer_'+newlen).click(function(){
+                    var p_class=$(this).attr('pid');
+                    $("."+pid+" ."+p_class).remove();
+                    $('.'+pid+' .delAnswer_'+(newlen-1)).css('display','block');
+                    $('.'+pid+' #addAnswer_'+pid).css('display','block');
+                });
+            });
+        });
+        //新增答案
+        $('#addAnswer_1').click(function(){
+            var len=$('.'+'1'+' .question').clone().length+1;
+            $('.'+'1'+' .wrap_answer').append(appendAnswer(1,len).ToString());
+            //删除答案
+            $('.'+'1'+' .delAnswer_'+len).click(function(){
+                var p_class=$(this).attr('pid');
+                $("."+"1"+" ."+p_class).remove();
+                $('.'+"1"+' .delAnswer_'+(len-1)).css('display','block');
+                $('.'+"1"+' #addAnswer_'+"1").css('display','block');
+            });
+        });
+
+    });
+
+    $('#submit').click(function(){
+        var data = new Array();
+        var question=null,answer=null;
+        var len=$("div[class^='wrap_question']").length;
+        var idstr="div[class^='wrap_question']";
+        for(var i=1;i<=len;i++){
+            var ids="div[class='wrap_question "+i+"']";
+            question={};
+            question.id=null;
+            question.question=$(ids+" input[dis='question']").val();
+            question.sort=$(ids+" input[dis='sort']").val();
+            question.version=1;
+            question.status=1;
+            question.remarks=null;
+            question.createBy='system';
+            question.createDate=null;
+            question.updateBy='system';
+            question.updateDate=null;
+            question.answerList= new Array();
+            var answerlen=$(ids+" div[class^='question']").length;
+            for(var j=1;j<=answerlen;j++){
+                answer={};
+                answer.answerCode=$(ids+" div[class='question "+j+"']").find("input[dis='answer']").val();
+                answer.answer=$(ids+" div[class='question "+j+"']").find("select[dis='answerCode']").val();
+                answer.createBy='system';
+                answer.createDate=null;
+                answer.id=null;
+                answer.questionId=null;
+                answer.remarks=null;
+                answer.score=$(ids+" div[class='question "+j+"']").find("input[dis='score']").val();
+                answer.sort=1;
+                answer.status=1;
+                answer.updateBy=null;
+                answer.version=1;
+                question.answerList.push(answer);
+            }
+            data.push(question);
+        }
+        /*$.getJSON(basePath+"question/editQuestion",data,function(result){
+         if(result){
+
+         }
+         });*/
+    });
+</script>
+</body>
+</html>

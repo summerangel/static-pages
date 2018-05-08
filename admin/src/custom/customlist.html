@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>客户管理</title>
+    <link rel="stylesheet" href="../../js/jquery-easyui-1.5/themes/default/easyui.css"/>
+    <link rel="stylesheet" type="text/css" href="../../js/jquery-easyui-1.5/themes/icon.css"/>
+    <link rel="stylesheet" href="../../css/font-awesome-4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../css/common.css"/>
+    <script src="../../js/jquery-easyui-1.5/jquery.min.js"></script>
+    <script src="../../js/jquery-easyui-1.5/jquery.easyui.min.js"></script>
+    <script src="../../js/jquery-easyui-1.5/locale/easyui-lang-zh_CN.js"></script>
+</head>
+<body class="easyui-layout">
+<div data-options="region:'north'">
+    <div class="wrapSearch">
+        <div class="wrapDate">
+            <span class="mLeft50 font12">日期范围：</span>
+            <input class="easyui-datebox" style="width: 180px;">
+            <span class="">——</span>
+            <input class="easyui-datebox" style="width: 180px;">
+        </div>
+        <input class="easyui-searchbox mLeft50" data-options="prompt:'请输入姓名或者手机号'"  style="width: 180px;">
+        <div class="clearfix"></div>
+    </div>
+    <div class="font12">
+        <label>开户状态：</label>
+        <select class="easyui-combobox">
+            <option value="aa">全部</option>
+            <option>成功</option>
+            <option>失败</option>
+        </select>
+    </div>
+</div>
+<div data-options="region:'center'">
+    <table id="table"></table>
+</div>
+    <div id="tip"></div>
+    <script type="text/javascript">
+        $('#table').datagrid({
+            fit:true,
+            fitColumns:true,
+            collapsible: true,
+            url:'customList.json',
+            columns:[[
+                {field:'custom_name',title:'姓名',width:100,align:'center'},
+                {field:'custom_sex',title:'性别',width:100,align:'center'},
+                {field:'custom_phone',title:'手机',width:100,align:'center'},
+                {field:'custom_ID',title:'身份证号',width:100,align:'center'},
+                {field:'join_time',title:'加入日期',width:100,align:'center'},
+                {field:'join_way',title:'渠道',width:100,align:'center'},
+                {field:'employer',title:'员工',width:100,align:'center'},
+                {field:'credit_status',title:'开户状态',width:100,align:'center'},
+                {field:'operate',title:'操作',width:100,align:'center',styler:function(value,row,index){
+                    return {class:'operate'};
+                }}
+            ]],
+            pagination:true,
+            sortName:'date,no',
+            multiSort:true,
+            sortOrder:'desc',
+            toolbar:[{
+                text:'导入客户',
+                iconCls:'icon fa fa-plus',
+                handler:function(){
+                    $('#tip').dialog({
+                        title: '导入客户提示信息',
+                        width: 500,
+                        height: 300,
+                        closed: false,
+                        cache: false,
+                        href: '_importTips.html',
+                        modal: true
+                    });
+                }
+            }, {
+                text: '下载模板',
+                iconCls: 'icon fa fa-download',
+                handler: function () {
+
+                }
+            }],
+            onClickCell:function(index,field,value){
+                if(field=='operate'){
+                    window.location.href='customEdit.html';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

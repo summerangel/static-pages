@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>东京中心概况</title>
+    <link rel="stylesheet" href="../../js/jquery-easyui-1.5/themes/bootstrap/easyui.css"/>
+    <link rel="stylesheet" type="text/css" href="../../js/jquery-easyui-1.5/themes/icon.css"/>
+    <link rel="stylesheet" href="../../css/font-awesome-4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../css/common.css"/>
+    <script src="../../js/jquery-easyui-1.5/jquery.min.js"></script>
+    <script src="../../js/jquery-easyui-1.5/jquery.easyui.min.js"></script>
+    <script src="../../js/jquery-easyui-1.5/locale/easyui-lang-zh_CN.js"></script>
+</head>
+<body class="easyui-layout">
+    <div data-options="region:'north'" style="height: 100px;">
+        <div class="wrapSearch">
+            <div class="wrapTime">
+                <span class="mLeft50 font12" style="cursor: pointer;">本月</span>
+                <span class="mLeft50 font12" style="cursor: pointer;">本周</span>
+            </div>
+            <div class="wrapDate">
+                <span class="mLeft50 font12">日期范围：</span>
+                <input class="easyui-datebox" style="width: 180px;">
+                <span class="">——</span>
+                <input class="easyui-datebox" style="width: 180px;">
+            </div>
+            <input class="easyui-searchbox mLeft50" data-options="prompt:'请输入用户名称电话或邮箱'"  style="width: 180px;">
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div data-options="region:'center'">
+        <table id="treegrid" title="客户发展情况" ></table>
+    </div>
+    <script type="text/javascript">
+        $('#treegrid').treegrid({
+            fit:true,
+            url:'dongjingCenter.json',
+            idField:'id',
+            treeField:'name',
+            iconCls: 'fa fa-square',
+            animate:true,
+            lines:true,
+            fitColumns:true,
+            collapsible: true,
+            columns:[[
+                {title:'名称',field:'name',width:180},
+                {field:'order_num',title:'理财总订单数',width:60,align:'center'},
+                {field:'success_num',title:'成功订单数',width:80,align:'center'},
+                {field:'book_num',title:'订购额',width:80,align:'center'},
+                {field:'income',title:'佣金收入',width:80,align:'center'}
+            ]]
+        });
+    </script>
+</body>
+</html>

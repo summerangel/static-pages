@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Jophy" />
+    <title>setPwd</title>
+    <link rel="stylesheet" href="../../css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <!--<link rel="stylesheet" href="setPwd.css">-->
+    <!--[if lt IE 9]>
+	  <link href="../../css/bootstrap/bootstrap-ie8.css" rel="stylesheet">
+      <link href="../../css/ieh5set.css" rel="stylesheet">
+    <![endif]-->
+
+    <script type="text/javascript" src="../../js/jquery-1.10.2/jquery.min.js"></script>
+    <script>
+        $(function(){
+            function resize() {
+                $(".midArea").css("min-height",$(window).height()-180);
+//                $(".myasset").css("min-height",$(window).height()-180);
+//                $(".bottom_table").css("min-height",$(window).height()-380);
+            }
+            resize();
+            $(window).resize(function() {
+                resize();
+            });
+
+        })
+    </script>
+
+</head>
+<body>
+    <div class="wrapSetPwd">
+        <div class="header_logout">
+            <div class="header_top">
+                <div class="text_left"><img src="../../images/shouye.jpg">秀卡首页</div>
+                <div class="text_right">已有帐号<span>请登录</span></div>
+            </div>
+            <div class="header_logo">
+                <a href="#"><img class="img" src="../../images/logo.png"/></a>
+                <div class="current"><a href="#">设置支付密码</a></div>
+            </div>
+        </div>
+        <div class="midArea">
+            <div class="setArea">
+                <h2>设置支付密码</h2>
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">设置新密码</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" name="" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">确认密码</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" name="" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"></label>
+                            <div class="col-sm-6">
+                                <input type="submit" class="form-control submitBtn" name="" value="提交">
+                            </div>
+
+                            </div>
+                        </form>
+            </div>
+        </div>
+         <div class="footer">
+            @Northeast-Asia. All rights reserved. 沪ICP备08104990号-1 京公网安备11010502026369
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+

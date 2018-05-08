@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <!--<link rel="stylesheet" href="products.css">-->
+    <script type="text/javascript" src="../../js/jquery-1.10.2/jquery.min.js"></script>
+    <script>
+        $(function(){
+            function resize() {
+                $(".productArea").css("min-height",$(window).height()-190);
+//                $(".bottom_table").css("min-height",$(window).height()-380);
+            }
+            resize();
+            $(window).resize(function() {
+                resize();
+            });
+
+            $('#reduce').click(function(){
+                var price=29.9;//商品价格
+                var buy_num=parseInt($('#buy_num').val());//购买数量
+                if(buy_num>1){
+                    buy_num=buy_num-1;
+                    $('#buy_num').val(buy_num);
+                    $('#price').html((price*buy_num).toFixed(2));
+                    $('#reduce').removeClass('forbid');
+                }
+                else{
+                    $('#buy_num').val(buy_num);
+                    $('#price').html(price);
+                    $('#reduce').addClass('forbid');
+                }
+            });
+            $('#add').click(function(){
+                var maxStack=999;
+                var price=29.9;//商品价格
+                var buy_num=parseInt($('#buy_num').val());//购买数量
+                buy_num=buy_num+1;
+                $('#buy_num').val(buy_num);
+                $('#price').html((price*buy_num).toFixed(2));
+                if(buy_num>maxStack){
+                    $('#add').addClass('forbid');
+                    $('#buy_num').val(maxStack);
+                }
+                else{
+                    $('#add').removeClass('forbid');
+                }
+            });
+
+        })
+    </script>
+</head>
+<body>
+<div class="wrapProducts">
+    <div class="header_pro">
+        <div class="header_top">
+            <div class="text_left"><img src="../../images/shouye.jpg">秀卡首页</div>
+            <div class="text_right">尊敬的xiuka88<span>&nbsp;退出登录</span></div>
+        </div>
+        <div class="header_logo">
+            <a href="#"><img class="img" src="../../images/logo.png"/></a>
+            <div class="current"><a href="#">首页</a></div>
+            <div class="cRegistration">个人中心</div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="productArea2">
+        <div class="wrapBox">
+            <!--产品show窗口-->
+            <div class="productShow">
+                <div class="proPic">
+                    <img src="../../images/book.png" alt="">
+                </div>
+                <div class="proR">
+                    <h2>愿你道路漫长</h2>
+                    <div class="describe">《智族GQ》总监王锋首部文集,陈坤,蔡崇达,冯唐作序并诚挚推荐,身体,精神和物质<br>,那些生活无法逃避的问题;我们彼此照见信念,不畏前行。</div>
+                    <span>王锋 &nbsp;著</span>
+                    <div class="price">秀价格:<span
+                            style="color: #c21b1b;font-size: 18px;font-weight: 600">&nbsp;￥<span id="price">29.9</span></span></div>
+                    <div class="expressWay">
+                        <span>支持 &nbsp;99元免运费&nbsp;|&nbsp;货到付款</span>
+                    </div>
+                    <div class="choose_btns">
+                        <div class="proNum fl">
+                            <div class="wrap-input">
+                                <a class="btn-reduce" id="reduce" href="#none">-</a>
+                                <a class="btn-add disabled" id="add" href="#none">+</a>
+                                <input class="text" id="buy_num" value="1" onkeyup="setAmount.modify('#buy-num');">
+                            </div>
+                        </div>
+                        <div class="btn" id="choose-btn-append">
+                            <a class="btn-append" id="InitCartUrl" href="#none">去支付<b></b></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="serialNum">商品编号:<span>&nbsp;119009110</span></div>
+            </div>
+            <!--产品详情-->
+            <div class="productInfo">
+                <ul class="infoList">
+                    <li class="current">商品详情</li>
+                    <li>精彩书评</li>
+                    <li>商品评价</li>
+                </ul>
+                <div class="clear"></div>
+                <div class="msg">
+                    <img src="../../images/book2.png" alt="">
+                    <div class="lPicInfo">
+                        <ul class="msgList">
+                            <li>出版社: 浙江文艺出版社</li>
+                            <li>包装: 精装</li>
+                            <li>字数: 150</li>
+                            <li>出版时间: 2016-08-06</li>
+                            <li>页数: 240</li>
+                        </ul>
+                        <ul class="msgList">
+                            <li>ISBM: 97870023827</li>
+                            <li>版次: 1商品编码: 11099011</li>
+                            <li>开本: 32开</li>
+                            <li>用纸: 胶版纸</li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        @Northeast-Asia. All rights reserved. 沪ICP备08104990号-1 京公网安备11010502026369
+    </div>
+</div>
+<script>
+    $(function () {
+        $('.infoList>li:first-child').click(function () {
+            $('.msg').css('display','block');
+            $(this).siblings().removeClass('current');
+            $(this).addClass('current');
+        });
+        $('.infoList>li:eq(1)').click(function () {
+            $('.msg').css('display','none');
+            $(this).siblings().removeClass('current');
+            $(this).addClass('current');
+        });
+
+        $('.infoList>li:eq(2)').click(function () {
+            $('.msg').css('display','none');
+            $(this).siblings().removeClass('current');
+            $(this).addClass('current');
+        });
+    })
+</script>
+</body>
+</html>

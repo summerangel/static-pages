@@ -1,0 +1,58 @@
+.wrapWithDrawSuc {
+    min-width: 1200px;
+    overflow: hidden;
+}
+
+.wrapWithDrawSuc .midArea {
+    width: 100%;
+    background: #eee;
+}
+
+.wrapWithDrawSuc .midArea .setArea {
+    padding: 115px 0;
+}
+
+.wrapWithDrawSuc .midArea .setArea .dialog {
+    background-color: #fff;
+    width: 42.2%;
+    margin: 0 auto;
+    padding: 65px 0;
+}
+
+.wrapWithDrawSuc .dialogInfo {
+    width: 42%;
+    margin: auto;
+    text-align: center;
+}
+
+.wrapWithDrawSuc .midArea .setArea .dialog img {
+    width: 100px;
+    float: left;
+}
+
+.wrapWithDrawSuc .midArea .setArea .dialog h3 {
+    line-height: 100px;
+    margin-bottom: 15.65%;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.wrapWithDrawSuc .midArea .setArea .dialog span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.wrapWithDrawSuc .backBtn {
+    background: #dab866;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 13%;
+    padding: 2.65% 17.7% !important;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+
+.wrapWithDrawSuc .backBtn:hover {
+    background: #cda951;
+}

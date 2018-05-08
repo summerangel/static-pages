@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+    <meta name="author" content="" />
+    <title>个人中心</title>
+    <link rel="stylesheet" href="../../../css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/common.css">
+    <!--<link rel="stylesheet" href="style.css">-->
+    <!--[if lt IE 9]>
+    <link href="../../../css/ieh5set.css" rel="stylesheet">
+    <![endif]-->
+    <script type="text/javascript" src="../../../js/jquery-1.10.2/jquery.min.js"></script>
+    <script>
+        $(function(){
+            function resize() {
+                $(".content").css("min-height",$(window).height()-190);
+                $(".myasset").css("min-height",$(window).height()-180);
+//                $(".bottom_table").css("min-height",$(window).height()-380);
+            }
+            resize();
+            $(window).resize(function() {
+                resize();
+            });
+
+        })
+    </script>
+</head>
+<body>
+<div class="wrapAccountSet">
+    <div class="header_login">
+        <div class="header_top">
+            <div class="text_left"><img src="../../../images/shouye.jpg">秀卡首页</div>
+            <div class="text_right">尊敬的xiuka88<span>退出登录</span></div>
+        </div>
+        <div class="header_logo">
+            <a href="#"><img class="img" src="../../../images/logo.png"/></a>
+            <div class="cRegistration current"><a href="#">个人中心</a></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="main w">
+            <!-- 左侧导航-->
+            <div class="m_nav">
+                <div class="assets-nav">
+                    <!-- 用户信息-->
+                    <div class="an-userinfo">
+                        <!--<div class="u-img">-->
+                        <!--<img src="../../../images/head_new.png" alt="">-->
+                        <!--</div>-->
+                        <img class="u-img" src="../../../images/head_new.png" alt="">
+                        <div class="u-name" style="font-weight: 600;">xiuka88</div>
+                        <div class="tel u-name" style="font-weight: 600;">185*********</div>
+                        <div class="u-ext">
+                            <div class="u-security">
+                                <img class="img_header" src="../../../images/head_tou.png">
+                                <img class="img_header" src="../../../images/phone.png">
+                                <img class="img_header" src="../../../images/safe.png">
+
+                                <!--<a class="u-security-icon" target="_blank"></a>-->
+                                <!--<a class="u-security-icon" target="_blank"></a>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="an-list">
+                        <ul>
+                            <li class="l-item">
+                                <a href="#">账户总览<b></b></a>
+                            </li>
+                            <li class="l-item">
+                                <a href="myOrders.html">我的订单<b></b></a>
+                            </li>
+                            <li class="l-item">
+                                <a href="#">交易明细<b></b></a>
+                            </li>
+                            <li class="l-item current">
+                                <a href="#">账户设置<b></b></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧内容-->
+            <div class="m_content">
+                <div class="myasset">
+                    <div class="account">
+                        <div class="mya_list">
+                            <div class="mya_left">
+                                <label class="true_name_lbl">真实姓名</label>
+                                <div class="true_name"> <span class="name">吴良</span>3****************6</div>
+                            </div>
+                            <div class="mya_right">
+                               <div class="operate_btn">
+                                   已设置
+                               </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="mya_list">
+                            <div class="mya_left">
+                                <label class="true_name_lbl">邮箱</label>
+                                <!--<div class="true_name">XXX@qq.com</div>-->
+                                <input class="input_email" placeholder="XXX@qq.com"/>
+                            </div>
+                            <div class="mya_right pTop">
+                                <div class="update_btn">
+                                    修改
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="mya_list">
+                            <div class="mya_left">
+                                <label class="true_name_lbl">手机</label>
+                                <div class="true_name">138****7654</div>
+                            </div>
+                            <div class="mya_right">
+                                <div class="operate_btn">
+                                    已设置
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="mya_list">
+                            <div class="mya_left">
+                                <label class="true_name_lbl">银行卡</label>
+                                <div class="true_name colorD8B669">已绑定<span >1</span>张银行卡</div>
+                            </div>
+                            <div class="mya_right pTop">
+                                <div class="update_btn colorADADAD borderColorADADAD">
+                                    查看
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="mya_list">
+                            <div class="mya_left">
+                                <label class="true_name_lbl">登录密码</label>
+                                <!--<div class="true_name">XXX@qq.com</div>-->
+                                <input class="input_email" placeholder="登录时需要输入的密码"/>
+                            </div>
+                            <div class="mya_right pTop">
+                                <div class="update_btn colorADADAD borderColorADADAD">
+                                    修改
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="mya_list">
+                            <div class="mya_left">
+                                <label class="true_name_lbl">支付密码</label>
+                                <!--<div class="true_name">XXX@qq.com</div>-->
+                                <input class="input_email" placeholder="在账户资金变动，修改账户信息时需要输入的密码"/>
+                            </div>
+                            <div class="mya_right pTop">
+                                <div class="update_btn colorADADAD borderColorADADAD">
+                                    修改
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        @Northeast-Asia. All rights reserved. 沪ICP备08104990号-1 京公网安备11010502026369
+    </div>
+</div>
+<script>
+    $(function(){
+
+    });
+</script>
+</body>
+</html>

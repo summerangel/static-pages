@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加员工</title>
+    <link rel="stylesheet" href="../../js/jquery-easyui-1.5/themes/default/easyui.css"/>
+    <link rel="stylesheet" type="text/css" href="../../js/jquery-easyui-1.5/themes/icon.css"/>
+    <link rel="stylesheet" href="../../css/font-awesome-4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../css/common.css"/>
+    <script src="../../js/jquery-easyui-1.5/jquery.min.js"></script>
+    <script src="../../js/jquery-easyui-1.5/jquery.easyui.min.js"></script>
+    <script src="../../js/jquery-easyui-1.5/locale/easyui-lang-zh_CN.js"></script>
+</head>
+<body class="easyui-layout">
+<div data-options="region:'north'">
+
+</div>
+<div data-options="region:'center'">
+    <div class="easyui-panel" title="New Topic" style="width:80%;max-width:600px;padding:30px 60px;">
+        <form id="ff" class="easyui-form" method="post" data-options="novalidate:true">
+            <div style="margin-bottom:20px">
+                <input class="easyui-textbox" name="name" style="width:80%" data-options="label:'姓名:',required:true">
+            </div>
+            <div style="margin-bottom:20px">
+                <label class="textbox-label">性别：</label>
+                <input type="radio" class="textbox-f">男
+                <input type="radio" class="textbox-f">女
+                <!--<input class="easyui-textbox" name="email" style="width:80%" data-options="label:'性别:',required:true,validType:'email'">-->
+                <!--<input class="easyui-radiobox" name="sex" style="width: 80%" data-options="label:'性别:',required:true'">-->
+            </div>
+            <div style="margin-bottom:20px">
+                <input class="easyui-textbox" name="subject" style="width:80%" data-options="label:'联系手机号:',required:true">
+            </div>
+            <div style="margin-bottom:20px">
+                <input class="easyui-textbox" name="email" style="width:80%" data-options="label:'邮箱:',required:true,validType:'email'">
+                <!--<input class="easyui-textbox" name="subject" style="width:80%" data-options="label:'银行预留手机号:',required:true">-->
+            </div>
+            <div style="margin-bottom:20px">
+                <input class="easyui-textbox" name="subject" style="width:80%" data-options="label:'所属公司:',required:true">
+            </div>
+            <div style="margin-bottom:20px">
+                <input class="easyui-textbox" name="subject" style="width:80%" data-options="label:'所属团队:',required:true">
+            </div>
+            <div style="margin-bottom:20px">
+                <select class="easyui-combobox" name="language" label="角色类型：" style="width:80%">
+                    <option value="en" selected="selected">普通员工</option>
+                    <option value="ar">团队leader</option>
+                </select>
+            </div>
+            <div style="margin-bottom:20px">
+                <input class="easyui-textbox" name="subject" style="width:80%" data-options="label:'分配帐号:',required:true">
+            </div>
+            <div style="margin-bottom:20px">
+                <input class="easyui-textbox" name="subject" style="width:80%" data-options="label:'初始密码:',required:true">
+            </div>
+            <!--<div style="margin-bottom:20px">-->
+            <!--<select class="easyui-combobox" name="language" label="Language" style="width:80%"><option value="ar">Arabic</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="zh-cht">Chinese Traditional</option><option value="cs">Czech</option><option value="da">Danish</option><option value="nl">Dutch</option><option value="en" selected="selected">English</option><option value="et">Estonian</option><option value="fi">Finnish</option><option value="fr">French</option><option value="de">German</option><option value="el">Greek</option><option value="ht">Haitian Creole</option><option value="he">Hebrew</option><option value="hi">Hindi</option><option value="mww">Hmong Daw</option><option value="hu">Hungarian</option><option value="id">Indonesian</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="ko">Korean</option><option value="lv">Latvian</option><option value="lt">Lithuanian</option><option value="no">Norwegian</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="ro">Romanian</option><option value="ru">Russian</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="es">Spanish</option><option value="sv">Swedish</option><option value="th">Thai</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option><option value="vi">Vietnamese</option></select>-->
+            <!--</div>-->
+        </form>
+        <div style="text-align:center;padding:5px 0">
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()" style="width:80px">提交</a>
+            <!--<a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()" style="width:80px">Clear</a>-->
+        </div>
+    </div>
+    <div id="success"></div>
+</div>
+    <script>
+        function submitForm(){
+            $('#ff').form('submit',{
+                onSubmit:function(){
+//                    return $(this).form('enableValidation').form('validate');
+                    $('#success').dialog({
+                        title: '添加成功',
+                        width: 400,
+                        height: 250,
+                        closed: false,
+                        cache: false,
+                        href: '_addSuccess.html',
+                        modal: true
+                    });
+                }
+            });
+        }
+        //        function clearForm(){
+        //            $('#ff').form('clear');
+        //        }
+    </script>
+</body>
+</html>

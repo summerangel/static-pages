@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>layer</title>
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../lib/layer2.4/skin/layer.css">
+    <link rel="stylesheet" href="../../lib/zTree_v3-master/css/zTreeStyle/zTreeStyle.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/app.min.css">
+    <link rel="stylesheet" href="layerDemo.css">
+    <!--以下样式仅限树弹框使用-->
+    <style>
+        .zTree{
+            margin-top: 40px;
+            display: inline-block;
+            width: 30%;
+            height: 547px;
+            border: 1px solid #ddd;
+            overflow: auto;
+            padding-bottom: 165px;
+            padding-top: 30px;
+        }
+        .right_bar{
+            margin-top: 40px;
+            margin-bottom: 10px;
+            display: inline-block;
+            height: 547px;
+            width: 70%;
+            vertical-align: top;
+            margin-left: -4px;
+        }
+        .note-prompt{
+            position: fixed;
+            top: 41px;
+            left: -1px;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 30px;
+            color: rgb(143, 87, 0);
+            margin-bottom: 1px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(204, 204, 204);
+            border-image: initial;
+            background: url(http://121.40.148.178:8080/Content/Images/Icon16/lightbulb.png) 7px 12px no-repeat scroll rgb(255, 253, 205);
+        }
+        .sys_title{
+            padding-left: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: #e4e4e4;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .top_bar{
+            height:220px;
+        }
+        .bottom_bar{
+            height:220px;
+        }
+
+        .layui-layer-demo .layui-layer-btn{
+            border-top: 1px solid rgb(231,231,231);
+        }
+        .layui-layer-demo .layui-layer-content{
+            overflow-y: hidden !important;
+        }
+        .bd {
+            border: 1px solid #ccc;
+        }
+        .todayInfoPanelTab {
+            height: 32px;
+            line-height: 32px;
+            padding-top: 0px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+            padding-left: 5px;
+            border-top: 0px!important;
+            border-right-width: 0px!important;
+            border-bottom-width: 1px!important;
+            border-left-width: 0px!important;
+        }
+        .settingtable {
+            background-image: none;
+            background-attachment: scroll;
+            background-repeat: repeat;
+            background-position-x: 0%;
+            background-position-y: 0%;
+            background-color: #F7F7F7;
+        }
+
+        .tab_list {
+            line-height: 15px;
+            padding-top: 6px;
+            padding-right: 10px;
+            padding-bottom: 6px;
+            padding-left: 10px;
+            font-size: 12px;
+            margin-top: 4px;
+            margin-right: 5px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            border-top-width: 1px;
+            border-right-width: 1px;
+            border-left-width: 1px;
+            float: left;
+            -moz-border-radius-topright: 7px;
+            -moz-border-radius-topleft: 7px;
+            -webkit-border-top-right-radius: 7px;
+            -webkit-border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+            border-top-left-radius: 7px;
+            cursor: pointer;
+        }
+        .actived {
+            border-bottom-color: #fff;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            background-image: none;
+            background-attachment: scroll;
+            background-repeat: repeat;
+            background-position-x: 0px;
+            background-position-y: 0px;
+            background-color: rgb(255,255,255);
+            -moz-border-radius-topright: 7px;
+            -moz-border-radius-topleft: 7px;
+            -webkit-border-top-right-radius: 7px;
+            -webkit-border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+            /* border-top-left-radius: 7px; */
+        }
+
+        .bar_item{
+            position: relative;
+            outline: none;
+            display: inline;
+            float: left;
+            height: 43px;
+            position: relative;
+            margin: 10px 15px 0px 0;
+            outline: none;
+        }
+        .bar_item a{
+            cursor: pointer;
+            vertical-align: middle;
+            text-align: center;
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border-radius: 5px 5px 5px 5px;
+            height: 39px;
+            line-height: 39px;
+            width: 98px;
+            text-align: center;
+            padding: 0px 0px;
+            border: 1px solid #ccc;
+            background: #fff;
+            display: inline-block;
+            outline: none;
+            color: #a9a6a6;
+            text-decoration: none;
+        }
+        .bar_item a.disabled {
+            cursor: not-allowed;
+            display: block;
+            overflow: hidden;
+            color: #a9a6a6;
+        }
+        a:link{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapLayer">
+    <div class="header"></div>
+    <div class="aside"></div>
+    <div class="home">
+        <div class="">
+            <div class="col-xs-12" style="margin-bottom: 20px;">
+                按钮示例(使用请加载app.min.css，后面整合放一个css文件)
+                <br/>
+                点击按钮弹框（使用请加载layer.css和layer.js）
+                <br/>
+                欲知layer更多详情，<a style="color: red;" href="http://layer.layui.com/" target="_blank">点击此处看官网</a>
+                <br/>
+            </div>
+            <div class="col-xs-12">
+                <!--<button class="btn m-b-xs btn-sm btn-primary btn-addon"><i class="icon iconfont icon-jiahao1"></i>Primary</button>-->
+                <button class="btn m-b-xs btn-sm btn-info btn-addon confirm"><i class="icon iconfont icon-jiahao1"></i>确认框
+                </button>
+                <button class="btn m-b-xs btn-sm btn-danger btn-addon tip"><i class="icon iconfont icon-shanchu"></i>提示框
+                </button>
+                <button class="btn m-b-xs btn-sm btn-success btn-addon load"><i class="icon iconfont icon-shanchu"></i>提示框
+                </button>
+            </div>
+        </div>
+        <div>
+            <div class="col-xs-12">
+                <button class="btn m-b-xs btn-sm btn-info btn-addon new_dialog"><i
+                        class="icon iconfont icon-jiahao1"></i>点击弹新增框
+                </button>
+            </div>
+        </div>
+        <div>
+            <div class="col-xs-12">
+                树弹框使用请加载zTreeStyle.css、jquery.ztree.core.min.js、query.ztree.excheck.min.js
+            </div>
+            <div class="col-xs-12">
+                <button class="btn m-b-xs btn-sm btn-info btn-addon tree_dialog"><i
+                        class="icon iconfont icon-jiahao1"></i>点击弹树框
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="wrapDialog" style="display: none;overflow-x: hidden;">
+    <form class="form-horizontal" style="margin-top: 20px;margin-bottom: 20px;">
+        <div class="form-group">
+            <label class="col-xs-4 control-label textR">角色编码：</label>
+            <div class="col-xs-6">
+                <input type="text" class="form-control" placeholder="角色编码">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-xs-4 control-label textR">角色名称：</label>
+            <div class="col-xs-6">
+                <input type="text" class="form-control" placeholder="角色名称">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-xs-4 control-label textR">角色分类：</label>
+            <div class="col-xs-6">
+                <select class="form-control">
+                    <option value="0">
+                        ==请选择==
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-xs-4 control-label textR">显示顺序：</label>
+            <div class="col-xs-6">
+                <input type="text" class="form-control" placeholder="100146">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-xs-4 control-label textR">选项：</label>
+            <div class="col-xs-6">
+                <label class="checkbox-inline">
+                    <input type="checkbox" value="option1">有效
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-xs-4 control-label textR">描述：</label>
+            <div class="col-xs-6">
+                <textarea class="form-control" cols="10" rows="4"></textarea>
+            </div>
+        </div>
+    </form>
+    <!--<div class="layui-layer-btn">-->
+        <!--<a class="layui-layer-btn0">确定</a>-->
+        <!--<a class="layui-layer-btn1">取消</a>-->
+    <!--</div>-->
+</div>
+<div class="wrapZTree" style="display:none;">
+    <div class="note-prompt" style="margin: 1px;">
+        温馨提示：选中复选框即可授予相应权限，取消选中则回收相应权限。
+    </div>
+    <div class="zTree">
+        <div class="sys_title" style="width: 28%;position: fixed;top: 80px;">系统模块</div>
+        <ul id="treeDemo" class="ztree"></ul>
+    </div>
+    <div class="right_bar">
+        <div class="top_bar">
+            <div class="sys_title">
+                系统按钮-系统表单
+            </div>
+            <div class="bd" style="border: none;">
+                <div class="settingtable bd todayInfoPanelTab">
+                    <div class="tab_list_top" style="position: absolute">
+                        <div id="TabToolbar" class="tab_list bd actived">工具栏</div>
+                        <div id="TabRightToolbar" class="tab_list bd">右击菜单栏</div>
+                    </div>
+                </div>
+            </div>
+            <div class="height: 170px;overflow: auto;">
+                <ul style="padding-left: 20px;">
+                    <li class="bar_item">
+                        <a href="#" class="disabled">
+                            <i class="icon iconfont icon-shuaxin color2addea"></i>
+                            刷新
+                        </a>
+                    </li>
+                    <li class="bar_item">
+                        <a href="#">
+                            <i class="icon iconfont icon-xinzeng color0249c7"></i>
+                            新增
+                        </a>
+                    </li>
+                    <li class="bar_item">
+                        <a href="#">
+                            <i class="icon iconfont icon-bi-copy color64b44b"></i>
+                            编辑
+                        </a>
+                    </li>
+                    <li class="bar_item">
+                        <a href="#">
+                            <i class="icon iconfont icon-shanchu colorf27e67"></i>
+                            删除
+                        </a>
+                    </li>
+                    <li class="bar_item">
+                        <a href="#">
+                            <i class="icon iconfont icon-xiangxi colorf9b71e"></i>
+                            详细
+                        </a>
+                    </li>
+                    <li class="bar_item">
+                        <a href="#">
+                            <i class="icon iconfont icon-category color0249c7"></i>
+                            分类管理
+                        </a>
+                    </li>
+                    <li class="bar_item">
+                        <a href="#">
+                            <i class="icon iconfont icon-fanhui color64b44b"></i>
+                            离开
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom_bar">
+            <div class="sys_title">
+                系统视图-系统表单
+            </div>
+            <div class="height: 170px;overflow: auto;">
+                <ul style="padding-left: 20px;">
+                    <li class="bar_item">
+                        <a href="#" class="disabled">
+                            <i class="icon iconfont icon-tag"></i>
+                            项目名称
+                        </a>
+                    </li>
+                    <li class="bar_item">
+                        <a href="#">
+                            <i class="icon iconfont icon-tag"></i>
+                            项目值
+                        </a>
+                    </li>
+                    <li class="bar_item">
+                        <a href="#">
+                            <i class="icon iconfont icon-tag"></i>
+                            有效
+                        </a>
+                    </li>
+                    <li class="bar_item">
+                        <a href="#">
+                            <i class="icon iconfont icon-tag"></i>
+                            删除
+                        </a>
+                    </li>
+                    <li class="bar_item">
+                        <a href="#">
+                            <i class="icon iconfont icon-tag"></i>
+                            创建用户
+                        </a>
+                    </li>
+                    <li class="bar_item">
+                        <a href="#">
+                            <i class="icon iconfont icon-tag"></i>
+                            创建时间
+                        </a>
+                    </li>
+                    <li class="bar_item">
+                        <a href="#">
+                            <i class="icon iconfont icon-tag"></i>
+                            修改用户
+                        </a>
+                    </li>
+                    <li class="bar_item">
+                        <a href="#">
+                            <i class="icon iconfont icon-tag"></i>
+                            修改时间
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../lib/jquery-1.10.2/jquery.min.js"></script>
+<!--<script src="../../lib/zTree_v3-master/js/jquery-1.4.4.min.js"></script>-->
+<script src="../../lib/jquery.bootgrid-1.3.1/jquery.bootgrid.min.js"></script>
+<script src="../../lib/layer2.4/layer.js"></script>
+
+<script src="../../lib/zTree_v3-master/js/jquery.ztree.core.js"></script>
+<script src="../../lib/zTree_v3-master/js/jquery.ztree.excheck.js"></script>
+<script src="../../plugin/StringBuilder.Min.js"></script>
+<script src="../../plugin/header.js"></script>
+<script>
+    var setting = {
+        check: {
+            enable: true
+        },
+        data: {
+            simpleData: {
+                enable: true
+            }
+        },
+        view: {
+            selectedMulti: false
+        }
+
+    };
+    var zNodes =[
+        { id:1, pId:0, name:"快速开发平台", open:true},
+        { id:11, pId:1, name:"系统管理", open:true},
+        { id:111, pId:11, name:"应用配置"},
+        { id:112, pId:11, name:"数据字典"},
+        { id:113, pId:11, name:"智能开发", open: true},
+        { id:1131, pId:113, name:"系统模块", open: false},
+        { id:1132, pId:113, name:"系统按钮", open: false},
+        { id:1133, pId:113, name:"系统视图", open: false},
+        { id:1134, pId:113, name:"系统表单", open: false},
+        { id:1135, pId:113, name:"异常文件", open: false},
+        { id:1136, pId:113, name:"代码生成", open: false},
+        { id:1137, pId:113, name:"接口API", open: false},
+        { id:112, pId:11, name:"数据库管理", open: false},
+        { id:113, pId:11, name:"系统日志"},
+        { id:114, pId:11, name:"单据编码"},
+        { id:115, pId:11, name:"导入配置"},
+        { id:12, pId:1, name:"基础资料", open:true},
+        { id:121, pId:12, name:"公司管理"},
+        { id:122, pId:12, name:"部门管理"},
+        { id:123, pId:12, name:"角色管理"},
+        { id:124, pId:12, name:"岗位管理"},
+        { id:125, pId:12, name:"用户组管理"},
+        { id:126, pId:12, name:"用户管理"},
+        { id:13, pId:1, name:"流程管理", open:true},
+        { id:131, pId:13, name:"流程设计", open: false},
+        { id:1311, pId:131, name:"表单设计"},
+        { id:1312, pId:13, name:"流程设计"},
+        { id:132, pId:13, name:"流程监控"},
+        { id:133, pId:13, name:"我的任务", open: false},
+        { id:1331, pId:133, name:"待处理"},
+        { id:1332, pId:133, name:"新建任务"},
+        { id:134, pId:13, name:"请款流程演示"},
+        { id:135, pId:13, name:"订单管理"},
+        { id:136, pId:13, name:"销售订单"},
+        { id:14, pId:1, name:"业务报表", open:true},
+        { id:141, pId:14, name:"饼图"},
+        { id:142, pId:14, name:"报价单"},
+        { id:143, pId:14, name:"货币余额报表"},
+        { id:144, pId:14, name:"银行到账报表"},
+        { id:145, pId:14, name:"登录访问统计"},
+        { id:15, pId:1, name:"案例模块", open:true},
+        { id:151, pId:15, name:"电子邮箱"},
+        { id:152, pId:15, name:"手机短信"},
+        { id:153, pId:15, name:"文件中心"},
+        { id:154, pId:15, name:"打印功能"},
+        { id:155, pId:15, name:"在线PDF阅读"},
+        { id:156, pId:15, name:"百万数据量测试"}
+
+//        { id:16, pId:1, name:"第三方控件整合", open:true},
+    ];
+    $(function () {
+        //初始化头部和左边导航
+        $('.header').headerPlugin({});
+        $('.aside').navAsidePlugin({});
+
+        $('.confirm').click(function () {
+            //询问框
+            layer.confirm('您确定要删除这条记录？', {
+                btn: ['确认', '取消'] //按钮
+            }, function () {
+                layer.msg('删除成功', {icon: 1});
+            }, function () {
+
+            });
+        });
+
+        $('.tip').click(function () {
+            //提示框
+            layer.msg('玩命提示中');
+        });
+        $('.load').click(function () {
+            //加载层
+            var index = layer.load(0, {shade: false}); //0代表加载的风格，支持0-2
+        });
+
+        $('.new_dialog').click(function () {
+            //页面层
+            layer.open({
+                type: 1,
+                title:'新增角色',
+                btn:['确定','取消'],
+                skin: 'layui-layer-rim', //加上边框
+                area: ['420px', '420px'], //宽高
+                content: $('.wrapDialog'),
+                yes:function(index,layero){
+                    //确定按钮处理
+                    layer.msg('您点击了确定', {icon: 1});
+                },
+                btn2:function(index,layero){
+                    //取消按钮处理
+                    layer.msg('您点击了取消', {icon: 2});
+                }
+            });
+        });
+
+        $('.tree_dialog').click(function(){
+            //页面层
+            layer.open({
+                type: 1,
+                title:'角色权限-采购经理',
+                btn:['确定','取消'],
+                skin: 'layui-layer-demo', //加上边框
+                area: ['800px', '600px'], //宽高
+                content: $('.wrapZTree'),
+                yes:function(index,layero){
+                    //确定按钮处理
+                    layer.msg('您点击了确定', {icon: 1});
+                },
+                btn2:function(index,layero){
+                    //取消按钮处理
+                    layer.msg('您点击了取消', {icon: 2});
+                }
+            });
+        });
+
+        $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+
+        $('#TabToolbar').click(function(){
+            $('#TabToolbar').addClass('actived');
+            $('#TabRightToolbar').removeClass('actived');
+        });
+        $('#TabRightToolbar').click(function(){
+            $('#TabRightToolbar').addClass('actived');
+            $('#TabToolbar').removeClass('actived');
+        });
+    });
+</script>
+</body>
+</html>

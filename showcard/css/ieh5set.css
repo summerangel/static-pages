@@ -1,0 +1,27 @@
+/* h5部分新特性兼容ie *//* */
+/*个人中心部分 */
+.wrapInfoCenter .content .main .m_content .myasset .mya-history .h-ulist {
+  behavior: url(ie-css3.htc); /*引用兼容ie的文件*/
+}
+
+.wrapInfoCenter .content .main .m_content .myasset .mya-ulike .u-like .u-l-list .u-l-l-tip {
+  behavior: url(ie-css3.htc); /*引用兼容ie的文件*/
+}
+
+.wrapInfoCenter .content .main .m_nav .assets-nav .an-userinfo .u-img {
+  behavior: url(ie-css3.htc); /*引用兼容ie的文件*/
+}
+
+.wrapInfoCenter .content .main .m_nav .assets-nav .an-userinfo .u-ext .u-security .img_header {
+  behavior: url(ie-css3.htc); /*引用兼容ie的文件*/
+}
+
+
+.wrapInfoCenter .content .main .m_nav .assets-nav .an-userinfo .u-ext .u-security .u-security-icon {
+  behavior: url(ie-css3.htc); /*引用兼容ie的文件*/
+}
+
+/*ie下所有的输入框 */
+.form-control{
+	/* behavior: url(ie-css3.htc); /*引用兼容ie的文件*/*/
+}
